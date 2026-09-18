@@ -1,0 +1,6 @@
+module wc3.definitions.upgrades
+
+import "../schema.pkl" as schema
+import "../bases.pkl" as bases
+
+upgrades: Mapping<String, schema.Upgrade> = new {}

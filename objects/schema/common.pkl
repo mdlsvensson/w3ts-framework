@@ -1,0 +1,27 @@
+module wc3.schema.common
+
+/// Base class for all Warcraft III custom objects.
+/// Provides unique identification and arbitrary property overrides.
+open class Wc3Object {
+  id: String
+  name: String?
+  
+  /// Escape hatch mapping for raw object fields not directly typed in schema
+  properties: Mapping<String, Any>?
+}
+
+/// Visual and art representation in the Warcraft III world.
+open class VisualObject extends Wc3Object {
+  modelFile: String?
+  scalingValue: Number?
+  selectionScale: Number?
+  tintingColorRed: Int?
+  tintingColorGreen: Int?
+  tintingColorBlue: Int?
+}
+
+/// Objects that have an in-game gold and lumber cost (Units, Buildings, Items).
+open class CostableObject extends VisualObject {
+  goldCost: Int?
+  lumberCost: Int?
+}

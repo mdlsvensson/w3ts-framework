@@ -1,0 +1,62 @@
+/// Auto-generated Warcraft III properties from Blizzard metadata
+/// Run `npm run schema:gen` to regenerate.
+module wc3.schema.generated.buffs_props
+
+import "../common.pkl" as base
+
+open class GeneratedBuffProps extends base.Wc3Object {
+  /// Rawcode: `fnam`, Engine type: `string`
+  nameEditorOnly: String?
+  /// Rawcode: `fnsf`, Engine type: `string`
+  editorSuffix: String?
+  /// Rawcode: `ftip`, Engine type: `string`
+  tooltip: String?
+  /// Rawcode: `fube`, Engine type: `string`
+  tooltipExtended: String?
+  /// Rawcode: `feff`, Engine type: `bool`
+  isAnEffect: Boolean?
+  /// Rawcode: `frac`, Engine type: `unitRace`
+  race: String?
+  /// Rawcode: `fart`, Engine type: `icon`
+  icon: String?
+  /// Rawcode: `ftat`, Engine type: `modelList`
+  target: List<String>?
+  /// Rawcode: `fsat`, Engine type: `modelList`
+  special: List<String>?
+  /// Rawcode: `feat`, Engine type: `modelList`
+  effect: List<String>?
+  /// Rawcode: `flig`, Engine type: `lightningEffect`
+  lightning: String?
+  /// Rawcode: `fmat`, Engine type: `modelList`
+  missileArt: List<String>?
+  /// Rawcode: `fmsp`, Engine type: `int`
+  missileSpeed: Int?
+  /// Rawcode: `fmac`, Engine type: `unreal`
+  missileArc: Number?
+  /// Rawcode: `fmho`, Engine type: `bool`
+  missileHomingEnabled: Boolean?
+  /// Rawcode: `ftac`, Engine type: `int`
+  targetAttachments: Int?
+  /// Rawcode: `fta0`, Engine type: `stringList`
+  targetAttachmentPoint1: List<String>?
+  /// Rawcode: `fta1`, Engine type: `stringList`
+  targetAttachmentPoint2: List<String>?
+  /// Rawcode: `fta2`, Engine type: `stringList`
+  targetAttachmentPoint3: List<String>?
+  /// Rawcode: `fta3`, Engine type: `stringList`
+  targetAttachmentPoint4: List<String>?
+  /// Rawcode: `fta4`, Engine type: `stringList`
+  targetAttachmentPoint5: List<String>?
+  /// Rawcode: `fta5`, Engine type: `stringList`
+  targetAttachmentPoint6: List<String>?
+  /// Rawcode: `feft`, Engine type: `stringList`
+  effectAttachmentPoint: List<String>?
+  /// Rawcode: `fspt`, Engine type: `stringList`
+  specialAttachmentPoint: List<String>?
+  /// Rawcode: `fefs`, Engine type: `soundLabel`
+  effectSound: String?
+  /// Rawcode: `fefl`, Engine type: `soundLabel`
+  effectSoundLooping: String?
+  /// Rawcode: `fspd`, Engine type: `spellDetail`
+  requiredSpellDetail: String?
+}

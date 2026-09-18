@@ -1,0 +1,33 @@
+module wc3.schema.units
+
+import "../bases.pkl" as bases
+import "types.pkl" as types
+import "common.pkl" as common
+import "generated/units_props.pkl" as generated
+
+/// Base representation for all Warcraft III Unit entities (Heroes, Regular Units, Buildings, Neutral Shops).
+/// Inherits all 240 Warcraft III engine unit properties from `GeneratedUnitProps`.
+open class BaseUnit extends generated.GeneratedUnitProps {
+  base: bases.BaseUnitId
+}
+
+/// Stationary structure, production building, defensive tower, or shop.
+open class Building extends BaseUnit {
+  id: types.BuildingId
+  isABuilding: Boolean = true
+}
+
+/// Mobile unit with movement capabilities.
+open class MobileUnit extends BaseUnit {
+}
+
+/// Standard non-hero mobile unit (soldiers, creeps, and workers).
+open class RegularUnit extends MobileUnit {
+  id: types.UnitId
+}
+
+/// Warcraft III Hero unit with attributes, proper names, leveling, and training capabilities.
+open class Hero extends MobileUnit {
+  id: types.HeroId
+  primaryAttribute: types.PrimaryAttribute?
+}

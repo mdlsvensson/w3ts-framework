@@ -1,0 +1,11 @@
+module wc3.schema.upgrades
+
+import "types.pkl" as types
+import "common.pkl" as common
+import "generated/upgrades_props.pkl" as generated
+
+/// Warcraft III research upgrade.
+/// Inherits all 37 upgrade properties from `GeneratedUpgradeProps`.
+open class Upgrade extends generated.GeneratedUpgradeProps {
+  id: types.UpgradeId
+}

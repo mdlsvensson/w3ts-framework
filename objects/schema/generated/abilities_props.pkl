@@ -1,0 +1,146 @@
+/// Auto-generated Warcraft III properties from Blizzard metadata
+/// Run `npm run schema:gen` to regenerate.
+module wc3.schema.generated.abilities_props
+
+import "../common.pkl" as base
+
+open class GeneratedAbilityProps extends base.Wc3Object {
+  /// Rawcode: `anam`, Engine type: `string`
+  name: String?
+  /// Rawcode: `ansf`, Engine type: `string`
+  editorSuffix: String?
+  /// Rawcode: `aher`, Engine type: `bool`
+  heroAbility: Boolean?
+  /// Rawcode: `aite`, Engine type: `bool`
+  itemAbility: Boolean?
+  /// Rawcode: `arac`, Engine type: `unitRace`
+  race: String?
+  /// Rawcode: `abpx`, Engine type: `int`
+  buttonPositionNormalX: Int?
+  /// Rawcode: `abpy`, Engine type: `int`
+  buttonPositionNormalY: Int?
+  /// Rawcode: `aubx`, Engine type: `int`
+  buttonPositionTurnOffX: Int?
+  /// Rawcode: `auby`, Engine type: `int`
+  buttonPositionTurnOffY: Int?
+  /// Rawcode: `arpx`, Engine type: `int`
+  buttonPositionResearchX: Int?
+  /// Rawcode: `arpy`, Engine type: `int`
+  buttonPositionResearchY: Int?
+  /// Rawcode: `aart`, Engine type: `icon`
+  iconNormal: String?
+  /// Rawcode: `auar`, Engine type: `icon`
+  iconTurnOff: String?
+  /// Rawcode: `arar`, Engine type: `icon`
+  iconResearch: String?
+  /// Rawcode: `acat`, Engine type: `modelList`
+  caster: List<String>?
+  /// Rawcode: `atat`, Engine type: `modelList`
+  target: List<String>?
+  /// Rawcode: `asat`, Engine type: `modelList`
+  special: List<String>?
+  /// Rawcode: `aeat`, Engine type: `modelList`
+  effect: List<String>?
+  /// Rawcode: `aaea`, Engine type: `modelList`
+  areaEffect: List<String>?
+  /// Rawcode: `alig`, Engine type: `lightningList`
+  lightningEffects: String?
+  /// Rawcode: `amat`, Engine type: `modelList`
+  missileArt: List<String>?
+  /// Rawcode: `amsp`, Engine type: `int`
+  missileSpeed: Int?
+  /// Rawcode: `amac`, Engine type: `unreal`
+  missileArc: Number?
+  /// Rawcode: `amho`, Engine type: `bool`
+  missileHomingEnabled: Boolean?
+  /// Rawcode: `atac`, Engine type: `int`
+  targetAttachments: Int?
+  /// Rawcode: `ata0`, Engine type: `stringList`
+  targetAttachmentPoint1: List<String>?
+  /// Rawcode: `ata1`, Engine type: `stringList`
+  targetAttachmentPoint2: List<String>?
+  /// Rawcode: `ata2`, Engine type: `stringList`
+  targetAttachmentPoint3: List<String>?
+  /// Rawcode: `ata3`, Engine type: `stringList`
+  targetAttachmentPoint4: List<String>?
+  /// Rawcode: `ata4`, Engine type: `stringList`
+  targetAttachmentPoint5: List<String>?
+  /// Rawcode: `ata5`, Engine type: `stringList`
+  targetAttachmentPoint6: List<String>?
+  /// Rawcode: `acac`, Engine type: `int`
+  casterAttachments: Int?
+  /// Rawcode: `acap`, Engine type: `stringList`
+  casterAttachmentPoint1: List<String>?
+  /// Rawcode: `aca1`, Engine type: `stringList`
+  casterAttachmentPoint2: List<String>?
+  /// Rawcode: `aspt`, Engine type: `stringList`
+  specialAttachmentPoint: List<String>?
+  /// Rawcode: `aani`, Engine type: `stringList`
+  animationNames: List<String>?
+  /// Rawcode: `atp1`, Engine type: `string`
+  tooltipNormal: String?
+  /// Rawcode: `aut1`, Engine type: `string`
+  tooltipTurnOff: String?
+  /// Rawcode: `aub1`, Engine type: `string`
+  tooltipNormalExtended: String?
+  /// Rawcode: `auu1`, Engine type: `string`
+  tooltipTurnOffExtended: String?
+  /// Rawcode: `aret`, Engine type: `string`
+  tooltipLearn: String?
+  /// Rawcode: `arut`, Engine type: `string`
+  tooltipLearnExtended: String?
+  /// Rawcode: `arhk`, Engine type: `char`
+  hotkeyLearn: String?
+  /// Rawcode: `ahky`, Engine type: `char`
+  hotkeyNormal: String?
+  /// Rawcode: `auhk`, Engine type: `char`
+  hotkeyTurnOff: String?
+  /// Rawcode: `areq`, Engine type: `techList`
+  requirements: List<String>?
+  /// Rawcode: `arqa`, Engine type: `intList`
+  requirementsLevels: List<String>?
+  /// Rawcode: `achd`, Engine type: `bool`
+  checkDependencies: Boolean?
+  /// Rawcode: `apri`, Engine type: `int`
+  priorityForSpellSteal: Int?
+  /// Rawcode: `aord`, Engine type: `orderString`
+  orderStringUseOrTurnOn: String?
+  /// Rawcode: `aoru`, Engine type: `orderString`
+  orderStringTurnOff: String?
+  /// Rawcode: `aoro`, Engine type: `orderString`
+  orderStringActivate: String?
+  /// Rawcode: `aorf`, Engine type: `orderString`
+  orderStringDeactivate: String?
+  /// Rawcode: `aefs`, Engine type: `soundLabel`
+  effectSound: String?
+  /// Rawcode: `aefl`, Engine type: `soundLabel`
+  effectSoundLooping: String?
+  /// Rawcode: `alev`, Engine type: `int`
+  levels: Int?
+  /// Rawcode: `arlv`, Engine type: `int`
+  requiredLevel: Int?
+  /// Rawcode: `alsk`, Engine type: `int`
+  levelSkipRequirement: Int?
+  /// Rawcode: `atar`, Engine type: `targetList`
+  targetsAllowed: List<String>?
+  /// Rawcode: `acas`, Engine type: `unreal`
+  castingTime: Number?
+  /// Rawcode: `adur`, Engine type: `unreal`
+  durationNormal: Number?
+  /// Rawcode: `ahdu`, Engine type: `unreal`
+  durationHero: Number?
+  /// Rawcode: `acdn`, Engine type: `unreal`
+  cooldown: Number?
+  /// Rawcode: `amcs`, Engine type: `int`
+  manaCost: Int?
+  /// Rawcode: `aare`, Engine type: `unreal`
+  areaOfEffect: Number?
+  /// Rawcode: `aran`, Engine type: `unreal`
+  castRange: Number?
+  /// Rawcode: `abuf`, Engine type: `buffList`
+  buffs: String?
+  /// Rawcode: `aeff`, Engine type: `effectList`
+  effects: String?
+  /// Rawcode: `ausk`, Engine type: `unitSkinList`
+  unitSkinList: String?
+}

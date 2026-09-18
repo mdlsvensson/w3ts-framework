@@ -1,0 +1,92 @@
+/// Auto-generated Warcraft III properties from Blizzard metadata
+/// Run `npm run schema:gen` to regenerate.
+module wc3.schema.generated.items_props
+
+import "../common.pkl" as base
+
+open class GeneratedItemProps extends base.Wc3Object {
+  /// Rawcode: `iabi`, Engine type: `abilityList`
+  abilities: List<String>?
+  /// Rawcode: `iarm`, Engine type: `armorType`
+  armorType: String?
+  /// Rawcode: `icla`, Engine type: `itemClass`
+  classification: String?
+  /// Rawcode: `iclb`, Engine type: `int`
+  tintingColor3Blue: Int?
+  /// Rawcode: `iclg`, Engine type: `int`
+  tintingColor2Green: Int?
+  /// Rawcode: `iclr`, Engine type: `int`
+  tintingColor1Red: Int?
+  /// Rawcode: `icid`, Engine type: `abilCode`
+  cooldownGroup: String?
+  /// Rawcode: `idrp`, Engine type: `bool`
+  droppedWhenCarrierDies: Boolean?
+  /// Rawcode: `idro`, Engine type: `bool`
+  canBeDropped: Boolean?
+  /// Rawcode: `ifil`, Engine type: `model`
+  modelUsed: String?
+  /// Rawcode: `igol`, Engine type: `int`
+  goldCost: Int?
+  /// Rawcode: `ihtp`, Engine type: `int`
+  hitPoints: Int?
+  /// Rawcode: `iicd`, Engine type: `bool`
+  ignoreCooldown: Boolean?
+  /// Rawcode: `ilev`, Engine type: `int`
+  level: Int?
+  /// Rawcode: `ilum`, Engine type: `int`
+  lumberCost: Int?
+  /// Rawcode: `imor`, Engine type: `bool`
+  validTargetForTransformation: Boolean?
+  /// Rawcode: `ilvo`, Engine type: `int`
+  levelUnclassified: Int?
+  /// Rawcode: `iper`, Engine type: `bool`
+  perishable: Boolean?
+  /// Rawcode: `iprn`, Engine type: `bool`
+  includeAsRandomChoice: Boolean?
+  /// Rawcode: `ipow`, Engine type: `bool`
+  useAutomaticallyWhenAcquired: Boolean?
+  /// Rawcode: `ipri`, Engine type: `int`
+  priority: Int?
+  /// Rawcode: `isca`, Engine type: `real`
+  scalingValue: Number?
+  /// Rawcode: `issc`, Engine type: `real`
+  selectionSizeEditor: Number?
+  /// Rawcode: `isel`, Engine type: `bool`
+  canBeSoldByMerchants: Boolean?
+  /// Rawcode: `ipaw`, Engine type: `bool`
+  canBeSoldToMerchants: Boolean?
+  /// Rawcode: `isto`, Engine type: `int`
+  stockMaximum: Int?
+  /// Rawcode: `istr`, Engine type: `int`
+  stockReplenishInterval: Int?
+  /// Rawcode: `isst`, Engine type: `int`
+  stockStartDelay: Int?
+  /// Rawcode: `isit`, Engine type: `int`
+  stockInitialAfterStartDelay: Int?
+  /// Rawcode: `iusa`, Engine type: `bool`
+  activelyUsed: Boolean?
+  /// Rawcode: `iuse`, Engine type: `int`
+  numberOfCharges: Int?
+  /// Rawcode: `ista`, Engine type: `int`
+  maxStacks: Int?
+  /// Rawcode: `iico`, Engine type: `icon`
+  interfaceIcon: String?
+  /// Rawcode: `ubpx`, Engine type: `int`
+  buttonPositionX: Int?
+  /// Rawcode: `ubpy`, Engine type: `int`
+  buttonPositionY: Int?
+  /// Rawcode: `ides`, Engine type: `string`
+  description: String?
+  /// Rawcode: `uhot`, Engine type: `char`
+  hotkey: String?
+  /// Rawcode: `unam`, Engine type: `string`
+  name: String?
+  /// Rawcode: `ureq`, Engine type: `techList`
+  requirements: List<String>?
+  /// Rawcode: `urqa`, Engine type: `intList`
+  requirementsLevels: List<String>?
+  /// Rawcode: `utip`, Engine type: `string`
+  tooltipBasic: String?
+  /// Rawcode: `utub`, Engine type: `string`
+  tooltipExtended: String?
+}

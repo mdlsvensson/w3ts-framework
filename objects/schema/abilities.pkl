@@ -1,0 +1,21 @@
+module wc3.schema.abilities
+
+import "../bases.pkl" as bases
+import "types.pkl" as types
+import "common.pkl" as common
+import "generated/abilities_props.pkl" as generated
+
+/// Warcraft III spell or ability definition.
+/// Inherits all 69 ability properties from `GeneratedAbilityProps`.
+open class Ability extends generated.GeneratedAbilityProps {
+  id: types.AbilityId
+  base: bases.BaseAbilityId
+
+  // Multi-level fields convenient aliases
+  cooldown: List<Number>?
+  manaCost: List<Int>?
+  castRange: List<Int>?
+  durationHero: List<Number>?
+  durationNormal: List<Number>?
+  areaOfEffect: List<Number>?
+}

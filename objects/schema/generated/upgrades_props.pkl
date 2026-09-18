@@ -1,0 +1,82 @@
+/// Auto-generated Warcraft III properties from Blizzard metadata
+/// Run `npm run schema:gen` to regenerate.
+module wc3.schema.generated.upgrades_props
+
+import "../common.pkl" as base
+
+open class GeneratedUpgradeProps extends base.Wc3Object {
+  /// Rawcode: `gnam`, Engine type: `string`
+  name: String?
+  /// Rawcode: `gnsf`, Engine type: `string`
+  editorSuffix: String?
+  /// Rawcode: `grac`, Engine type: `unitRace`
+  race: String?
+  /// Rawcode: `gtp1`, Engine type: `string`
+  tooltip: String?
+  /// Rawcode: `gub1`, Engine type: `string`
+  tooltipExtended: String?
+  /// Rawcode: `ghk1`, Engine type: `char`
+  hotkey: String?
+  /// Rawcode: `gbpx`, Engine type: `int`
+  buttonPositionX: Int?
+  /// Rawcode: `gbpy`, Engine type: `int`
+  buttonPositionY: Int?
+  /// Rawcode: `gar1`, Engine type: `icon`
+  icon: String?
+  /// Rawcode: `gcls`, Engine type: `upgradeClass`
+  upgradeClass: String?
+  /// Rawcode: `glvl`, Engine type: `int`
+  levels: Int?
+  /// Rawcode: `gglb`, Engine type: `int`
+  goldBase: Int?
+  /// Rawcode: `gglm`, Engine type: `int`
+  goldIncrement: Int?
+  /// Rawcode: `glmb`, Engine type: `int`
+  lumberBase: Int?
+  /// Rawcode: `glmm`, Engine type: `int`
+  lumberIncrement: Int?
+  /// Rawcode: `gtib`, Engine type: `int`
+  timeBase: Int?
+  /// Rawcode: `gtim`, Engine type: `int`
+  timeIncrement: Int?
+  /// Rawcode: `gef1`, Engine type: `upgradeEffect`
+  effect1: String?
+  /// Rawcode: `gba1`, Engine type: `unreal`
+  effect1PercentS: Number?
+  /// Rawcode: `gmo1`, Engine type: `unreal`
+  effect1PercentSMod: Number?
+  /// Rawcode: `gco1`, Engine type: `string`
+  effect1PercentSCode: String?
+  /// Rawcode: `gef2`, Engine type: `upgradeEffect`
+  effect2: String?
+  /// Rawcode: `gba2`, Engine type: `unreal`
+  effect2PercentS: Number?
+  /// Rawcode: `gmo2`, Engine type: `unreal`
+  effect2PercentSMod: Number?
+  /// Rawcode: `gco2`, Engine type: `string`
+  effect2PercentSCode: String?
+  /// Rawcode: `gef3`, Engine type: `upgradeEffect`
+  effect3: String?
+  /// Rawcode: `gba3`, Engine type: `unreal`
+  effect3PercentS: Number?
+  /// Rawcode: `gmo3`, Engine type: `unreal`
+  effect3PercentSMod: Number?
+  /// Rawcode: `gco3`, Engine type: `string`
+  effect3PercentSCode: String?
+  /// Rawcode: `gef4`, Engine type: `upgradeEffect`
+  effect4: String?
+  /// Rawcode: `gba4`, Engine type: `unreal`
+  effect4PercentS: Number?
+  /// Rawcode: `gmo4`, Engine type: `unreal`
+  effect4PercentSMod: Number?
+  /// Rawcode: `gco4`, Engine type: `string`
+  effect4PercentSCode: String?
+  /// Rawcode: `ginh`, Engine type: `bool`
+  transferWithUnitOwnership: Boolean?
+  /// Rawcode: `greq`, Engine type: `techList`
+  requirements: List<String>?
+  /// Rawcode: `grqc`, Engine type: `intList`
+  requirementsLevels: List<String>?
+  /// Rawcode: `glob`, Engine type: `bool`
+  appliesToAllUnits: Boolean?
+}

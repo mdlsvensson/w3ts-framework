@@ -1,0 +1,6 @@
+module wc3.definitions.items
+
+import "../schema.pkl" as schema
+import "../bases.pkl" as bases
+
+items: Mapping<String, schema.Item> = new {}

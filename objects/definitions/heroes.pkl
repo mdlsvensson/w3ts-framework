@@ -1,0 +1,6 @@
+module wc3.definitions.heroes
+
+import "../schema.pkl" as schema
+import "../bases.pkl" as bases
+
+heroes: Mapping<String, schema.Hero> = new {}

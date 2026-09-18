@@ -10,6 +10,7 @@
       "ESNext"
     ],
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "paths": {
       "@objectdata/*": [
         "./node_modules/war3-objectdata-th/dist/cjs/generated/constants/*"
@@ -18,9 +19,9 @@
     "plugins": [
       {
         "transform": "war3-transformer",
-        "mapDir": "C:/Users/Me/Documents/GitHub/wc3-ts-template/maps/map.w3x",
-        "entryFile": "C:/Users/Me/Documents/GitHub/wc3-ts-template/src/main.ts",
-        "outputDir": "C:/Users/Me/Documents/GitHub/wc3-ts-template/dist/map.w3x"
+        "mapDir": "C:/Users/mdlsvensson/Repo/w3ts-framework/maps/map.w3x",
+        "entryFile": "C:/Users/mdlsvensson/Repo/w3ts-framework/src/main.ts",
+        "outputDir": "C:/Users/mdlsvensson/Repo/w3ts-framework/dist/map.w3x"
       }
     ],
     "types": [

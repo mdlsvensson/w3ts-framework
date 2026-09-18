@@ -1,0 +1,488 @@
+/// Auto-generated Warcraft III properties from Blizzard metadata
+/// Run `npm run schema:gen` to regenerate.
+module wc3.schema.generated.units_props
+
+import "../common.pkl" as base
+
+open class GeneratedUnitProps extends base.Wc3Object {
+  /// Rawcode: `uani`, Engine type: `stringList`
+  requiredAnimationNames: List<String>?
+  /// Rawcode: `uico`, Engine type: `icon`
+  iconGameInterface: String?
+  /// Rawcode: `uaap`, Engine type: `stringList`
+  requiredAnimationNamesAttachments: List<String>?
+  /// Rawcode: `ualp`, Engine type: `stringList`
+  requiredAttachmentLinkNames: List<String>?
+  /// Rawcode: `uawt`, Engine type: `string`
+  tooltipAwaken: String?
+  /// Rawcode: `ubpr`, Engine type: `stringList`
+  requiredBoneNames: List<String>?
+  /// Rawcode: `ubsl`, Engine type: `soundLabel`
+  construction: String?
+  /// Rawcode: `ubui`, Engine type: `unitList`
+  structuresBuilt: List<String>?
+  /// Rawcode: `ubpx`, Engine type: `int`
+  buttonPositionX: Int?
+  /// Rawcode: `ubpy`, Engine type: `int`
+  buttonPositionY: Int?
+  /// Rawcode: `ucua`, Engine type: `icon`
+  casterUpgradeArt: String?
+  /// Rawcode: `ucun`, Engine type: `stringList`
+  casterUpgradeNames: List<String>?
+  /// Rawcode: `ucut`, Engine type: `stringList`
+  casterUpgradeTips: List<String>?
+  /// Rawcode: `udep`, Engine type: `unitList`
+  dependencyEquivalents: List<String>?
+  /// Rawcode: `ides`, Engine type: `string`
+  description: String?
+  /// Rawcode: `unsf`, Engine type: `string`
+  nameEditorSuffix: String?
+  /// Rawcode: `uhot`, Engine type: `char`
+  hotkey: String?
+  /// Rawcode: `ulfi`, Engine type: `int`
+  loopingFadeInRate: Int?
+  /// Rawcode: `ulfo`, Engine type: `int`
+  loopingFadeOutRate: Int?
+  /// Rawcode: `umki`, Engine type: `itemList`
+  itemsMade: List<String>?
+  /// Rawcode: `uma1`, Engine type: `unreal`
+  attack1ProjectileArc: Number?
+  /// Rawcode: `uma2`, Engine type: `unreal`
+  attack2ProjectileArc: Number?
+  /// Rawcode: `ua1m`, Engine type: `model`
+  attack1ProjectileArt: String?
+  /// Rawcode: `ua2m`, Engine type: `model`
+  attack2ProjectileArt: String?
+  /// Rawcode: `umh1`, Engine type: `bool`
+  attack1ProjectileHomingEnabled: Boolean?
+  /// Rawcode: `umh2`, Engine type: `bool`
+  attack2ProjectileHomingEnabled: Boolean?
+  /// Rawcode: `ua1z`, Engine type: `int`
+  attack1ProjectileSpeed: Int?
+  /// Rawcode: `ua2z`, Engine type: `int`
+  attack2ProjectileSpeed: Int?
+  /// Rawcode: `umsl`, Engine type: `soundLabel`
+  movement: String?
+  /// Rawcode: `unam`, Engine type: `string`
+  name: String?
+  /// Rawcode: `upro`, Engine type: `stringList`
+  properNames: List<String>?
+  /// Rawcode: `ursl`, Engine type: `soundLabel`
+  random: String?
+  /// Rawcode: `urqc`, Engine type: `int`
+  requirementsTiersUsed: Int?
+  /// Rawcode: `ureq`, Engine type: `techList`
+  requirements: List<String>?
+  /// Rawcode: `urq1`, Engine type: `techList`
+  requirementsTier2: List<String>?
+  /// Rawcode: `urq2`, Engine type: `techList`
+  requirementsTier3: List<String>?
+  /// Rawcode: `urq3`, Engine type: `techList`
+  requirementsTier4: List<String>?
+  /// Rawcode: `urq4`, Engine type: `techList`
+  requirementsTier5: List<String>?
+  /// Rawcode: `urq5`, Engine type: `techList`
+  requirementsTier6: List<String>?
+  /// Rawcode: `urq6`, Engine type: `techList`
+  requirementsTier7: List<String>?
+  /// Rawcode: `urq7`, Engine type: `techList`
+  requirementsTier8: List<String>?
+  /// Rawcode: `urq8`, Engine type: `techList`
+  requirementsTier9: List<String>?
+  /// Rawcode: `urqa`, Engine type: `intList`
+  requirementsLevels: List<String>?
+  /// Rawcode: `ures`, Engine type: `upgradeList`
+  researchesAvailable: List<String>?
+  /// Rawcode: `urev`, Engine type: `bool`
+  revivesDeadHeroes: Boolean?
+  /// Rawcode: `utpr`, Engine type: `string`
+  tooltipRevive: String?
+  /// Rawcode: `ussi`, Engine type: `icon`
+  iconScoreScreen: String?
+  /// Rawcode: `usei`, Engine type: `itemList`
+  itemsSold: List<String>?
+  /// Rawcode: `useu`, Engine type: `unitList`
+  unitsSold: List<String>?
+  /// Rawcode: `uspa`, Engine type: `modelList`
+  special: List<String>?
+  /// Rawcode: `utaa`, Engine type: `modelList`
+  target: List<String>?
+  /// Rawcode: `utip`, Engine type: `string`
+  tooltipBasic: String?
+  /// Rawcode: `utra`, Engine type: `unitList`
+  unitsTrained: List<String>?
+  /// Rawcode: `urva`, Engine type: `unitList`
+  heroRevivalLocations: List<String>?
+  /// Rawcode: `utub`, Engine type: `string`
+  tooltipExtended: String?
+  /// Rawcode: `uupt`, Engine type: `unitList`
+  upgradesTo: List<String>?
+  /// Rawcode: `uabi`, Engine type: `abilityList`
+  normal: List<String>?
+  /// Rawcode: `udaa`, Engine type: `abilCode`
+  defaultActiveAbility: String?
+  /// Rawcode: `uhab`, Engine type: `heroAbilityList`
+  hero: List<String>?
+  /// Rawcode: `uagi`, Engine type: `int`
+  startingAgility: Int?
+  /// Rawcode: `uagp`, Engine type: `unreal`
+  agilityPerLevel: Number?
+  /// Rawcode: `ubld`, Engine type: `int`
+  buildTime: Int?
+  /// Rawcode: `ubdi`, Engine type: `int`
+  goldBountyAwardedNumberOfDice: Int?
+  /// Rawcode: `ubba`, Engine type: `int`
+  goldBountyAwardedBase: Int?
+  /// Rawcode: `ubsi`, Engine type: `int`
+  goldBountyAwardedSidesPerDie: Int?
+  /// Rawcode: `ulbd`, Engine type: `int`
+  lumberBountyAwardedNumberOfDice: Int?
+  /// Rawcode: `ulba`, Engine type: `int`
+  lumberBountyAwardedBase: Int?
+  /// Rawcode: `ulbs`, Engine type: `int`
+  lumberBountyAwardedSidesPerDie: Int?
+  /// Rawcode: `ucol`, Engine type: `unreal`
+  collisionSize: Number?
+  /// Rawcode: `udef`, Engine type: `int`
+  defenseBase: Int?
+  /// Rawcode: `udty`, Engine type: `defenseType`
+  defenseType: String?
+  /// Rawcode: `udup`, Engine type: `int`
+  defenseUpgradeBonus: Int?
+  /// Rawcode: `ufma`, Engine type: `int`
+  foodProduced: Int?
+  /// Rawcode: `ufoo`, Engine type: `int`
+  foodCost: Int?
+  /// Rawcode: `ugol`, Engine type: `int`
+  goldCost: Int?
+  /// Rawcode: `ugor`, Engine type: `int`
+  repairGoldCost: Int?
+  /// Rawcode: `uhpm`, Engine type: `int`
+  hitPointsMaximumBase: Int?
+  /// Rawcode: `uint`, Engine type: `int`
+  startingIntelligence: Int?
+  /// Rawcode: `uinp`, Engine type: `unreal`
+  intelligencePerLevel: Number?
+  /// Rawcode: `ubdg`, Engine type: `bool`
+  isABuilding: Boolean?
+  /// Rawcode: `ulev`, Engine type: `int`
+  level: Int?
+  /// Rawcode: `ulum`, Engine type: `int`
+  lumberCost: Int?
+  /// Rawcode: `ulur`, Engine type: `int`
+  repairLumberCost: Int?
+  /// Rawcode: `umpi`, Engine type: `int`
+  manaInitialAmount: Int?
+  /// Rawcode: `umpm`, Engine type: `int`
+  manaMaximum: Int?
+  /// Rawcode: `umas`, Engine type: `int`
+  speedMaximum: Int?
+  /// Rawcode: `umis`, Engine type: `int`
+  speedMinimum: Int?
+  /// Rawcode: `unbr`, Engine type: `bool`
+  neutralBuildingValidAsRandomBuilding: Boolean?
+  /// Rawcode: `usin`, Engine type: `int`
+  sightRadiusNight: Int?
+  /// Rawcode: `upap`, Engine type: `pathingListPrevent`
+  placementRequires: List<String>?
+  /// Rawcode: `upra`, Engine type: `attributeType`
+  primaryAttribute: String?
+  /// Rawcode: `uhpr`, Engine type: `unreal`
+  hitPointsRegenerationRate: Number?
+  /// Rawcode: `umpr`, Engine type: `unreal`
+  manaRegeneration: Number?
+  /// Rawcode: `uhrt`, Engine type: `regenType`
+  hitPointsRegenerationType: String?
+  /// Rawcode: `urtm`, Engine type: `int`
+  repairTime: Int?
+  /// Rawcode: `urpo`, Engine type: `bool`
+  groupSeparationEnabled: Boolean?
+  /// Rawcode: `urpg`, Engine type: `int`
+  groupSeparationGroupNumber: Int?
+  /// Rawcode: `urpp`, Engine type: `int`
+  groupSeparationParameter: Int?
+  /// Rawcode: `urpr`, Engine type: `int`
+  groupSeparationPriority: Int?
+  /// Rawcode: `upar`, Engine type: `pathingListRequire`
+  placementPreventedBy: List<String>?
+  /// Rawcode: `usid`, Engine type: `int`
+  sightRadiusDay: Int?
+  /// Rawcode: `umvs`, Engine type: `int`
+  speedBase: Int?
+  /// Rawcode: `usma`, Engine type: `int`
+  stockMaximum: Int?
+  /// Rawcode: `usrg`, Engine type: `int`
+  stockReplenishInterval: Int?
+  /// Rawcode: `usst`, Engine type: `int`
+  stockStartDelay: Int?
+  /// Rawcode: `usit`, Engine type: `int`
+  stockInitialAfterStartDelay: Int?
+  /// Rawcode: `ustr`, Engine type: `int`
+  startingStrength: Int?
+  /// Rawcode: `ustp`, Engine type: `unreal`
+  strengthPerLevel: Number?
+  /// Rawcode: `util`, Engine type: `tilesetList`
+  tilesets: List<String>?
+  /// Rawcode: `utyp`, Engine type: `unitClass`
+  unitClassification: String?
+  /// Rawcode: `upgr`, Engine type: `upgradeList`
+  upgradesUsed: List<String>?
+  /// Rawcode: `uabr`, Engine type: `unreal`
+  aIPlacementRadius: Number?
+  /// Rawcode: `uabt`, Engine type: `aiBuffer`
+  aIPlacementType: String?
+  /// Rawcode: `ucbo`, Engine type: `bool`
+  canBuildOn: Boolean?
+  /// Rawcode: `ufle`, Engine type: `bool`
+  canFlee: Boolean?
+  /// Rawcode: `usle`, Engine type: `bool`
+  sleeps: Boolean?
+  /// Rawcode: `ucar`, Engine type: `int`
+  transportedSize: Int?
+  /// Rawcode: `udtm`, Engine type: `unreal`
+  deathTimeSeconds: Number?
+  /// Rawcode: `udea`, Engine type: `deathType`
+  deathType: String?
+  /// Rawcode: `ulos`, Engine type: `bool`
+  useExtendedLineOfSight: Boolean?
+  /// Rawcode: `ufor`, Engine type: `int`
+  formationRank: Int?
+  /// Rawcode: `uibo`, Engine type: `bool`
+  canBeBuiltOn: Boolean?
+  /// Rawcode: `umvf`, Engine type: `unreal`
+  heightMinimum: Number?
+  /// Rawcode: `umvh`, Engine type: `unreal`
+  height: Number?
+  /// Rawcode: `umvt`, Engine type: `moveType`
+  movementType: String?
+  /// Rawcode: `upru`, Engine type: `int`
+  properNamesUsed: Int?
+  /// Rawcode: `uori`, Engine type: `int`
+  orientationInterpolation: Int?
+  /// Rawcode: `upat`, Engine type: `pathingTexture`
+  pathingMap: String?
+  /// Rawcode: `upoi`, Engine type: `int`
+  pointValue: Int?
+  /// Rawcode: `upri`, Engine type: `int`
+  priority: Int?
+  /// Rawcode: `uprw`, Engine type: `unreal`
+  propulsionWindowDegrees: Number?
+  /// Rawcode: `urac`, Engine type: `unitRace`
+  race: String?
+  /// Rawcode: `upaw`, Engine type: `unreal`
+  placementRequiresWaterRadius: Number?
+  /// Rawcode: `utar`, Engine type: `targetList`
+  targetedAs: List<String>?
+  /// Rawcode: `umvr`, Engine type: `unreal`
+  turnRate: Number?
+  /// Rawcode: `uarm`, Engine type: `armorType`
+  armorType: String?
+  /// Rawcode: `uble`, Engine type: `real`
+  animationBlendTimeSeconds: Number?
+  /// Rawcode: `uclb`, Engine type: `int`
+  tintingColorBlue: Int?
+  /// Rawcode: `ushb`, Engine type: `shadowTexture`
+  shadowTextureBuilding: String?
+  /// Rawcode: `ucam`, Engine type: `bool`
+  categorizationCampaign: Boolean?
+  /// Rawcode: `utcc`, Engine type: `bool`
+  allowCustomTeamColor: Boolean?
+  /// Rawcode: `udro`, Engine type: `bool`
+  canDropItemsOnDeath: Boolean?
+  /// Rawcode: `uept`, Engine type: `int`
+  elevationSamplePoints: Int?
+  /// Rawcode: `uerd`, Engine type: `real`
+  elevationSampleRadius: Number?
+  /// Rawcode: `umdl`, Engine type: `model`
+  modelFile: String?
+  /// Rawcode: `upor`, Engine type: `model`
+  portraitModelFile: String?
+  /// Rawcode: `uver`, Engine type: `versionFlags`
+  modelFileExtraVersions: String?
+  /// Rawcode: `ufrd`, Engine type: `real`
+  fogOfWarSampleRadius: Number?
+  /// Rawcode: `uclg`, Engine type: `int`
+  tintingColorGreen: Int?
+  /// Rawcode: `uhos`, Engine type: `bool`
+  displayAsNeutralHostile: Boolean?
+  /// Rawcode: `uine`, Engine type: `bool`
+  placeableInEditor: Boolean?
+  /// Rawcode: `umxp`, Engine type: `real`
+  maximumPitchAngleDegrees: Number?
+  /// Rawcode: `umxr`, Engine type: `real`
+  maximumRollAngleDegrees: Number?
+  /// Rawcode: `usca`, Engine type: `real`
+  scalingValue: Number?
+  /// Rawcode: `unbm`, Engine type: `bool`
+  neutralBuildingShowsMinimapIcon: Boolean?
+  /// Rawcode: `uhhb`, Engine type: `bool`
+  heroHideHeroInterfaceIcon: Boolean?
+  /// Rawcode: `uhhm`, Engine type: `bool`
+  heroHideHeroMinimapDisplay: Boolean?
+  /// Rawcode: `uhhd`, Engine type: `bool`
+  heroHideHeroDeathMessage: Boolean?
+  /// Rawcode: `uhom`, Engine type: `bool`
+  hideMinimapDisplay: Boolean?
+  /// Rawcode: `uocc`, Engine type: `unreal`
+  occluderHeight: Number?
+  /// Rawcode: `uclr`, Engine type: `int`
+  tintingColorRed: Int?
+  /// Rawcode: `urun`, Engine type: `real`
+  animationRunSpeed: Number?
+  /// Rawcode: `ussc`, Engine type: `real`
+  selectionScale: Number?
+  /// Rawcode: `uscb`, Engine type: `bool`
+  scaleProjectiles: Boolean?
+  /// Rawcode: `usew`, Engine type: `bool`
+  selectionCircleOnWater: Boolean?
+  /// Rawcode: `uslz`, Engine type: `real`
+  selectionCircleHeight: Number?
+  /// Rawcode: `ushh`, Engine type: `real`
+  shadowImageHeight: Number?
+  /// Rawcode: `ushr`, Engine type: `bool`
+  hasWaterShadow: Boolean?
+  /// Rawcode: `ushw`, Engine type: `real`
+  shadowImageWidth: Number?
+  /// Rawcode: `ushx`, Engine type: `real`
+  shadowImageCenterX: Number?
+  /// Rawcode: `ushy`, Engine type: `real`
+  shadowImageCenterY: Number?
+  /// Rawcode: `uspe`, Engine type: `bool`
+  categorizationSpecial: Boolean?
+  /// Rawcode: `utco`, Engine type: `teamColor`
+  teamColor: String?
+  /// Rawcode: `utss`, Engine type: `bool`
+  hasTilesetSpecificData: Boolean?
+  /// Rawcode: `uubs`, Engine type: `uberSplat`
+  groundTexture: String?
+  /// Rawcode: `ushu`, Engine type: `shadowImage`
+  shadowImageUnit: String?
+  /// Rawcode: `usnd`, Engine type: `unitSound`
+  unitSoundSet: String?
+  /// Rawcode: `uuch`, Engine type: `bool`
+  useClickHelper: Boolean?
+  /// Rawcode: `uwal`, Engine type: `real`
+  animationWalkSpeed: Number?
+  /// Rawcode: `uacq`, Engine type: `unreal`
+  acquisitionRange: Number?
+  /// Rawcode: `ua1t`, Engine type: `attackType`
+  attack1AttackType: String?
+  /// Rawcode: `ua2t`, Engine type: `attackType`
+  attack2AttackType: String?
+  /// Rawcode: `ubs1`, Engine type: `unreal`
+  attack1AnimationBackswingPoint: Number?
+  /// Rawcode: `ubs2`, Engine type: `unreal`
+  attack2AnimationBackswingPoint: Number?
+  /// Rawcode: `ucbs`, Engine type: `unreal`
+  animationCastBackswing: Number?
+  /// Rawcode: `ucpt`, Engine type: `unreal`
+  animationCastPoint: Number?
+  /// Rawcode: `ua1c`, Engine type: `unreal`
+  attack1CooldownTime: Number?
+  /// Rawcode: `ua2c`, Engine type: `unreal`
+  attack2CooldownTime: Number?
+  /// Rawcode: `udl1`, Engine type: `unreal`
+  attack1DamageLossFactor: Number?
+  /// Rawcode: `udl2`, Engine type: `unreal`
+  attack2DamageLossFactor: Number?
+  /// Rawcode: `ua1d`, Engine type: `int`
+  attack1DamageNumberOfDice: Int?
+  /// Rawcode: `ua2d`, Engine type: `int`
+  attack2DamageNumberOfDice: Int?
+  /// Rawcode: `ua1b`, Engine type: `int`
+  attack1DamageBase: Int?
+  /// Rawcode: `ua2b`, Engine type: `int`
+  attack2DamageBase: Int?
+  /// Rawcode: `udp1`, Engine type: `unreal`
+  attack1AnimationDamagePoint: Number?
+  /// Rawcode: `udp2`, Engine type: `unreal`
+  attack2AnimationDamagePoint: Number?
+  /// Rawcode: `udu1`, Engine type: `int`
+  attack1DamageUpgradeAmount: Int?
+  /// Rawcode: `udu2`, Engine type: `int`
+  attack2DamageUpgradeAmount: Int?
+  /// Rawcode: `ua1f`, Engine type: `int`
+  attack1AreaOfEffectFullDamage: Int?
+  /// Rawcode: `ua2f`, Engine type: `int`
+  attack2AreaOfEffectFullDamage: Int?
+  /// Rawcode: `ua1h`, Engine type: `int`
+  attack1AreaOfEffectMediumDamage: Int?
+  /// Rawcode: `ua2h`, Engine type: `int`
+  attack2AreaOfEffectMediumDamage: Int?
+  /// Rawcode: `uhd1`, Engine type: `unreal`
+  attack1DamageFactorMedium: Number?
+  /// Rawcode: `uhd2`, Engine type: `unreal`
+  attack2DamageFactorMedium: Number?
+  /// Rawcode: `uisz`, Engine type: `unreal`
+  projectileImpactZSwimming: Number?
+  /// Rawcode: `uimz`, Engine type: `unreal`
+  projectileImpactZ: Number?
+  /// Rawcode: `ulsz`, Engine type: `unreal`
+  projectileLaunchZSwimming: Number?
+  /// Rawcode: `ulpx`, Engine type: `unreal`
+  projectileLaunchX: Number?
+  /// Rawcode: `ulpy`, Engine type: `unreal`
+  projectileLaunchY: Number?
+  /// Rawcode: `ulpz`, Engine type: `unreal`
+  projectileLaunchZ: Number?
+  /// Rawcode: `uamn`, Engine type: `int`
+  minimumAttackRange: Int?
+  /// Rawcode: `ua1q`, Engine type: `int`
+  attack1AreaOfEffectSmallDamage: Int?
+  /// Rawcode: `ua2q`, Engine type: `int`
+  attack2AreaOfEffectSmallDamage: Int?
+  /// Rawcode: `uqd1`, Engine type: `unreal`
+  attack1DamageFactorSmall: Number?
+  /// Rawcode: `uqd2`, Engine type: `unreal`
+  attack2DamageFactorSmall: Number?
+  /// Rawcode: `ua1r`, Engine type: `int`
+  attack1Range: Int?
+  /// Rawcode: `ua2r`, Engine type: `int`
+  attack2Range: Int?
+  /// Rawcode: `urb1`, Engine type: `unreal`
+  attack1RangeMotionBuffer: Number?
+  /// Rawcode: `urb2`, Engine type: `unreal`
+  attack2RangeMotionBuffer: Number?
+  /// Rawcode: `uwu1`, Engine type: `bool`
+  attack1ShowUI: Boolean?
+  /// Rawcode: `uwu2`, Engine type: `bool`
+  attack2ShowUI: Boolean?
+  /// Rawcode: `ua1s`, Engine type: `int`
+  attack1DamageSidesPerDie: Int?
+  /// Rawcode: `ua2s`, Engine type: `int`
+  attack2DamageSidesPerDie: Int?
+  /// Rawcode: `usd1`, Engine type: `unreal`
+  attack1DamageSpillDistance: Number?
+  /// Rawcode: `usd2`, Engine type: `unreal`
+  attack2DamageSpillDistance: Number?
+  /// Rawcode: `usr1`, Engine type: `unreal`
+  attack1DamageSpillRadius: Number?
+  /// Rawcode: `usr2`, Engine type: `unreal`
+  attack2DamageSpillRadius: Number?
+  /// Rawcode: `ua1p`, Engine type: `targetList`
+  attack1AreaOfEffectTargets: List<String>?
+  /// Rawcode: `ua2p`, Engine type: `targetList`
+  attack2AreaOfEffectTargets: List<String>?
+  /// Rawcode: `utc1`, Engine type: `int`
+  attack1MaximumNumberOfTargets: Int?
+  /// Rawcode: `utc2`, Engine type: `int`
+  attack2MaximumNumberOfTargets: Int?
+  /// Rawcode: `ua1g`, Engine type: `targetList`
+  attack1TargetsAllowed: List<String>?
+  /// Rawcode: `ua2g`, Engine type: `targetList`
+  attack2TargetsAllowed: List<String>?
+  /// Rawcode: `uaen`, Engine type: `attackBits`
+  attacksEnabled: String?
+  /// Rawcode: `ua1w`, Engine type: `weaponType`
+  attack1WeaponType: String?
+  /// Rawcode: `ua2w`, Engine type: `weaponType`
+  attack2WeaponType: String?
+  /// Rawcode: `ucs1`, Engine type: `combatSound`
+  attack1WeaponSound: String?
+  /// Rawcode: `ucs2`, Engine type: `combatSound`
+  attack2WeaponSound: String?
+  /// Rawcode: `uabs`, Engine type: `abilitySkinList`
+  normalSkin: List<String>?
+  /// Rawcode: `uhas`, Engine type: `abilitySkinList`
+  heroSkin: List<String>?
+}

@@ -1,0 +1,13 @@
+module wc3.schema.items
+
+import "../bases.pkl" as bases
+import "types.pkl" as types
+import "common.pkl" as common
+import "generated/items_props.pkl" as generated
+
+/// Warcraft III inventory item definition.
+/// Inherits all 42 item properties from `GeneratedItemProps`.
+open class Item extends generated.GeneratedItemProps {
+  id: types.ItemId
+  base: bases.BaseItemId
+}

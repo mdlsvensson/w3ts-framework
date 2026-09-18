@@ -1,0 +1,7950 @@
+/// Generated Warcraft III Base Object IDs and Constants
+/// Run `npm run bases:gen` to regenerate.
+module wc3.bases
+
+typealias BaseUnitId =
+  "Ecen" |
+  "Edem" |
+  "Edmm" |
+  "Eevi" |
+  "Eevm" |
+  "Efur" |
+  "Eidm" |
+  "Eill" |
+  "Eilm" |
+  "Ekee" |
+  "Ekgg" |
+  "Emfr" |
+  "Emns" |
+  "Emoo" |
+  "Etyr" |
+  "Ewar" |
+  "Ewrd" |
+  "Haah" |
+  "Hamg" |
+  "Hant" |
+  "Hapm" |
+  "Harf" |
+  "Hart" |
+  "Hblm" |
+  "Hddt" |
+  "Hdgo" |
+  "Hgam" |
+  "Hhkl" |
+  "Hjai" |
+  "Hjnd" |
+  "Hkal" |
+  "Hlgr" |
+  "Hmbr" |
+  "Hmgd" |
+  "Hmkg" |
+  "Hpal" |
+  "Hpb1" |
+  "Hpb2" |
+  "Hssa" |
+  "Huth" |
+  "Hvsh" |
+  "Hvwd" |
+  "Naka" |
+  "Nal2" |
+  "Nal3" |
+  "Nalc" |
+  "Nalm" |
+  "Nbbc" |
+  "Nbrn" |
+  "Nbst" |
+  "Nfir" |
+  "Nkjx" |
+  "Nklj" |
+  "Nmag" |
+  "Nman" |
+  "Nmsr" |
+  "Nngs" |
+  "Npbm" |
+  "Npld" |
+  "Nplh" |
+  "Nrob" |
+  "Nsjs" |
+  "Nswt" |
+  "Ntin" |
+  "Obla" |
+  "Ocb2" |
+  "Ocbh" |
+  "Odrt" |
+  "Ofar" |
+  "Ogld" |
+  "Ogrh" |
+  "Opgh" |
+  "Orex" |
+  "Orkn" |
+  "Osam" |
+  "Oshd" |
+  "Otcc" |
+  "Otch" |
+  "Othr" |
+  "Oths" |
+  "Uanb" |
+  "Ubal" |
+  "Uclc" |
+  "Ucrl" |
+  "Udea" |
+  "Udre" |
+  "Udth" |
+  "Uear" |
+  "Uktl" |
+  "Ulic" |
+  "Umal" |
+  "Usyl" |
+  "Utic" |
+  "Uvar" |
+  "Uvng" |
+  "Uwar" |
+  "eaoe" |
+  "eaom" |
+  "eaow" |
+  "earc" |
+  "eate" |
+  "ebal" |
+  "ebsh" |
+  "echm" |
+  "edcm" |
+  "eden" |
+  "edes" |
+  "edob" |
+  "edoc" |
+  "edos" |
+  "edot" |
+  "edry" |
+  "edtm" |
+  "efdr" |
+  "efon" |
+  "egol" |
+  "ehip" |
+  "ehpr" |
+  "eilw" |
+  "emow" |
+  "emtg" |
+  "enec" |
+  "ensh" |
+  "esen" |
+  "eshd" |
+  "eshy" |
+  "espv" |
+  "etoa" |
+  "etoe" |
+  "etol" |
+  "etrp" |
+  "etrs" |
+  "even" |
+  "ewsp" |
+  "halt" |
+  "harm" |
+  "haro" |
+  "hars" |
+  "hatw" |
+  "hbar" |
+  "hbew" |
+  "hbla" |
+  "hbot" |
+  "hbsh" |
+  "hcas" |
+  "hcth" |
+  "hctw" |
+  "hdes" |
+  "hdhw" |
+  "hfoo" |
+  "hgra" |
+  "hgry" |
+  "hgtw" |
+  "hgyr" |
+  "hhdl" |
+  "hhes" |
+  "hhou" |
+  "hkee" |
+  "hkni" |
+  "hlum" |
+  "hmil" |
+  "hmpr" |
+  "hmtm" |
+  "hmtt" |
+  "hpea" |
+  "hphx" |
+  "hprt" |
+  "hpxe" |
+  "hrdh" |
+  "hrif" |
+  "hrrh" |
+  "hrtt" |
+  "hshy" |
+  "hsor" |
+  "hspt" |
+  "htow" |
+  "hvlt" |
+  "hwat" |
+  "hwt2" |
+  "hwt3" |
+  "hwtw" |
+  "nadk" |
+  "nadr" |
+  "nadw" |
+  "nahy" |
+  "nalb" |
+  "nanb" |
+  "nanc" |
+  "nane" |
+  "nanm" |
+  "nano" |
+  "nanw" |
+  "narg" |
+  "nass" |
+  "nba2" |
+  "nbal" |
+  "nban" |
+  "nbda" |
+  "nbdk" |
+  "nbdm" |
+  "nbdo" |
+  "nbdr" |
+  "nbds" |
+  "nbdw" |
+  "nbee" |
+  "nbel" |
+  "nbfl" |
+  "nbld" |
+  "nbnb" |
+  "nbot" |
+  "nbrg" |
+  "nbse" |
+  "nbsm" |
+  "nbsp" |
+  "nbsw" |
+  "nbt1" |
+  "nbt2" |
+  "nbwd" |
+  "nbwm" |
+  "nbzd" |
+  "nbzk" |
+  "nbzw" |
+  "ncap" |
+  "ncat" |
+  "ncaw" |
+  "ncb0" |
+  "ncb1" |
+  "ncb2" |
+  "ncb3" |
+  "ncb4" |
+  "ncb5" |
+  "ncb6" |
+  "ncb7" |
+  "ncb8" |
+  "ncb9" |
+  "ncba" |
+  "ncbb" |
+  "ncbc" |
+  "ncbd" |
+  "ncbe" |
+  "ncbf" |
+  "nccd" |
+  "ncco" |
+  "nccr" |
+  "nccu" |
+  "ncea" |
+  "ncen" |
+  "ncer" |
+  "ncfs" |
+  "ncg1" |
+  "ncg2" |
+  "ncg3" |
+  "ncgb" |
+  "nchg" |
+  "nchp" |
+  "nchr" |
+  "nchw" |
+  "ncim" |
+  "nckb" |
+  "ncks" |
+  "ncmw" |
+  "ncnk" |
+  "ncnt" |
+  "ncop" |
+  "ncp2" |
+  "ncp3" |
+  "ncpn" |
+  "ncrb" |
+  "nct1" |
+  "nct2" |
+  "ncta" |
+  "ncte" |
+  "nctl" |
+  "ndch" |
+  "nder" |
+  "ndfl" |
+  "ndgt" |
+  "ndh0" |
+  "ndh1" |
+  "ndh2" |
+  "ndh3" |
+  "ndh4" |
+  "ndke" |
+  "ndkw" |
+  "ndmg" |
+  "ndmu" |
+  "ndog" |
+  "ndqn" |
+  "ndqp" |
+  "ndqs" |
+  "ndqt" |
+  "ndqv" |
+  "ndr1" |
+  "ndr2" |
+  "ndr3" |
+  "ndrb" |
+  "ndrd" |
+  "ndrf" |
+  "ndrg" |
+  "ndrh" |
+  "ndrj" |
+  "ndrk" |
+  "ndrl" |
+  "ndrm" |
+  "ndrn" |
+  "ndro" |
+  "ndrp" |
+  "ndrr" |
+  "ndrs" |
+  "ndrt" |
+  "ndru" |
+  "ndrv" |
+  "ndrw" |
+  "ndrz" |
+  "ndsa" |
+  "ndt1" |
+  "ndt2" |
+  "ndtb" |
+  "ndth" |
+  "ndtp" |
+  "ndtr" |
+  "ndtt" |
+  "ndtw" |
+  "ndwm" |
+  "nech" |
+  "necr" |
+  "nef0" |
+  "nef1" |
+  "nef2" |
+  "nef3" |
+  "nef4" |
+  "nef5" |
+  "nef6" |
+  "nef7" |
+  "nefm" |
+  "negf" |
+  "negm" |
+  "negt" |
+  "negz" |
+  "nehy" |
+  "nelb" |
+  "nele" |
+  "nemi" |
+  "nenc" |
+  "nenf" |
+  "nenp" |
+  "nepl" |
+  "nerd" |
+  "ners" |
+  "nerw" |
+  "net1" |
+  "net2" |
+  "nfa1" |
+  "nfa2" |
+  "nfac" |
+  "nfbr" |
+  "nfel" |
+  "nfgb" |
+  "nfgl" |
+  "nfgo" |
+  "nfgt" |
+  "nfgu" |
+  "nfh0" |
+  "nfh1" |
+  "nfnp" |
+  "nfod" |
+  "nfoh" |
+  "nfor" |
+  "nfot" |
+  "nfov" |
+  "nfpc" |
+  "nfpe" |
+  "nfpl" |
+  "nfps" |
+  "nfpt" |
+  "nfpu" |
+  "nfr1" |
+  "nfr2" |
+  "nfra" |
+  "nfrb" |
+  "nfre" |
+  "nfrg" |
+  "nfrl" |
+  "nfrm" |
+  "nfro" |
+  "nfrp" |
+  "nfrs" |
+  "nfrt" |
+  "nfsh" |
+  "nfsp" |
+  "nft1" |
+  "nft2" |
+  "nftb" |
+  "nftk" |
+  "nftr" |
+  "nftt" |
+  "nfv0" |
+  "nfv1" |
+  "nfv2" |
+  "nfv3" |
+  "nfv4" |
+  "ngad" |
+  "ngbl" |
+  "ngdk" |
+  "nggd" |
+  "nggg" |
+  "nggm" |
+  "nggr" |
+  "ngh1" |
+  "ngh2" |
+  "ngir" |
+  "nglm" |
+  "ngme" |
+  "ngna" |
+  "ngnb" |
+  "ngnh" |
+  "ngni" |
+  "ngno" |
+  "ngns" |
+  "ngnv" |
+  "ngnw" |
+  "ngob" |
+  "ngog" |
+  "ngol" |
+  "ngos" |
+  "ngow" |
+  "ngrd" |
+  "ngrk" |
+  "ngrw" |
+  "ngsp" |
+  "ngst" |
+  "ngt2" |
+  "ngwr" |
+  "ngz1" |
+  "ngz2" |
+  "ngz3" |
+  "ngz4" |
+  "ngza" |
+  "ngzc" |
+  "ngzd" |
+  "nhar" |
+  "nhcn" |
+  "nhdc" |
+  "nhea" |
+  "nheb" |
+  "nhef" |
+  "nhem" |
+  "nhew" |
+  "nhfp" |
+  "nhhr" |
+  "nhmc" |
+  "nhn2" |
+  "nhns" |
+  "nhrh" |
+  "nhrq" |
+  "nhrr" |
+  "nhrw" |
+  "nhyc" |
+  "nhyd" |
+  "nhyh" |
+  "nhym" |
+  "nico" |
+  "nina" |
+  "ninc" |
+  "ninf" |
+  "ninm" |
+  "nitb" |
+  "nith" |
+  "nitp" |
+  "nitr" |
+  "nits" |
+  "nitt" |
+  "nitw" |
+  "njg1" |
+  "njga" |
+  "njgb" |
+  "njks" |
+  "nkob" |
+  "nkog" |
+  "nkol" |
+  "nkot" |
+  "nlds" |
+  "nlkl" |
+  "nlpd" |
+  "nlpr" |
+  "nlps" |
+  "nlrv" |
+  "nlsn" |
+  "nltc" |
+  "nltl" |
+  "nlur" |
+  "nlv1" |
+  "nlv2" |
+  "nlv3" |
+  "nmam" |
+  "nmbg" |
+  "nmcf" |
+  "nmdm" |
+  "nmdr" |
+  "nmed" |
+  "nmer" |
+  "nmfs" |
+  "nmg0" |
+  "nmg1" |
+  "nmg2" |
+  "nmgd" |
+  "nmgr" |
+  "nmgv" |
+  "nmgw" |
+  "nmh0" |
+  "nmh1" |
+  "nmit" |
+  "nmmu" |
+  "nmoo" |
+  "nmpe" |
+  "nmpg" |
+  "nmr0" |
+  "nmr2" |
+  "nmr3" |
+  "nmr4" |
+  "nmr5" |
+  "nmr6" |
+  "nmr7" |
+  "nmr8" |
+  "nmr9" |
+  "nmra" |
+  "nmrb" |
+  "nmrc" |
+  "nmrd" |
+  "nmre" |
+  "nmrf" |
+  "nmrk" |
+  "nmrl" |
+  "nmrm" |
+  "nmrr" |
+  "nmrv" |
+  "nmsc" |
+  "nmsh" |
+  "nmsn" |
+  "nmtw" |
+  "nmyr" |
+  "nmys" |
+  "nnad" |
+  "nndk" |
+  "nndr" |
+  "nnfm" |
+  "nnht" |
+  "nnmg" |
+  "nnrg" |
+  "nnrs" |
+  "nnsa" |
+  "nnsg" |
+  "nnsu" |
+  "nnsw" |
+  "nntg" |
+  "nntt" |
+  "nnwa" |
+  "nnwl" |
+  "nnwq" |
+  "nnwr" |
+  "nnws" |
+  "nnzg" |
+  "noga" |
+  "nogl" |
+  "nogm" |
+  "nogn" |
+  "nogo" |
+  "nogr" |
+  "nomg" |
+  "now2" |
+  "now3" |
+  "nowb" |
+  "nowe" |
+  "nowk" |
+  "nowl" |
+  "npfl" |
+  "npfm" |
+  "npgf" |
+  "npgr" |
+  "npig" |
+  "nplb" |
+  "nplg" |
+  "npn1" |
+  "npn2" |
+  "npn3" |
+  "npn4" |
+  "npn5" |
+  "npn6" |
+  "npng" |
+  "npnw" |
+  "nqb1" |
+  "nqb2" |
+  "nqb3" |
+  "nqb4" |
+  "nqbh" |
+  "nrac" |
+  "nrat" |
+  "nrdk" |
+  "nrdr" |
+  "nrel" |
+  "nrog" |
+  "nrvd" |
+  "nrvf" |
+  "nrvi" |
+  "nrvl" |
+  "nrvs" |
+  "nrwm" |
+  "nrzb" |
+  "nrzg" |
+  "nrzm" |
+  "nrzs" |
+  "nrzt" |
+  "nsat" |
+  "nsbm" |
+  "nsbs" |
+  "nsc2" |
+  "nsc3" |
+  "nsca" |
+  "nscb" |
+  "nsce" |
+  "nsea" |
+  "nsel" |
+  "nser" |
+  "nsgb" |
+  "nsgg" |
+  "nsgh" |
+  "nsgn" |
+  "nsgt" |
+  "nsha" |
+  "nshe" |
+  "nshf" |
+  "nshp" |
+  "nshr" |
+  "nshw" |
+  "nska" |
+  "nske" |
+  "nskf" |
+  "nskg" |
+  "nskk" |
+  "nskm" |
+  "nsko" |
+  "nslf" |
+  "nslh" |
+  "nsll" |
+  "nslm" |
+  "nsln" |
+  "nslr" |
+  "nslv" |
+  "nsno" |
+  "nsnp" |
+  "nsns" |
+  "nsoc" |
+  "nsog" |
+  "nspb" |
+  "nspc" |
+  "nspd" |
+  "nspg" |
+  "nspp" |
+  "nspr" |
+  "nsqa" |
+  "nsqe" |
+  "nsqo" |
+  "nsqt" |
+  "nsra" |
+  "nsrh" |
+  "nsrn" |
+  "nsrv" |
+  "nsrw" |
+  "nssn" |
+  "nssp" |
+  "nsth" |
+  "nstl" |
+  "nsts" |
+  "nstw" |
+  "nsty" |
+  "nsw1" |
+  "nsw2" |
+  "nsw3" |
+  "ntav" |
+  "nten" |
+  "nth0" |
+  "nth1" |
+  "nthl" |
+  "nthr" |
+  "ntka" |
+  "ntkc" |
+  "ntkf" |
+  "ntkh" |
+  "ntks" |
+  "ntkt" |
+  "ntkw" |
+  "ntn2" |
+  "ntn3" |
+  "ntnt" |
+  "ntor" |
+  "ntrd" |
+  "ntrg" |
+  "ntrh" |
+  "ntrs" |
+  "ntrt" |
+  "ntrv" |
+  "ntt1" |
+  "ntt2" |
+  "ntws" |
+  "ntx2" |
+  "nubk" |
+  "nubr" |
+  "nubw" |
+  "nvde" |
+  "nvdg" |
+  "nvdl" |
+  "nvdw" |
+  "nvil" |
+  "nvk2" |
+  "nvl2" |
+  "nvlk" |
+  "nvlw" |
+  "nvr0" |
+  "nvr1" |
+  "nvr2" |
+  "nvul" |
+  "nw2w" |
+  "nwad" |
+  "nwar" |
+  "nwat" |
+  "nwc1" |
+  "nwc2" |
+  "nwc3" |
+  "nwc4" |
+  "nwe1" |
+  "nwe2" |
+  "nwe3" |
+  "nwen" |
+  "nwgs" |
+  "nwgt" |
+  "nwiz" |
+  "nwld" |
+  "nwlg" |
+  "nwlt" |
+  "nwna" |
+  "nwnr" |
+  "nwns" |
+  "nwrg" |
+  "nws1" |
+  "nwwd" |
+  "nwwf" |
+  "nwwg" |
+  "nwzd" |
+  "nwzg" |
+  "nwzr" |
+  "nwzw" |
+  "nzep" |
+  "nzin" |
+  "nzlc" |
+  "nzof" |
+  "nzom" |
+  "oalt" |
+  "obai" |
+  "obar" |
+  "obea" |
+  "obot" |
+  "ocat" |
+  "ocbw" |
+  "odes" |
+  "odkt" |
+  "odoc" |
+  "oeye" |
+  "ofor" |
+  "ofrt" |
+  "ogre" |
+  "ogrk" |
+  "ogru" |
+  "ohun" |
+  "ohwd" |
+  "ojgn" |
+  "okod" |
+  "omtg" |
+  "onzg" |
+  "oosc" |
+  "opeo" |
+  "orai" |
+  "oshm" |
+  "oshy" |
+  "osld" |
+  "osp1" |
+  "osp2" |
+  "osp3" |
+  "osp4" |
+  "ospm" |
+  "ospw" |
+  "ostr" |
+  "osw1" |
+  "osw2" |
+  "osw3" |
+  "oswy" |
+  "otau" |
+  "otbk" |
+  "otbr" |
+  "otot" |
+  "otrb" |
+  "otto" |
+  "ovlj" |
+  "ovln" |
+  "owad" |
+  "owar" |
+  "ownr" |
+  "owtw" |
+  "owyv" |
+  "uabc" |
+  "uabo" |
+  "uaco" |
+  "uaod" |
+  "uarb" |
+  "uban" |
+  "ubdd" |
+  "ubdr" |
+  "ubon" |
+  "ubot" |
+  "ubsp" |
+  "ucrm" |
+  "ucry" |
+  "ucs1" |
+  "ucs2" |
+  "ucs3" |
+  "ucsB" |
+  "ucsC" |
+  "udes" |
+  "ufro" |
+  "ugar" |
+  "ugho" |
+  "ugol" |
+  "ugrm" |
+  "ugrv" |
+  "uktg" |
+  "uktn" |
+  "uloc" |
+  "umtw" |
+  "unec" |
+  "unp1" |
+  "unp2" |
+  "unpl" |
+  "uobs" |
+  "uplg" |
+  "usap" |
+  "usep" |
+  "ushd" |
+  "ushp" |
+  "uske" |
+  "uskm" |
+  "uslh" |
+  "uswb" |
+  "utod" |
+  "utom" |
+  "uubs" |
+  "uzg1" |
+  "uzg2" |
+  "uzig" |
+  "zcso" |
+  "zhyd" |
+  "zjug" |
+  "zmar" |
+  "zshv" |
+  "zsmc" |
+  "zzrg"
+
+typealias BaseItemId =
+  "afac" |
+  "ajen" |
+  "amrc" |
+  "anfg" |
+  "ankh" |
+  "arsc" |
+  "arsh" |
+  "asbl" |
+  "axas" |
+  "azhr" |
+  "belv" |
+  "bfhr" |
+  "bgst" |
+  "blba" |
+  "brac" |
+  "brag" |
+  "bspd" |
+  "btst" |
+  "bzbe" |
+  "bzbf" |
+  "ccmd" |
+  "ches" |
+  "ciri" |
+  "ckng" |
+  "clfm" |
+  "clsd" |
+  "cnhn" |
+  "cnob" |
+  "cosl" |
+  "crdt" |
+  "crys" |
+  "desc" |
+  "dkfw" |
+  "dphe" |
+  "drph" |
+  "dsum" |
+  "dthb" |
+  "dtsb" |
+  "dust" |
+  "engr" |
+  "engs" |
+  "envl" |
+  "esaz" |
+  "evtl" |
+  "fgbd" |
+  "fgdg" |
+  "fgfh" |
+  "fgrd" |
+  "fgrg" |
+  "fgsk" |
+  "fgun" |
+  "flag" |
+  "frgd" |
+  "frhg" |
+  "fwss" |
+  "gcel" |
+  "gemt" |
+  "gfor" |
+  "gldo" |
+  "glsk" |
+  "gmfr" |
+  "gobm" |
+  "gold" |
+  "gomn" |
+  "gopr" |
+  "grsl" |
+  "gsou" |
+  "guvi" |
+  "gvsm" |
+  "hbth" |
+  "hcun" |
+  "hlst" |
+  "horl" |
+  "hslv" |
+  "hval" |
+  "infs" |
+  "iotw" |
+  "iwbr" |
+  "jdrn" |
+  "jpnt" |
+  "k3m1" |
+  "k3m2" |
+  "k3m3" |
+  "kgal" |
+  "klmm" |
+  "kpin" |
+  "ktrm" |
+  "kybl" |
+  "kygh" |
+  "kymn" |
+  "kysn" |
+  "ledg" |
+  "lgdh" |
+  "lhst" |
+  "lmbr" |
+  "lnrn" |
+  "lure" |
+  "manh" |
+  "mcou" |
+  "mcri" |
+  "mgtk" |
+  "mlst" |
+  "mnsf" |
+  "mnst" |
+  "modt" |
+  "moon" |
+  "mort" |
+  "nflg" |
+  "nspi" |
+  "ocor" |
+  "odef" |
+  "ofir" |
+  "oflg" |
+  "ofr2" |
+  "ofro" |
+  "oli2" |
+  "olig" |
+  "oslo" |
+  "oven" |
+  "pams" |
+  "pclr" |
+  "pdi2" |
+  "pdiv" |
+  "penr" |
+  "pghe" |
+  "pgin" |
+  "pgma" |
+  "phea" |
+  "phlt" |
+  "pinv" |
+  "plcl" |
+  "pman" |
+  "pmna" |
+  "pnvl" |
+  "pnvu" |
+  "pomn" |
+  "pres" |
+  "prvt" |
+  "pspd" |
+  "rag1" |
+  "ram1" |
+  "ram2" |
+  "ram3" |
+  "ram4" |
+  "rat3" |
+  "rat6" |
+  "rat9" |
+  "ratc" |
+  "ratf" |
+  "rde0" |
+  "rde1" |
+  "rde2" |
+  "rde3" |
+  "rde4" |
+  "rdis" |
+  "rej1" |
+  "rej2" |
+  "rej3" |
+  "rej4" |
+  "rej5" |
+  "rej6" |
+  "rhe1" |
+  "rhe2" |
+  "rhe3" |
+  "rhth" |
+  "rin1" |
+  "ritd" |
+  "rlif" |
+  "rma2" |
+  "rman" |
+  "rnec" |
+  "rnsp" |
+  "rots" |
+  "rre1" |
+  "rre2" |
+  "rreb" |
+  "rres" |
+  "rspd" |
+  "rspl" |
+  "rsps" |
+  "rst1" |
+  "rugt" |
+  "rump" |
+  "rwat" |
+  "rwiz" |
+  "sand" |
+  "sbch" |
+  "sbok" |
+  "scav" |
+  "schl" |
+  "sclp" |
+  "scul" |
+  "sehr" |
+  "sfog" |
+  "shar" |
+  "shas" |
+  "shcw" |
+  "shdt" |
+  "shea" |
+  "shen" |
+  "shhn" |
+  "shrs" |
+  "shtm" |
+  "shwd" |
+  "silk" |
+  "skrt" |
+  "sksh" |
+  "skul" |
+  "sman" |
+  "sneg" |
+  "sor1" |
+  "sor2" |
+  "sor3" |
+  "sor4" |
+  "sor5" |
+  "sor6" |
+  "sor7" |
+  "sor8" |
+  "sor9" |
+  "sora" |
+  "sorf" |
+  "soul" |
+  "spre" |
+  "sprn" |
+  "spro" |
+  "spsh" |
+  "srbd" |
+  "sreg" |
+  "sres" |
+  "sror" |
+  "srrc" |
+  "srtl" |
+  "ssan" |
+  "ssil" |
+  "stel" |
+  "stpg" |
+  "stre" |
+  "stwa" |
+  "stwp" |
+  "sxpl" |
+  "tbak" |
+  "tbar" |
+  "tbsm" |
+  "tcas" |
+  "tdex" |
+  "tdx2" |
+  "tels" |
+  "texp" |
+  "tfar" |
+  "tgrh" |
+  "tgxp" |
+  "thdm" |
+  "thle" |
+  "tin2" |
+  "tint" |
+  "tkno" |
+  "tlum" |
+  "tmmt" |
+  "tmsc" |
+  "totw" |
+  "tpow" |
+  "tret" |
+  "tsct" |
+  "tst2" |
+  "tstr" |
+  "uflg" |
+  "vamp" |
+  "vddl" |
+  "vpur" |
+  "war2" |
+  "ward" |
+  "wcyc" |
+  "whwd" |
+  "wild" |
+  "will" |
+  "wlsd" |
+  "wneg" |
+  "wneu" |
+  "wolg" |
+  "woms" |
+  "wshs" |
+  "wswd" |
+  "wtlg"
+
+typealias BaseAbilityId =
+  "AAns" |
+  "ACac" |
+  "ACad" |
+  "ACah" |
+  "ACam" |
+  "ACat" |
+  "ACav" |
+  "ACba" |
+  "ACbb" |
+  "ACbc" |
+  "ACbf" |
+  "ACbh" |
+  "ACbk" |
+  "ACbl" |
+  "ACbn" |
+  "ACbz" |
+  "ACc2" |
+  "ACc3" |
+  "ACca" |
+  "ACcb" |
+  "ACce" |
+  "ACch" |
+  "ACcl" |
+  "ACcn" |
+  "ACcr" |
+  "ACcs" |
+  "ACct" |
+  "ACcv" |
+  "ACcw" |
+  "ACcy" |
+  "ACd2" |
+  "ACdc" |
+  "ACde" |
+  "ACdm" |
+  "ACdr" |
+  "ACds" |
+  "ACdv" |
+  "ACen" |
+  "ACes" |
+  "ACev" |
+  "ACf2" |
+  "ACf3" |
+  "ACfa" |
+  "ACfb" |
+  "ACfd" |
+  "ACff" |
+  "ACfl" |
+  "ACfn" |
+  "ACfr" |
+  "ACfs" |
+  "ACfu" |
+  "AChv" |
+  "AChw" |
+  "AChx" |
+  "ACif" |
+  "ACim" |
+  "ACls" |
+  "ACm2" |
+  "ACm3" |
+  "ACmf" |
+  "ACmi" |
+  "ACmo" |
+  "ACmp" |
+  "ACnr" |
+  "ACpa" |
+  "ACps" |
+  "ACpu" |
+  "ACpv" |
+  "ACpy" |
+  "ACr1" |
+  "ACr2" |
+  "ACrd" |
+  "ACrf" |
+  "ACrg" |
+  "ACrj" |
+  "ACrk" |
+  "ACrn" |
+  "ACro" |
+  "ACs7" |
+  "ACs8" |
+  "ACs9" |
+  "ACsa" |
+  "ACsf" |
+  "ACsh" |
+  "ACsi" |
+  "ACsk" |
+  "ACsl" |
+  "ACsm" |
+  "ACsp" |
+  "ACss" |
+  "ACst" |
+  "ACsw" |
+  "ACt2" |
+  "ACtb" |
+  "ACtc" |
+  "ACtn" |
+  "ACua" |
+  "ACuf" |
+  "ACvp" |
+  "ACvs" |
+  "ACwb" |
+  "ACwe" |
+  "AEIl" |
+  "AEah" |
+  "AEar" |
+  "AEbl" |
+  "AEbu" |
+  "AEer" |
+  "AEev" |
+  "AEfk" |
+  "AEfn" |
+  "AEim" |
+  "AEmb" |
+  "AEme" |
+  "AEpa" |
+  "AEsb" |
+  "AEsf" |
+  "AEsh" |
+  "AEst" |
+  "AEsv" |
+  "AEtq" |
+  "AEvi" |
+  "AGbu" |
+  "AHab" |
+  "AHad" |
+  "AHav" |
+  "AHbh" |
+  "AHbn" |
+  "AHbu" |
+  "AHbz" |
+  "AHca" |
+  "AHdr" |
+  "AHds" |
+  "AHer" |
+  "AHfa" |
+  "AHfs" |
+  "AHhb" |
+  "AHmt" |
+  "AHpx" |
+  "AHre" |
+  "AHta" |
+  "AHtb" |
+  "AHtc" |
+  "AHwe" |
+  "AI2m" |
+  "AIa1" |
+  "AIa3" |
+  "AIa4" |
+  "AIa5" |
+  "AIa6" |
+  "AIaa" |
+  "AIad" |
+  "AIae" |
+  "AIam" |
+  "AIan" |
+  "AIar" |
+  "AIat" |
+  "AIau" |
+  "AIav" |
+  "AIaz" |
+  "AIba" |
+  "AIbb" |
+  "AIbf" |
+  "AIbg" |
+  "AIbh" |
+  "AIbk" |
+  "AIbl" |
+  "AIbm" |
+  "AIbr" |
+  "AIbs" |
+  "AIbt" |
+  "AIbx" |
+  "AIcb" |
+  "AIcd" |
+  "AIcf" |
+  "AIcl" |
+  "AIcm" |
+  "AIco" |
+  "AIcs" |
+  "AIct" |
+  "AIcy" |
+  "AId0" |
+  "AId1" |
+  "AId2" |
+  "AId3" |
+  "AId4" |
+  "AId5" |
+  "AId7" |
+  "AId8" |
+  "AIda" |
+  "AIdb" |
+  "AIdc" |
+  "AIdd" |
+  "AIdf" |
+  "AIdg" |
+  "AIdi" |
+  "AIdm" |
+  "AIdn" |
+  "AIdp" |
+  "AIds" |
+  "AIdv" |
+  "AIe2" |
+  "AIem" |
+  "AIev" |
+  "AIf2" |
+  "AIfa" |
+  "AIfb" |
+  "AIfd" |
+  "AIfe" |
+  "AIff" |
+  "AIfg" |
+  "AIfh" |
+  "AIfl" |
+  "AIfm" |
+  "AIfn" |
+  "AIfo" |
+  "AIfr" |
+  "AIfs" |
+  "AIft" |
+  "AIfu" |
+  "AIfw" |
+  "AIfx" |
+  "AIfz" |
+  "AIg2" |
+  "AIgd" |
+  "AIgf" |
+  "AIgm" |
+  "AIgo" |
+  "AIgu" |
+  "AIgx" |
+  "AIh1" |
+  "AIh2" |
+  "AIh3" |
+  "AIha" |
+  "AIhb" |
+  "AIhl" |
+  "AIhm" |
+  "AIhw" |
+  "AIhx" |
+  "AIi1" |
+  "AIi3" |
+  "AIi4" |
+  "AIi5" |
+  "AIi6" |
+  "AIil" |
+  "AIim" |
+  "AIin" |
+  "AIir" |
+  "AIl1" |
+  "AIl2" |
+  "AIlb" |
+  "AIlf" |
+  "AIll" |
+  "AIlm" |
+  "AIlp" |
+  "AIls" |
+  "AIlu" |
+  "AIlx" |
+  "AIlz" |
+  "AIm1" |
+  "AIm2" |
+  "AImb" |
+  "AImh" |
+  "AImo" |
+  "AImr" |
+  "AIms" |
+  "AImt" |
+  "AImv" |
+  "AImx" |
+  "AImz" |
+  "AInd" |
+  "AInm" |
+  "AIno" |
+  "AInv" |
+  "AIob" |
+  "AIos" |
+  "AIp1" |
+  "AIp2" |
+  "AIp3" |
+  "AIp4" |
+  "AIp5" |
+  "AIp6" |
+  "AIpb" |
+  "AIpg" |
+  "AIpl" |
+  "AIpm" |
+  "AIpr" |
+  "AIps" |
+  "AIpv" |
+  "AIpw" |
+  "AIpx" |
+  "AIpz" |
+  "AIra" |
+  "AIrb" |
+  "AIrc" |
+  "AIrd" |
+  "AIre" |
+  "AIri" |
+  "AIrl" |
+  "AIrm" |
+  "AIrn" |
+  "AIrr" |
+  "AIrs" |
+  "AIrt" |
+  "AIrv" |
+  "AIrx" |
+  "AIs1" |
+  "AIs2" |
+  "AIs3" |
+  "AIs4" |
+  "AIs5" |
+  "AIs6" |
+  "AIsa" |
+  "AIsb" |
+  "AIse" |
+  "AIsh" |
+  "AIsi" |
+  "AIsl" |
+  "AIsm" |
+  "AIso" |
+  "AIsp" |
+  "AIsr" |
+  "AIsw" |
+  "AIsx" |
+  "AIsz" |
+  "AIt6" |
+  "AIt9" |
+  "AIta" |
+  "AItb" |
+  "AItc" |
+  "AItf" |
+  "AItg" |
+  "AIth" |
+  "AIti" |
+  "AItj" |
+  "AItk" |
+  "AItl" |
+  "AItm" |
+  "AItn" |
+  "AItp" |
+  "AIts" |
+  "AItx" |
+  "AIuf" |
+  "AIut" |
+  "AIuv" |
+  "AIuw" |
+  "AIv1" |
+  "AIv2" |
+  "AIva" |
+  "AIvg" |
+  "AIvl" |
+  "AIvu" |
+  "AIwb" |
+  "AIwd" |
+  "AIwm" |
+  "AIx1" |
+  "AIx2" |
+  "AIx3" |
+  "AIx4" |
+  "AIx5" |
+  "AIxk" |
+  "AIxm" |
+  "AIxs" |
+  "AIzb" |
+  "ANab" |
+  "ANak" |
+  "ANav" |
+  "ANb2" |
+  "ANba" |
+  "ANbf" |
+  "ANbh" |
+  "ANbl" |
+  "ANbr" |
+  "ANbs" |
+  "ANbu" |
+  "ANc1" |
+  "ANc2" |
+  "ANc3" |
+  "ANca" |
+  "ANcf" |
+  "ANch" |
+  "ANcl" |
+  "ANcr" |
+  "ANcs" |
+  "ANd1" |
+  "ANd2" |
+  "ANd3" |
+  "ANdb" |
+  "ANdc" |
+  "ANde" |
+  "ANdh" |
+  "ANdo" |
+  "ANdp" |
+  "ANdr" |
+  "ANef" |
+  "ANeg" |
+  "ANen" |
+  "ANfa" |
+  "ANfb" |
+  "ANfd" |
+  "ANfl" |
+  "ANfs" |
+  "ANfy" |
+  "ANg1" |
+  "ANg2" |
+  "ANg3" |
+  "ANha" |
+  "ANhs" |
+  "ANht" |
+  "ANhw" |
+  "ANhx" |
+  "ANia" |
+  "ANic" |
+  "ANin" |
+  "ANlm" |
+  "ANmo" |
+  "ANmr" |
+  "ANms" |
+  "ANpa" |
+  "ANpi" |
+  "ANpr" |
+  "ANr2" |
+  "ANr3" |
+  "ANrc" |
+  "ANre" |
+  "ANrf" |
+  "ANrg" |
+  "ANrn" |
+  "ANs1" |
+  "ANs2" |
+  "ANs3" |
+  "ANsa" |
+  "ANsb" |
+  "ANse" |
+  "ANsg" |
+  "ANsh" |
+  "ANsi" |
+  "ANsl" |
+  "ANso" |
+  "ANsq" |
+  "ANss" |
+  "ANst" |
+  "ANsw" |
+  "ANsy" |
+  "ANt2" |
+  "ANta" |
+  "ANth" |
+  "ANtm" |
+  "ANto" |
+  "ANtr" |
+  "ANvc" |
+  "ANwk" |
+  "ANwm" |
+  "AOae" |
+  "AObu" |
+  "AOcl" |
+  "AOcr" |
+  "AOeq" |
+  "AOfs" |
+  "AOhw" |
+  "AOhx" |
+  "AOls" |
+  "AOmi" |
+  "AOr2" |
+  "AOr3" |
+  "AOre" |
+  "AOs2" |
+  "AOsf" |
+  "AOsh" |
+  "AOsw" |
+  "AOvd" |
+  "AOw2" |
+  "AOwk" |
+  "AOws" |
+  "AOww" |
+  "APdi" |
+  "APh1" |
+  "APh2" |
+  "APh3" |
+  "APmg" |
+  "APmr" |
+  "APra" |
+  "APrl" |
+  "APrr" |
+  "APsa" |
+  "APwt" |
+  "ARal" |
+  "AUa2" |
+  "AUan" |
+  "AUau" |
+  "AUav" |
+  "AUbu" |
+  "AUcb" |
+  "AUcs" |
+  "AUdc" |
+  "AUdd" |
+  "AUdp" |
+  "AUdr" |
+  "AUds" |
+  "AUfa" |
+  "AUfn" |
+  "AUfu" |
+  "AUim" |
+  "AUin" |
+  "AUls" |
+  "AUsl" |
+  "AUts" |
+  "Aabr" |
+  "Aabs" |
+  "Aadm" |
+  "Aaha" |
+  "Aakb" |
+  "Aall" |
+  "Aalr" |
+  "Aam2" |
+  "Aamk" |
+  "Aams" |
+  "Aap1" |
+  "Aap2" |
+  "Aap3" |
+  "Aap4" |
+  "Aap5" |
+  "Aasl" |
+  "Aast" |
+  "Aatk" |
+  "Aatp" |
+  "Aave" |
+  "Aawa" |
+  "Abdl" |
+  "Abds" |
+  "Abdt" |
+  "Abgl" |
+  "Abgm" |
+  "Abgs" |
+  "Ablo" |
+  "Ablp" |
+  "Abof" |
+  "Abrf" |
+  "Absk" |
+  "Abtl" |
+  "Abu2" |
+  "Abu3" |
+  "Abu5" |
+  "Abun" |
+  "Abur" |
+  "Acan" |
+  "Acdb" |
+  "Acdh" |
+  "Acef" |
+  "Achd" |
+  "Ache" |
+  "Achl" |
+  "Acht" |
+  "Aclf" |
+  "Acmg" |
+  "Acn2" |
+  "Acny" |
+  "Aco2" |
+  "Aco3" |
+  "Acoa" |
+  "Acoh" |
+  "Acor" |
+  "Acpf" |
+  "Acri" |
+  "Acrs" |
+  "Acyc" |
+  "Adch" |
+  "Adcn" |
+  "Adda" |
+  "Adec" |
+  "Adef" |
+  "Adev" |
+  "Adis" |
+  "Adri" |
+  "Adro" |
+  "Adsm" |
+  "Adt1" |
+  "Adtg" |
+  "Adtn" |
+  "Adts" |
+  "Advc" |
+  "Advm" |
+  "Aeat" |
+  "Aegm" |
+  "Aegr" |
+  "Aeib" |
+  "Aemk" |
+  "Aenc" |
+  "Aenr" |
+  "Aens" |
+  "Aent" |
+  "Aenw" |
+  "Aesn" |
+  "Aesr" |
+  "Aetf" |
+  "Aeth" |
+  "Aetl" |
+  "Aews" |
+  "Aexh" |
+  "Aeye" |
+  "Afa2" |
+  "Afae" |
+  "Afak" |
+  "Afbb" |
+  "Afbk" |
+  "Afbt" |
+  "Afih" |
+  "Afin" |
+  "Afio" |
+  "Afir" |
+  "Afiu" |
+  "Afla" |
+  "Aflk" |
+  "Afod" |
+  "Afr2" |
+  "Afra" |
+  "Afrb" |
+  "Afrc" |
+  "Afrz" |
+  "Afsh" |
+  "Afzy" |
+  "Agho" |
+  "Agld" |
+  "Agra" |
+  "Agyb" |
+  "Agyd" |
+  "Agyv" |
+  "Ahan" |
+  "Ahar" |
+  "Ahea" |
+  "Ahid" |
+  "Ahlh" |
+  "Ahnl" |
+  "Ahpe" |
+  "Ahr2" |
+  "Ahr3" |
+  "Ahri" |
+  "Ahrl" |
+  "Ahrp" |
+  "Ahsb" |
+  "Ahwd" |
+  "Aien" |
+  "Aihn" |
+  "Aimp" |
+  "Ainf" |
+  "Aion" |
+  "Aiun" |
+  "Aivs" |
+  "Alam" |
+  "Aliq" |
+  "Alit" |
+  "Aloa" |
+  "Aloc" |
+  "Alsh" |
+  "Amb2" |
+  "Ambb" |
+  "Ambd" |
+  "Ambt" |
+  "Amdf" |
+  "Amec" |
+  "Amed" |
+  "Amel" |
+  "Amfl" |
+  "Amgi" |
+  "Amgl" |
+  "Amgr" |
+  "Amic" |
+  "Amil" |
+  "Amim" |
+  "Amin" |
+  "Amls" |
+  "Amnb" |
+  "Amnx" |
+  "Amnz" |
+  "Amov" |
+  "Amrf" |
+  "Andm" |
+  "Andt" |
+  "Ane2" |
+  "Aneu" |
+  "Anh1" |
+  "Anh2" |
+  "Anhe" |
+  "Ansk" |
+  "Aoar" |
+  "Aobk" |
+  "Aobs" |
+  "Aorb" |
+  "Aosp" |
+  "Aotr" |
+  "Apak" |
+  "Apg2" |
+  "Aphx" |
+  "Apig" |
+  "Apit" |
+  "Apiv" |
+  "Aply" |
+  "Apmf" |
+  "Apo2" |
+  "Apoi" |
+  "Apos" |
+  "Aprg" |
+  "Aps2" |
+  "Apsh" |
+  "Apts" |
+  "Apxf" |
+  "Ara2" |
+  "Arai" |
+  "Arav" |
+  "Arbr" |
+  "Arej" |
+  "Arel" |
+  "Aren" |
+  "Arep" |
+  "Aret" |
+  "Arev" |
+  "Argd" |
+  "Argl" |
+  "Arll" |
+  "Arlm" |
+  "Arng" |
+  "Aro1" |
+  "Aro2" |
+  "Aroa" |
+  "Aroc" |
+  "Arpb" |
+  "Arpl" |
+  "Arpm" |
+  "Arsg" |
+  "Arsk" |
+  "Arsp" |
+  "Arsq" |
+  "Arst" |
+  "Arsw" |
+  "Asac" |
+  "Asal" |
+  "Asb1" |
+  "Asb2" |
+  "Asb3" |
+  "Asd2" |
+  "Asd3" |
+  "Asdg" |
+  "Asds" |
+  "Ashm" |
+  "Ashs" |
+  "Asid" |
+  "Asla" |
+  "Aslo" |
+  "Aslp" |
+  "Asod" |
+  "Asou" |
+  "Asp1" |
+  "Asp2" |
+  "Asp3" |
+  "Asp4" |
+  "Asp5" |
+  "Asp6" |
+  "Aspa" |
+  "Aspb" |
+  "Aspd" |
+  "Asph" |
+  "Aspi" |
+  "Aspl" |
+  "Aspo" |
+  "Aspp" |
+  "Asps" |
+  "Aspt" |
+  "Aspy" |
+  "Assk" |
+  "Assp" |
+  "Asta" |
+  "Astd" |
+  "Aste" |
+  "Asth" |
+  "Astn" |
+  "Asud" |
+  "Atau" |
+  "Atdg" |
+  "Atdp" |
+  "Atlp" |
+  "Atol" |
+  "Atru" |
+  "Atsp" |
+  "Attu" |
+  "Atwa" |
+  "Auco" |
+  "Augf" |
+  "Augh" |
+  "Auhf" |
+  "Ault" |
+  "Auns" |
+  "Ausm" |
+  "Auuf" |
+  "Aven" |
+  "Avng" |
+  "Avul" |
+  "Awan" |
+  "Awar" |
+  "Aweb" |
+  "Awfb" |
+  "Awh2" |
+  "Awha" |
+  "Awrg" |
+  "Awrh" |
+  "Awrp" |
+  "Awrs" |
+  "SCae" |
+  "SCc1" |
+  "SCva" |
+  "SNdc" |
+  "SNdd" |
+  "SNeq" |
+  "SNin" |
+  "Sbsk" |
+  "Sbtl" |
+  "Sca1" |
+  "Sca2" |
+  "Sca3" |
+  "Sca4" |
+  "Sca5" |
+  "Sca6" |
+  "Sch2" |
+  "Sch3" |
+  "Sch4" |
+  "Sch5" |
+  "Scri" |
+  "Sdro" |
+  "Slo2" |
+  "Slo3" |
+  "Sloa" |
+  "Sshm" |
+  "Suhf"
+
+const StandardUnitIds: Set<String> = Set(
+  "Ecen",
+  "Edem",
+  "Edmm",
+  "Eevi",
+  "Eevm",
+  "Efur",
+  "Eidm",
+  "Eill",
+  "Eilm",
+  "Ekee",
+  "Ekgg",
+  "Emfr",
+  "Emns",
+  "Emoo",
+  "Etyr",
+  "Ewar",
+  "Ewrd",
+  "Haah",
+  "Hamg",
+  "Hant",
+  "Hapm",
+  "Harf",
+  "Hart",
+  "Hblm",
+  "Hddt",
+  "Hdgo",
+  "Hgam",
+  "Hhkl",
+  "Hjai",
+  "Hjnd",
+  "Hkal",
+  "Hlgr",
+  "Hmbr",
+  "Hmgd",
+  "Hmkg",
+  "Hpal",
+  "Hpb1",
+  "Hpb2",
+  "Hssa",
+  "Huth",
+  "Hvsh",
+  "Hvwd",
+  "Naka",
+  "Nal2",
+  "Nal3",
+  "Nalc",
+  "Nalm",
+  "Nbbc",
+  "Nbrn",
+  "Nbst",
+  "Nfir",
+  "Nkjx",
+  "Nklj",
+  "Nmag",
+  "Nman",
+  "Nmsr",
+  "Nngs",
+  "Npbm",
+  "Npld",
+  "Nplh",
+  "Nrob",
+  "Nsjs",
+  "Nswt",
+  "Ntin",
+  "Obla",
+  "Ocb2",
+  "Ocbh",
+  "Odrt",
+  "Ofar",
+  "Ogld",
+  "Ogrh",
+  "Opgh",
+  "Orex",
+  "Orkn",
+  "Osam",
+  "Oshd",
+  "Otcc",
+  "Otch",
+  "Othr",
+  "Oths",
+  "Uanb",
+  "Ubal",
+  "Uclc",
+  "Ucrl",
+  "Udea",
+  "Udre",
+  "Udth",
+  "Uear",
+  "Uktl",
+  "Ulic",
+  "Umal",
+  "Usyl",
+  "Utic",
+  "Uvar",
+  "Uvng",
+  "Uwar",
+  "eaoe",
+  "eaom",
+  "eaow",
+  "earc",
+  "eate",
+  "ebal",
+  "ebsh",
+  "echm",
+  "edcm",
+  "eden",
+  "edes",
+  "edob",
+  "edoc",
+  "edos",
+  "edot",
+  "edry",
+  "edtm",
+  "efdr",
+  "efon",
+  "egol",
+  "ehip",
+  "ehpr",
+  "eilw",
+  "emow",
+  "emtg",
+  "enec",
+  "ensh",
+  "esen",
+  "eshd",
+  "eshy",
+  "espv",
+  "etoa",
+  "etoe",
+  "etol",
+  "etrp",
+  "etrs",
+  "even",
+  "ewsp",
+  "halt",
+  "harm",
+  "haro",
+  "hars",
+  "hatw",
+  "hbar",
+  "hbew",
+  "hbla",
+  "hbot",
+  "hbsh",
+  "hcas",
+  "hcth",
+  "hctw",
+  "hdes",
+  "hdhw",
+  "hfoo",
+  "hgra",
+  "hgry",
+  "hgtw",
+  "hgyr",
+  "hhdl",
+  "hhes",
+  "hhou",
+  "hkee",
+  "hkni",
+  "hlum",
+  "hmil",
+  "hmpr",
+  "hmtm",
+  "hmtt",
+  "hpea",
+  "hphx",
+  "hprt",
+  "hpxe",
+  "hrdh",
+  "hrif",
+  "hrrh",
+  "hrtt",
+  "hshy",
+  "hsor",
+  "hspt",
+  "htow",
+  "hvlt",
+  "hwat",
+  "hwt2",
+  "hwt3",
+  "hwtw",
+  "nadk",
+  "nadr",
+  "nadw",
+  "nahy",
+  "nalb",
+  "nanb",
+  "nanc",
+  "nane",
+  "nanm",
+  "nano",
+  "nanw",
+  "narg",
+  "nass",
+  "nba2",
+  "nbal",
+  "nban",
+  "nbda",
+  "nbdk",
+  "nbdm",
+  "nbdo",
+  "nbdr",
+  "nbds",
+  "nbdw",
+  "nbee",
+  "nbel",
+  "nbfl",
+  "nbld",
+  "nbnb",
+  "nbot",
+  "nbrg",
+  "nbse",
+  "nbsm",
+  "nbsp",
+  "nbsw",
+  "nbt1",
+  "nbt2",
+  "nbwd",
+  "nbwm",
+  "nbzd",
+  "nbzk",
+  "nbzw",
+  "ncap",
+  "ncat",
+  "ncaw",
+  "ncb0",
+  "ncb1",
+  "ncb2",
+  "ncb3",
+  "ncb4",
+  "ncb5",
+  "ncb6",
+  "ncb7",
+  "ncb8",
+  "ncb9",
+  "ncba",
+  "ncbb",
+  "ncbc",
+  "ncbd",
+  "ncbe",
+  "ncbf",
+  "nccd",
+  "ncco",
+  "nccr",
+  "nccu",
+  "ncea",
+  "ncen",
+  "ncer",
+  "ncfs",
+  "ncg1",
+  "ncg2",
+  "ncg3",
+  "ncgb",
+  "nchg",
+  "nchp",
+  "nchr",
+  "nchw",
+  "ncim",
+  "nckb",
+  "ncks",
+  "ncmw",
+  "ncnk",
+  "ncnt",
+  "ncop",
+  "ncp2",
+  "ncp3",
+  "ncpn",
+  "ncrb",
+  "nct1",
+  "nct2",
+  "ncta",
+  "ncte",
+  "nctl",
+  "ndch",
+  "nder",
+  "ndfl",
+  "ndgt",
+  "ndh0",
+  "ndh1",
+  "ndh2",
+  "ndh3",
+  "ndh4",
+  "ndke",
+  "ndkw",
+  "ndmg",
+  "ndmu",
+  "ndog",
+  "ndqn",
+  "ndqp",
+  "ndqs",
+  "ndqt",
+  "ndqv",
+  "ndr1",
+  "ndr2",
+  "ndr3",
+  "ndrb",
+  "ndrd",
+  "ndrf",
+  "ndrg",
+  "ndrh",
+  "ndrj",
+  "ndrk",
+  "ndrl",
+  "ndrm",
+  "ndrn",
+  "ndro",
+  "ndrp",
+  "ndrr",
+  "ndrs",
+  "ndrt",
+  "ndru",
+  "ndrv",
+  "ndrw",
+  "ndrz",
+  "ndsa",
+  "ndt1",
+  "ndt2",
+  "ndtb",
+  "ndth",
+  "ndtp",
+  "ndtr",
+  "ndtt",
+  "ndtw",
+  "ndwm",
+  "nech",
+  "necr",
+  "nef0",
+  "nef1",
+  "nef2",
+  "nef3",
+  "nef4",
+  "nef5",
+  "nef6",
+  "nef7",
+  "nefm",
+  "negf",
+  "negm",
+  "negt",
+  "negz",
+  "nehy",
+  "nelb",
+  "nele",
+  "nemi",
+  "nenc",
+  "nenf",
+  "nenp",
+  "nepl",
+  "nerd",
+  "ners",
+  "nerw",
+  "net1",
+  "net2",
+  "nfa1",
+  "nfa2",
+  "nfac",
+  "nfbr",
+  "nfel",
+  "nfgb",
+  "nfgl",
+  "nfgo",
+  "nfgt",
+  "nfgu",
+  "nfh0",
+  "nfh1",
+  "nfnp",
+  "nfod",
+  "nfoh",
+  "nfor",
+  "nfot",
+  "nfov",
+  "nfpc",
+  "nfpe",
+  "nfpl",
+  "nfps",
+  "nfpt",
+  "nfpu",
+  "nfr1",
+  "nfr2",
+  "nfra",
+  "nfrb",
+  "nfre",
+  "nfrg",
+  "nfrl",
+  "nfrm",
+  "nfro",
+  "nfrp",
+  "nfrs",
+  "nfrt",
+  "nfsh",
+  "nfsp",
+  "nft1",
+  "nft2",
+  "nftb",
+  "nftk",
+  "nftr",
+  "nftt",
+  "nfv0",
+  "nfv1",
+  "nfv2",
+  "nfv3",
+  "nfv4",
+  "ngad",
+  "ngbl",
+  "ngdk",
+  "nggd",
+  "nggg",
+  "nggm",
+  "nggr",
+  "ngh1",
+  "ngh2",
+  "ngir",
+  "nglm",
+  "ngme",
+  "ngna",
+  "ngnb",
+  "ngnh",
+  "ngni",
+  "ngno",
+  "ngns",
+  "ngnv",
+  "ngnw",
+  "ngob",
+  "ngog",
+  "ngol",
+  "ngos",
+  "ngow",
+  "ngrd",
+  "ngrk",
+  "ngrw",
+  "ngsp",
+  "ngst",
+  "ngt2",
+  "ngwr",
+  "ngz1",
+  "ngz2",
+  "ngz3",
+  "ngz4",
+  "ngza",
+  "ngzc",
+  "ngzd",
+  "nhar",
+  "nhcn",
+  "nhdc",
+  "nhea",
+  "nheb",
+  "nhef",
+  "nhem",
+  "nhew",
+  "nhfp",
+  "nhhr",
+  "nhmc",
+  "nhn2",
+  "nhns",
+  "nhrh",
+  "nhrq",
+  "nhrr",
+  "nhrw",
+  "nhyc",
+  "nhyd",
+  "nhyh",
+  "nhym",
+  "nico",
+  "nina",
+  "ninc",
+  "ninf",
+  "ninm",
+  "nitb",
+  "nith",
+  "nitp",
+  "nitr",
+  "nits",
+  "nitt",
+  "nitw",
+  "njg1",
+  "njga",
+  "njgb",
+  "njks",
+  "nkob",
+  "nkog",
+  "nkol",
+  "nkot",
+  "nlds",
+  "nlkl",
+  "nlpd",
+  "nlpr",
+  "nlps",
+  "nlrv",
+  "nlsn",
+  "nltc",
+  "nltl",
+  "nlur",
+  "nlv1",
+  "nlv2",
+  "nlv3",
+  "nmam",
+  "nmbg",
+  "nmcf",
+  "nmdm",
+  "nmdr",
+  "nmed",
+  "nmer",
+  "nmfs",
+  "nmg0",
+  "nmg1",
+  "nmg2",
+  "nmgd",
+  "nmgr",
+  "nmgv",
+  "nmgw",
+  "nmh0",
+  "nmh1",
+  "nmit",
+  "nmmu",
+  "nmoo",
+  "nmpe",
+  "nmpg",
+  "nmr0",
+  "nmr2",
+  "nmr3",
+  "nmr4",
+  "nmr5",
+  "nmr6",
+  "nmr7",
+  "nmr8",
+  "nmr9",
+  "nmra",
+  "nmrb",
+  "nmrc",
+  "nmrd",
+  "nmre",
+  "nmrf",
+  "nmrk",
+  "nmrl",
+  "nmrm",
+  "nmrr",
+  "nmrv",
+  "nmsc",
+  "nmsh",
+  "nmsn",
+  "nmtw",
+  "nmyr",
+  "nmys",
+  "nnad",
+  "nndk",
+  "nndr",
+  "nnfm",
+  "nnht",
+  "nnmg",
+  "nnrg",
+  "nnrs",
+  "nnsa",
+  "nnsg",
+  "nnsu",
+  "nnsw",
+  "nntg",
+  "nntt",
+  "nnwa",
+  "nnwl",
+  "nnwq",
+  "nnwr",
+  "nnws",
+  "nnzg",
+  "noga",
+  "nogl",
+  "nogm",
+  "nogn",
+  "nogo",
+  "nogr",
+  "nomg",
+  "now2",
+  "now3",
+  "nowb",
+  "nowe",
+  "nowk",
+  "nowl",
+  "npfl",
+  "npfm",
+  "npgf",
+  "npgr",
+  "npig",
+  "nplb",
+  "nplg",
+  "npn1",
+  "npn2",
+  "npn3",
+  "npn4",
+  "npn5",
+  "npn6",
+  "npng",
+  "npnw",
+  "nqb1",
+  "nqb2",
+  "nqb3",
+  "nqb4",
+  "nqbh",
+  "nrac",
+  "nrat",
+  "nrdk",
+  "nrdr",
+  "nrel",
+  "nrog",
+  "nrvd",
+  "nrvf",
+  "nrvi",
+  "nrvl",
+  "nrvs",
+  "nrwm",
+  "nrzb",
+  "nrzg",
+  "nrzm",
+  "nrzs",
+  "nrzt",
+  "nsat",
+  "nsbm",
+  "nsbs",
+  "nsc2",
+  "nsc3",
+  "nsca",
+  "nscb",
+  "nsce",
+  "nsea",
+  "nsel",
+  "nser",
+  "nsgb",
+  "nsgg",
+  "nsgh",
+  "nsgn",
+  "nsgt",
+  "nsha",
+  "nshe",
+  "nshf",
+  "nshp",
+  "nshr",
+  "nshw",
+  "nska",
+  "nske",
+  "nskf",
+  "nskg",
+  "nskk",
+  "nskm",
+  "nsko",
+  "nslf",
+  "nslh",
+  "nsll",
+  "nslm",
+  "nsln",
+  "nslr",
+  "nslv",
+  "nsno",
+  "nsnp",
+  "nsns",
+  "nsoc",
+  "nsog",
+  "nspb",
+  "nspc",
+  "nspd",
+  "nspg",
+  "nspp",
+  "nspr",
+  "nsqa",
+  "nsqe",
+  "nsqo",
+  "nsqt",
+  "nsra",
+  "nsrh",
+  "nsrn",
+  "nsrv",
+  "nsrw",
+  "nssn",
+  "nssp",
+  "nsth",
+  "nstl",
+  "nsts",
+  "nstw",
+  "nsty",
+  "nsw1",
+  "nsw2",
+  "nsw3",
+  "ntav",
+  "nten",
+  "nth0",
+  "nth1",
+  "nthl",
+  "nthr",
+  "ntka",
+  "ntkc",
+  "ntkf",
+  "ntkh",
+  "ntks",
+  "ntkt",
+  "ntkw",
+  "ntn2",
+  "ntn3",
+  "ntnt",
+  "ntor",
+  "ntrd",
+  "ntrg",
+  "ntrh",
+  "ntrs",
+  "ntrt",
+  "ntrv",
+  "ntt1",
+  "ntt2",
+  "ntws",
+  "ntx2",
+  "nubk",
+  "nubr",
+  "nubw",
+  "nvde",
+  "nvdg",
+  "nvdl",
+  "nvdw",
+  "nvil",
+  "nvk2",
+  "nvl2",
+  "nvlk",
+  "nvlw",
+  "nvr0",
+  "nvr1",
+  "nvr2",
+  "nvul",
+  "nw2w",
+  "nwad",
+  "nwar",
+  "nwat",
+  "nwc1",
+  "nwc2",
+  "nwc3",
+  "nwc4",
+  "nwe1",
+  "nwe2",
+  "nwe3",
+  "nwen",
+  "nwgs",
+  "nwgt",
+  "nwiz",
+  "nwld",
+  "nwlg",
+  "nwlt",
+  "nwna",
+  "nwnr",
+  "nwns",
+  "nwrg",
+  "nws1",
+  "nwwd",
+  "nwwf",
+  "nwwg",
+  "nwzd",
+  "nwzg",
+  "nwzr",
+  "nwzw",
+  "nzep",
+  "nzin",
+  "nzlc",
+  "nzof",
+  "nzom",
+  "oalt",
+  "obai",
+  "obar",
+  "obea",
+  "obot",
+  "ocat",
+  "ocbw",
+  "odes",
+  "odkt",
+  "odoc",
+  "oeye",
+  "ofor",
+  "ofrt",
+  "ogre",
+  "ogrk",
+  "ogru",
+  "ohun",
+  "ohwd",
+  "ojgn",
+  "okod",
+  "omtg",
+  "onzg",
+  "oosc",
+  "opeo",
+  "orai",
+  "oshm",
+  "oshy",
+  "osld",
+  "osp1",
+  "osp2",
+  "osp3",
+  "osp4",
+  "ospm",
+  "ospw",
+  "ostr",
+  "osw1",
+  "osw2",
+  "osw3",
+  "oswy",
+  "otau",
+  "otbk",
+  "otbr",
+  "otot",
+  "otrb",
+  "otto",
+  "ovlj",
+  "ovln",
+  "owad",
+  "owar",
+  "ownr",
+  "owtw",
+  "owyv",
+  "uabc",
+  "uabo",
+  "uaco",
+  "uaod",
+  "uarb",
+  "uban",
+  "ubdd",
+  "ubdr",
+  "ubon",
+  "ubot",
+  "ubsp",
+  "ucrm",
+  "ucry",
+  "ucs1",
+  "ucs2",
+  "ucs3",
+  "ucsB",
+  "ucsC",
+  "udes",
+  "ufro",
+  "ugar",
+  "ugho",
+  "ugol",
+  "ugrm",
+  "ugrv",
+  "uktg",
+  "uktn",
+  "uloc",
+  "umtw",
+  "unec",
+  "unp1",
+  "unp2",
+  "unpl",
+  "uobs",
+  "uplg",
+  "usap",
+  "usep",
+  "ushd",
+  "ushp",
+  "uske",
+  "uskm",
+  "uslh",
+  "uswb",
+  "utod",
+  "utom",
+  "uubs",
+  "uzg1",
+  "uzg2",
+  "uzig",
+  "zcso",
+  "zhyd",
+  "zjug",
+  "zmar",
+  "zshv",
+  "zsmc",
+  "zzrg"
+)
+
+const StandardItemIds: Set<String> = Set(
+  "afac",
+  "ajen",
+  "amrc",
+  "anfg",
+  "ankh",
+  "arsc",
+  "arsh",
+  "asbl",
+  "axas",
+  "azhr",
+  "belv",
+  "bfhr",
+  "bgst",
+  "blba",
+  "brac",
+  "brag",
+  "bspd",
+  "btst",
+  "bzbe",
+  "bzbf",
+  "ccmd",
+  "ches",
+  "ciri",
+  "ckng",
+  "clfm",
+  "clsd",
+  "cnhn",
+  "cnob",
+  "cosl",
+  "crdt",
+  "crys",
+  "desc",
+  "dkfw",
+  "dphe",
+  "drph",
+  "dsum",
+  "dthb",
+  "dtsb",
+  "dust",
+  "engr",
+  "engs",
+  "envl",
+  "esaz",
+  "evtl",
+  "fgbd",
+  "fgdg",
+  "fgfh",
+  "fgrd",
+  "fgrg",
+  "fgsk",
+  "fgun",
+  "flag",
+  "frgd",
+  "frhg",
+  "fwss",
+  "gcel",
+  "gemt",
+  "gfor",
+  "gldo",
+  "glsk",
+  "gmfr",
+  "gobm",
+  "gold",
+  "gomn",
+  "gopr",
+  "grsl",
+  "gsou",
+  "guvi",
+  "gvsm",
+  "hbth",
+  "hcun",
+  "hlst",
+  "horl",
+  "hslv",
+  "hval",
+  "infs",
+  "iotw",
+  "iwbr",
+  "jdrn",
+  "jpnt",
+  "k3m1",
+  "k3m2",
+  "k3m3",
+  "kgal",
+  "klmm",
+  "kpin",
+  "ktrm",
+  "kybl",
+  "kygh",
+  "kymn",
+  "kysn",
+  "ledg",
+  "lgdh",
+  "lhst",
+  "lmbr",
+  "lnrn",
+  "lure",
+  "manh",
+  "mcou",
+  "mcri",
+  "mgtk",
+  "mlst",
+  "mnsf",
+  "mnst",
+  "modt",
+  "moon",
+  "mort",
+  "nflg",
+  "nspi",
+  "ocor",
+  "odef",
+  "ofir",
+  "oflg",
+  "ofr2",
+  "ofro",
+  "oli2",
+  "olig",
+  "oslo",
+  "oven",
+  "pams",
+  "pclr",
+  "pdi2",
+  "pdiv",
+  "penr",
+  "pghe",
+  "pgin",
+  "pgma",
+  "phea",
+  "phlt",
+  "pinv",
+  "plcl",
+  "pman",
+  "pmna",
+  "pnvl",
+  "pnvu",
+  "pomn",
+  "pres",
+  "prvt",
+  "pspd",
+  "rag1",
+  "ram1",
+  "ram2",
+  "ram3",
+  "ram4",
+  "rat3",
+  "rat6",
+  "rat9",
+  "ratc",
+  "ratf",
+  "rde0",
+  "rde1",
+  "rde2",
+  "rde3",
+  "rde4",
+  "rdis",
+  "rej1",
+  "rej2",
+  "rej3",
+  "rej4",
+  "rej5",
+  "rej6",
+  "rhe1",
+  "rhe2",
+  "rhe3",
+  "rhth",
+  "rin1",
+  "ritd",
+  "rlif",
+  "rma2",
+  "rman",
+  "rnec",
+  "rnsp",
+  "rots",
+  "rre1",
+  "rre2",
+  "rreb",
+  "rres",
+  "rspd",
+  "rspl",
+  "rsps",
+  "rst1",
+  "rugt",
+  "rump",
+  "rwat",
+  "rwiz",
+  "sand",
+  "sbch",
+  "sbok",
+  "scav",
+  "schl",
+  "sclp",
+  "scul",
+  "sehr",
+  "sfog",
+  "shar",
+  "shas",
+  "shcw",
+  "shdt",
+  "shea",
+  "shen",
+  "shhn",
+  "shrs",
+  "shtm",
+  "shwd",
+  "silk",
+  "skrt",
+  "sksh",
+  "skul",
+  "sman",
+  "sneg",
+  "sor1",
+  "sor2",
+  "sor3",
+  "sor4",
+  "sor5",
+  "sor6",
+  "sor7",
+  "sor8",
+  "sor9",
+  "sora",
+  "sorf",
+  "soul",
+  "spre",
+  "sprn",
+  "spro",
+  "spsh",
+  "srbd",
+  "sreg",
+  "sres",
+  "sror",
+  "srrc",
+  "srtl",
+  "ssan",
+  "ssil",
+  "stel",
+  "stpg",
+  "stre",
+  "stwa",
+  "stwp",
+  "sxpl",
+  "tbak",
+  "tbar",
+  "tbsm",
+  "tcas",
+  "tdex",
+  "tdx2",
+  "tels",
+  "texp",
+  "tfar",
+  "tgrh",
+  "tgxp",
+  "thdm",
+  "thle",
+  "tin2",
+  "tint",
+  "tkno",
+  "tlum",
+  "tmmt",
+  "tmsc",
+  "totw",
+  "tpow",
+  "tret",
+  "tsct",
+  "tst2",
+  "tstr",
+  "uflg",
+  "vamp",
+  "vddl",
+  "vpur",
+  "war2",
+  "ward",
+  "wcyc",
+  "whwd",
+  "wild",
+  "will",
+  "wlsd",
+  "wneg",
+  "wneu",
+  "wolg",
+  "woms",
+  "wshs",
+  "wswd",
+  "wtlg"
+)
+
+const StandardAbilityIds: Set<String> = Set(
+  "AAns",
+  "ACac",
+  "ACad",
+  "ACah",
+  "ACam",
+  "ACat",
+  "ACav",
+  "ACba",
+  "ACbb",
+  "ACbc",
+  "ACbf",
+  "ACbh",
+  "ACbk",
+  "ACbl",
+  "ACbn",
+  "ACbz",
+  "ACc2",
+  "ACc3",
+  "ACca",
+  "ACcb",
+  "ACce",
+  "ACch",
+  "ACcl",
+  "ACcn",
+  "ACcr",
+  "ACcs",
+  "ACct",
+  "ACcv",
+  "ACcw",
+  "ACcy",
+  "ACd2",
+  "ACdc",
+  "ACde",
+  "ACdm",
+  "ACdr",
+  "ACds",
+  "ACdv",
+  "ACen",
+  "ACes",
+  "ACev",
+  "ACf2",
+  "ACf3",
+  "ACfa",
+  "ACfb",
+  "ACfd",
+  "ACff",
+  "ACfl",
+  "ACfn",
+  "ACfr",
+  "ACfs",
+  "ACfu",
+  "AChv",
+  "AChw",
+  "AChx",
+  "ACif",
+  "ACim",
+  "ACls",
+  "ACm2",
+  "ACm3",
+  "ACmf",
+  "ACmi",
+  "ACmo",
+  "ACmp",
+  "ACnr",
+  "ACpa",
+  "ACps",
+  "ACpu",
+  "ACpv",
+  "ACpy",
+  "ACr1",
+  "ACr2",
+  "ACrd",
+  "ACrf",
+  "ACrg",
+  "ACrj",
+  "ACrk",
+  "ACrn",
+  "ACro",
+  "ACs7",
+  "ACs8",
+  "ACs9",
+  "ACsa",
+  "ACsf",
+  "ACsh",
+  "ACsi",
+  "ACsk",
+  "ACsl",
+  "ACsm",
+  "ACsp",
+  "ACss",
+  "ACst",
+  "ACsw",
+  "ACt2",
+  "ACtb",
+  "ACtc",
+  "ACtn",
+  "ACua",
+  "ACuf",
+  "ACvp",
+  "ACvs",
+  "ACwb",
+  "ACwe",
+  "AEIl",
+  "AEah",
+  "AEar",
+  "AEbl",
+  "AEbu",
+  "AEer",
+  "AEev",
+  "AEfk",
+  "AEfn",
+  "AEim",
+  "AEmb",
+  "AEme",
+  "AEpa",
+  "AEsb",
+  "AEsf",
+  "AEsh",
+  "AEst",
+  "AEsv",
+  "AEtq",
+  "AEvi",
+  "AGbu",
+  "AHab",
+  "AHad",
+  "AHav",
+  "AHbh",
+  "AHbn",
+  "AHbu",
+  "AHbz",
+  "AHca",
+  "AHdr",
+  "AHds",
+  "AHer",
+  "AHfa",
+  "AHfs",
+  "AHhb",
+  "AHmt",
+  "AHpx",
+  "AHre",
+  "AHta",
+  "AHtb",
+  "AHtc",
+  "AHwe",
+  "AI2m",
+  "AIa1",
+  "AIa3",
+  "AIa4",
+  "AIa5",
+  "AIa6",
+  "AIaa",
+  "AIad",
+  "AIae",
+  "AIam",
+  "AIan",
+  "AIar",
+  "AIat",
+  "AIau",
+  "AIav",
+  "AIaz",
+  "AIba",
+  "AIbb",
+  "AIbf",
+  "AIbg",
+  "AIbh",
+  "AIbk",
+  "AIbl",
+  "AIbm",
+  "AIbr",
+  "AIbs",
+  "AIbt",
+  "AIbx",
+  "AIcb",
+  "AIcd",
+  "AIcf",
+  "AIcl",
+  "AIcm",
+  "AIco",
+  "AIcs",
+  "AIct",
+  "AIcy",
+  "AId0",
+  "AId1",
+  "AId2",
+  "AId3",
+  "AId4",
+  "AId5",
+  "AId7",
+  "AId8",
+  "AIda",
+  "AIdb",
+  "AIdc",
+  "AIdd",
+  "AIdf",
+  "AIdg",
+  "AIdi",
+  "AIdm",
+  "AIdn",
+  "AIdp",
+  "AIds",
+  "AIdv",
+  "AIe2",
+  "AIem",
+  "AIev",
+  "AIf2",
+  "AIfa",
+  "AIfb",
+  "AIfd",
+  "AIfe",
+  "AIff",
+  "AIfg",
+  "AIfh",
+  "AIfl",
+  "AIfm",
+  "AIfn",
+  "AIfo",
+  "AIfr",
+  "AIfs",
+  "AIft",
+  "AIfu",
+  "AIfw",
+  "AIfx",
+  "AIfz",
+  "AIg2",
+  "AIgd",
+  "AIgf",
+  "AIgm",
+  "AIgo",
+  "AIgu",
+  "AIgx",
+  "AIh1",
+  "AIh2",
+  "AIh3",
+  "AIha",
+  "AIhb",
+  "AIhl",
+  "AIhm",
+  "AIhw",
+  "AIhx",
+  "AIi1",
+  "AIi3",
+  "AIi4",
+  "AIi5",
+  "AIi6",
+  "AIil",
+  "AIim",
+  "AIin",
+  "AIir",
+  "AIl1",
+  "AIl2",
+  "AIlb",
+  "AIlf",
+  "AIll",
+  "AIlm",
+  "AIlp",
+  "AIls",
+  "AIlu",
+  "AIlx",
+  "AIlz",
+  "AIm1",
+  "AIm2",
+  "AImb",
+  "AImh",
+  "AImo",
+  "AImr",
+  "AIms",
+  "AImt",
+  "AImv",
+  "AImx",
+  "AImz",
+  "AInd",
+  "AInm",
+  "AIno",
+  "AInv",
+  "AIob",
+  "AIos",
+  "AIp1",
+  "AIp2",
+  "AIp3",
+  "AIp4",
+  "AIp5",
+  "AIp6",
+  "AIpb",
+  "AIpg",
+  "AIpl",
+  "AIpm",
+  "AIpr",
+  "AIps",
+  "AIpv",
+  "AIpw",
+  "AIpx",
+  "AIpz",
+  "AIra",
+  "AIrb",
+  "AIrc",
+  "AIrd",
+  "AIre",
+  "AIri",
+  "AIrl",
+  "AIrm",
+  "AIrn",
+  "AIrr",
+  "AIrs",
+  "AIrt",
+  "AIrv",
+  "AIrx",
+  "AIs1",
+  "AIs2",
+  "AIs3",
+  "AIs4",
+  "AIs5",
+  "AIs6",
+  "AIsa",
+  "AIsb",
+  "AIse",
+  "AIsh",
+  "AIsi",
+  "AIsl",
+  "AIsm",
+  "AIso",
+  "AIsp",
+  "AIsr",
+  "AIsw",
+  "AIsx",
+  "AIsz",
+  "AIt6",
+  "AIt9",
+  "AIta",
+  "AItb",
+  "AItc",
+  "AItf",
+  "AItg",
+  "AIth",
+  "AIti",
+  "AItj",
+  "AItk",
+  "AItl",
+  "AItm",
+  "AItn",
+  "AItp",
+  "AIts",
+  "AItx",
+  "AIuf",
+  "AIut",
+  "AIuv",
+  "AIuw",
+  "AIv1",
+  "AIv2",
+  "AIva",
+  "AIvg",
+  "AIvl",
+  "AIvu",
+  "AIwb",
+  "AIwd",
+  "AIwm",
+  "AIx1",
+  "AIx2",
+  "AIx3",
+  "AIx4",
+  "AIx5",
+  "AIxk",
+  "AIxm",
+  "AIxs",
+  "AIzb",
+  "ANab",
+  "ANak",
+  "ANav",
+  "ANb2",
+  "ANba",
+  "ANbf",
+  "ANbh",
+  "ANbl",
+  "ANbr",
+  "ANbs",
+  "ANbu",
+  "ANc1",
+  "ANc2",
+  "ANc3",
+  "ANca",
+  "ANcf",
+  "ANch",
+  "ANcl",
+  "ANcr",
+  "ANcs",
+  "ANd1",
+  "ANd2",
+  "ANd3",
+  "ANdb",
+  "ANdc",
+  "ANde",
+  "ANdh",
+  "ANdo",
+  "ANdp",
+  "ANdr",
+  "ANef",
+  "ANeg",
+  "ANen",
+  "ANfa",
+  "ANfb",
+  "ANfd",
+  "ANfl",
+  "ANfs",
+  "ANfy",
+  "ANg1",
+  "ANg2",
+  "ANg3",
+  "ANha",
+  "ANhs",
+  "ANht",
+  "ANhw",
+  "ANhx",
+  "ANia",
+  "ANic",
+  "ANin",
+  "ANlm",
+  "ANmo",
+  "ANmr",
+  "ANms",
+  "ANpa",
+  "ANpi",
+  "ANpr",
+  "ANr2",
+  "ANr3",
+  "ANrc",
+  "ANre",
+  "ANrf",
+  "ANrg",
+  "ANrn",
+  "ANs1",
+  "ANs2",
+  "ANs3",
+  "ANsa",
+  "ANsb",
+  "ANse",
+  "ANsg",
+  "ANsh",
+  "ANsi",
+  "ANsl",
+  "ANso",
+  "ANsq",
+  "ANss",
+  "ANst",
+  "ANsw",
+  "ANsy",
+  "ANt2",
+  "ANta",
+  "ANth",
+  "ANtm",
+  "ANto",
+  "ANtr",
+  "ANvc",
+  "ANwk",
+  "ANwm",
+  "AOae",
+  "AObu",
+  "AOcl",
+  "AOcr",
+  "AOeq",
+  "AOfs",
+  "AOhw",
+  "AOhx",
+  "AOls",
+  "AOmi",
+  "AOr2",
+  "AOr3",
+  "AOre",
+  "AOs2",
+  "AOsf",
+  "AOsh",
+  "AOsw",
+  "AOvd",
+  "AOw2",
+  "AOwk",
+  "AOws",
+  "AOww",
+  "APdi",
+  "APh1",
+  "APh2",
+  "APh3",
+  "APmg",
+  "APmr",
+  "APra",
+  "APrl",
+  "APrr",
+  "APsa",
+  "APwt",
+  "ARal",
+  "AUa2",
+  "AUan",
+  "AUau",
+  "AUav",
+  "AUbu",
+  "AUcb",
+  "AUcs",
+  "AUdc",
+  "AUdd",
+  "AUdp",
+  "AUdr",
+  "AUds",
+  "AUfa",
+  "AUfn",
+  "AUfu",
+  "AUim",
+  "AUin",
+  "AUls",
+  "AUsl",
+  "AUts",
+  "Aabr",
+  "Aabs",
+  "Aadm",
+  "Aaha",
+  "Aakb",
+  "Aall",
+  "Aalr",
+  "Aam2",
+  "Aamk",
+  "Aams",
+  "Aap1",
+  "Aap2",
+  "Aap3",
+  "Aap4",
+  "Aap5",
+  "Aasl",
+  "Aast",
+  "Aatk",
+  "Aatp",
+  "Aave",
+  "Aawa",
+  "Abdl",
+  "Abds",
+  "Abdt",
+  "Abgl",
+  "Abgm",
+  "Abgs",
+  "Ablo",
+  "Ablp",
+  "Abof",
+  "Abrf",
+  "Absk",
+  "Abtl",
+  "Abu2",
+  "Abu3",
+  "Abu5",
+  "Abun",
+  "Abur",
+  "Acan",
+  "Acdb",
+  "Acdh",
+  "Acef",
+  "Achd",
+  "Ache",
+  "Achl",
+  "Acht",
+  "Aclf",
+  "Acmg",
+  "Acn2",
+  "Acny",
+  "Aco2",
+  "Aco3",
+  "Acoa",
+  "Acoh",
+  "Acor",
+  "Acpf",
+  "Acri",
+  "Acrs",
+  "Acyc",
+  "Adch",
+  "Adcn",
+  "Adda",
+  "Adec",
+  "Adef",
+  "Adev",
+  "Adis",
+  "Adri",
+  "Adro",
+  "Adsm",
+  "Adt1",
+  "Adtg",
+  "Adtn",
+  "Adts",
+  "Advc",
+  "Advm",
+  "Aeat",
+  "Aegm",
+  "Aegr",
+  "Aeib",
+  "Aemk",
+  "Aenc",
+  "Aenr",
+  "Aens",
+  "Aent",
+  "Aenw",
+  "Aesn",
+  "Aesr",
+  "Aetf",
+  "Aeth",
+  "Aetl",
+  "Aews",
+  "Aexh",
+  "Aeye",
+  "Afa2",
+  "Afae",
+  "Afak",
+  "Afbb",
+  "Afbk",
+  "Afbt",
+  "Afih",
+  "Afin",
+  "Afio",
+  "Afir",
+  "Afiu",
+  "Afla",
+  "Aflk",
+  "Afod",
+  "Afr2",
+  "Afra",
+  "Afrb",
+  "Afrc",
+  "Afrz",
+  "Afsh",
+  "Afzy",
+  "Agho",
+  "Agld",
+  "Agra",
+  "Agyb",
+  "Agyd",
+  "Agyv",
+  "Ahan",
+  "Ahar",
+  "Ahea",
+  "Ahid",
+  "Ahlh",
+  "Ahnl",
+  "Ahpe",
+  "Ahr2",
+  "Ahr3",
+  "Ahri",
+  "Ahrl",
+  "Ahrp",
+  "Ahsb",
+  "Ahwd",
+  "Aien",
+  "Aihn",
+  "Aimp",
+  "Ainf",
+  "Aion",
+  "Aiun",
+  "Aivs",
+  "Alam",
+  "Aliq",
+  "Alit",
+  "Aloa",
+  "Aloc",
+  "Alsh",
+  "Amb2",
+  "Ambb",
+  "Ambd",
+  "Ambt",
+  "Amdf",
+  "Amec",
+  "Amed",
+  "Amel",
+  "Amfl",
+  "Amgi",
+  "Amgl",
+  "Amgr",
+  "Amic",
+  "Amil",
+  "Amim",
+  "Amin",
+  "Amls",
+  "Amnb",
+  "Amnx",
+  "Amnz",
+  "Amov",
+  "Amrf",
+  "Andm",
+  "Andt",
+  "Ane2",
+  "Aneu",
+  "Anh1",
+  "Anh2",
+  "Anhe",
+  "Ansk",
+  "Aoar",
+  "Aobk",
+  "Aobs",
+  "Aorb",
+  "Aosp",
+  "Aotr",
+  "Apak",
+  "Apg2",
+  "Aphx",
+  "Apig",
+  "Apit",
+  "Apiv",
+  "Aply",
+  "Apmf",
+  "Apo2",
+  "Apoi",
+  "Apos",
+  "Aprg",
+  "Aps2",
+  "Apsh",
+  "Apts",
+  "Apxf",
+  "Ara2",
+  "Arai",
+  "Arav",
+  "Arbr",
+  "Arej",
+  "Arel",
+  "Aren",
+  "Arep",
+  "Aret",
+  "Arev",
+  "Argd",
+  "Argl",
+  "Arll",
+  "Arlm",
+  "Arng",
+  "Aro1",
+  "Aro2",
+  "Aroa",
+  "Aroc",
+  "Arpb",
+  "Arpl",
+  "Arpm",
+  "Arsg",
+  "Arsk",
+  "Arsp",
+  "Arsq",
+  "Arst",
+  "Arsw",
+  "Asac",
+  "Asal",
+  "Asb1",
+  "Asb2",
+  "Asb3",
+  "Asd2",
+  "Asd3",
+  "Asdg",
+  "Asds",
+  "Ashm",
+  "Ashs",
+  "Asid",
+  "Asla",
+  "Aslo",
+  "Aslp",
+  "Asod",
+  "Asou",
+  "Asp1",
+  "Asp2",
+  "Asp3",
+  "Asp4",
+  "Asp5",
+  "Asp6",
+  "Aspa",
+  "Aspb",
+  "Aspd",
+  "Asph",
+  "Aspi",
+  "Aspl",
+  "Aspo",
+  "Aspp",
+  "Asps",
+  "Aspt",
+  "Aspy",
+  "Assk",
+  "Assp",
+  "Asta",
+  "Astd",
+  "Aste",
+  "Asth",
+  "Astn",
+  "Asud",
+  "Atau",
+  "Atdg",
+  "Atdp",
+  "Atlp",
+  "Atol",
+  "Atru",
+  "Atsp",
+  "Attu",
+  "Atwa",
+  "Auco",
+  "Augf",
+  "Augh",
+  "Auhf",
+  "Ault",
+  "Auns",
+  "Ausm",
+  "Auuf",
+  "Aven",
+  "Avng",
+  "Avul",
+  "Awan",
+  "Awar",
+  "Aweb",
+  "Awfb",
+  "Awh2",
+  "Awha",
+  "Awrg",
+  "Awrh",
+  "Awrp",
+  "Awrs",
+  "SCae",
+  "SCc1",
+  "SCva",
+  "SNdc",
+  "SNdd",
+  "SNeq",
+  "SNin",
+  "Sbsk",
+  "Sbtl",
+  "Sca1",
+  "Sca2",
+  "Sca3",
+  "Sca4",
+  "Sca5",
+  "Sca6",
+  "Sch2",
+  "Sch3",
+  "Sch4",
+  "Sch5",
+  "Scri",
+  "Sdro",
+  "Slo2",
+  "Slo3",
+  "Sloa",
+  "Sshm",
+  "Suhf"
+)
+
+const AllStandardIds: Set<String> = Set(
+  "AAns",
+  "ACac",
+  "ACad",
+  "ACah",
+  "ACam",
+  "ACat",
+  "ACav",
+  "ACba",
+  "ACbb",
+  "ACbc",
+  "ACbf",
+  "ACbh",
+  "ACbk",
+  "ACbl",
+  "ACbn",
+  "ACbz",
+  "ACc2",
+  "ACc3",
+  "ACca",
+  "ACcb",
+  "ACce",
+  "ACch",
+  "ACcl",
+  "ACcn",
+  "ACcr",
+  "ACcs",
+  "ACct",
+  "ACcv",
+  "ACcw",
+  "ACcy",
+  "ACd2",
+  "ACdc",
+  "ACde",
+  "ACdm",
+  "ACdr",
+  "ACds",
+  "ACdv",
+  "ACen",
+  "ACes",
+  "ACev",
+  "ACf2",
+  "ACf3",
+  "ACfa",
+  "ACfb",
+  "ACfd",
+  "ACff",
+  "ACfl",
+  "ACfn",
+  "ACfr",
+  "ACfs",
+  "ACfu",
+  "AChv",
+  "AChw",
+  "AChx",
+  "ACif",
+  "ACim",
+  "ACls",
+  "ACm2",
+  "ACm3",
+  "ACmf",
+  "ACmi",
+  "ACmo",
+  "ACmp",
+  "ACnr",
+  "ACpa",
+  "ACps",
+  "ACpu",
+  "ACpv",
+  "ACpy",
+  "ACr1",
+  "ACr2",
+  "ACrd",
+  "ACrf",
+  "ACrg",
+  "ACrj",
+  "ACrk",
+  "ACrn",
+  "ACro",
+  "ACs7",
+  "ACs8",
+  "ACs9",
+  "ACsa",
+  "ACsf",
+  "ACsh",
+  "ACsi",
+  "ACsk",
+  "ACsl",
+  "ACsm",
+  "ACsp",
+  "ACss",
+  "ACst",
+  "ACsw",
+  "ACt2",
+  "ACtb",
+  "ACtc",
+  "ACtn",
+  "ACua",
+  "ACuf",
+  "ACvp",
+  "ACvs",
+  "ACwb",
+  "ACwe",
+  "AEIl",
+  "AEah",
+  "AEar",
+  "AEbl",
+  "AEbu",
+  "AEer",
+  "AEev",
+  "AEfk",
+  "AEfn",
+  "AEim",
+  "AEmb",
+  "AEme",
+  "AEpa",
+  "AEsb",
+  "AEsf",
+  "AEsh",
+  "AEst",
+  "AEsv",
+  "AEtq",
+  "AEvi",
+  "AGbu",
+  "AHab",
+  "AHad",
+  "AHav",
+  "AHbh",
+  "AHbn",
+  "AHbu",
+  "AHbz",
+  "AHca",
+  "AHdr",
+  "AHds",
+  "AHer",
+  "AHfa",
+  "AHfs",
+  "AHhb",
+  "AHmt",
+  "AHpx",
+  "AHre",
+  "AHta",
+  "AHtb",
+  "AHtc",
+  "AHwe",
+  "AI2m",
+  "AIa1",
+  "AIa3",
+  "AIa4",
+  "AIa5",
+  "AIa6",
+  "AIaa",
+  "AIad",
+  "AIae",
+  "AIam",
+  "AIan",
+  "AIar",
+  "AIat",
+  "AIau",
+  "AIav",
+  "AIaz",
+  "AIba",
+  "AIbb",
+  "AIbf",
+  "AIbg",
+  "AIbh",
+  "AIbk",
+  "AIbl",
+  "AIbm",
+  "AIbr",
+  "AIbs",
+  "AIbt",
+  "AIbx",
+  "AIcb",
+  "AIcd",
+  "AIcf",
+  "AIcl",
+  "AIcm",
+  "AIco",
+  "AIcs",
+  "AIct",
+  "AIcy",
+  "AId0",
+  "AId1",
+  "AId2",
+  "AId3",
+  "AId4",
+  "AId5",
+  "AId7",
+  "AId8",
+  "AIda",
+  "AIdb",
+  "AIdc",
+  "AIdd",
+  "AIdf",
+  "AIdg",
+  "AIdi",
+  "AIdm",
+  "AIdn",
+  "AIdp",
+  "AIds",
+  "AIdv",
+  "AIe2",
+  "AIem",
+  "AIev",
+  "AIf2",
+  "AIfa",
+  "AIfb",
+  "AIfd",
+  "AIfe",
+  "AIff",
+  "AIfg",
+  "AIfh",
+  "AIfl",
+  "AIfm",
+  "AIfn",
+  "AIfo",
+  "AIfr",
+  "AIfs",
+  "AIft",
+  "AIfu",
+  "AIfw",
+  "AIfx",
+  "AIfz",
+  "AIg2",
+  "AIgd",
+  "AIgf",
+  "AIgm",
+  "AIgo",
+  "AIgu",
+  "AIgx",
+  "AIh1",
+  "AIh2",
+  "AIh3",
+  "AIha",
+  "AIhb",
+  "AIhl",
+  "AIhm",
+  "AIhw",
+  "AIhx",
+  "AIi1",
+  "AIi3",
+  "AIi4",
+  "AIi5",
+  "AIi6",
+  "AIil",
+  "AIim",
+  "AIin",
+  "AIir",
+  "AIl1",
+  "AIl2",
+  "AIlb",
+  "AIlf",
+  "AIll",
+  "AIlm",
+  "AIlp",
+  "AIls",
+  "AIlu",
+  "AIlx",
+  "AIlz",
+  "AIm1",
+  "AIm2",
+  "AImb",
+  "AImh",
+  "AImo",
+  "AImr",
+  "AIms",
+  "AImt",
+  "AImv",
+  "AImx",
+  "AImz",
+  "AInd",
+  "AInm",
+  "AIno",
+  "AInv",
+  "AIob",
+  "AIos",
+  "AIp1",
+  "AIp2",
+  "AIp3",
+  "AIp4",
+  "AIp5",
+  "AIp6",
+  "AIpb",
+  "AIpg",
+  "AIpl",
+  "AIpm",
+  "AIpr",
+  "AIps",
+  "AIpv",
+  "AIpw",
+  "AIpx",
+  "AIpz",
+  "AIra",
+  "AIrb",
+  "AIrc",
+  "AIrd",
+  "AIre",
+  "AIri",
+  "AIrl",
+  "AIrm",
+  "AIrn",
+  "AIrr",
+  "AIrs",
+  "AIrt",
+  "AIrv",
+  "AIrx",
+  "AIs1",
+  "AIs2",
+  "AIs3",
+  "AIs4",
+  "AIs5",
+  "AIs6",
+  "AIsa",
+  "AIsb",
+  "AIse",
+  "AIsh",
+  "AIsi",
+  "AIsl",
+  "AIsm",
+  "AIso",
+  "AIsp",
+  "AIsr",
+  "AIsw",
+  "AIsx",
+  "AIsz",
+  "AIt6",
+  "AIt9",
+  "AIta",
+  "AItb",
+  "AItc",
+  "AItf",
+  "AItg",
+  "AIth",
+  "AIti",
+  "AItj",
+  "AItk",
+  "AItl",
+  "AItm",
+  "AItn",
+  "AItp",
+  "AIts",
+  "AItx",
+  "AIuf",
+  "AIut",
+  "AIuv",
+  "AIuw",
+  "AIv1",
+  "AIv2",
+  "AIva",
+  "AIvg",
+  "AIvl",
+  "AIvu",
+  "AIwb",
+  "AIwd",
+  "AIwm",
+  "AIx1",
+  "AIx2",
+  "AIx3",
+  "AIx4",
+  "AIx5",
+  "AIxk",
+  "AIxm",
+  "AIxs",
+  "AIzb",
+  "ANab",
+  "ANak",
+  "ANav",
+  "ANb2",
+  "ANba",
+  "ANbf",
+  "ANbh",
+  "ANbl",
+  "ANbr",
+  "ANbs",
+  "ANbu",
+  "ANc1",
+  "ANc2",
+  "ANc3",
+  "ANca",
+  "ANcf",
+  "ANch",
+  "ANcl",
+  "ANcr",
+  "ANcs",
+  "ANd1",
+  "ANd2",
+  "ANd3",
+  "ANdb",
+  "ANdc",
+  "ANde",
+  "ANdh",
+  "ANdo",
+  "ANdp",
+  "ANdr",
+  "ANef",
+  "ANeg",
+  "ANen",
+  "ANfa",
+  "ANfb",
+  "ANfd",
+  "ANfl",
+  "ANfs",
+  "ANfy",
+  "ANg1",
+  "ANg2",
+  "ANg3",
+  "ANha",
+  "ANhs",
+  "ANht",
+  "ANhw",
+  "ANhx",
+  "ANia",
+  "ANic",
+  "ANin",
+  "ANlm",
+  "ANmo",
+  "ANmr",
+  "ANms",
+  "ANpa",
+  "ANpi",
+  "ANpr",
+  "ANr2",
+  "ANr3",
+  "ANrc",
+  "ANre",
+  "ANrf",
+  "ANrg",
+  "ANrn",
+  "ANs1",
+  "ANs2",
+  "ANs3",
+  "ANsa",
+  "ANsb",
+  "ANse",
+  "ANsg",
+  "ANsh",
+  "ANsi",
+  "ANsl",
+  "ANso",
+  "ANsq",
+  "ANss",
+  "ANst",
+  "ANsw",
+  "ANsy",
+  "ANt2",
+  "ANta",
+  "ANth",
+  "ANtm",
+  "ANto",
+  "ANtr",
+  "ANvc",
+  "ANwk",
+  "ANwm",
+  "AOae",
+  "AObu",
+  "AOcl",
+  "AOcr",
+  "AOeq",
+  "AOfs",
+  "AOhw",
+  "AOhx",
+  "AOls",
+  "AOmi",
+  "AOr2",
+  "AOr3",
+  "AOre",
+  "AOs2",
+  "AOsf",
+  "AOsh",
+  "AOsw",
+  "AOvd",
+  "AOw2",
+  "AOwk",
+  "AOws",
+  "AOww",
+  "APdi",
+  "APh1",
+  "APh2",
+  "APh3",
+  "APmg",
+  "APmr",
+  "APra",
+  "APrl",
+  "APrr",
+  "APsa",
+  "APwt",
+  "ARal",
+  "AUa2",
+  "AUan",
+  "AUau",
+  "AUav",
+  "AUbu",
+  "AUcb",
+  "AUcs",
+  "AUdc",
+  "AUdd",
+  "AUdp",
+  "AUdr",
+  "AUds",
+  "AUfa",
+  "AUfn",
+  "AUfu",
+  "AUim",
+  "AUin",
+  "AUls",
+  "AUsl",
+  "AUts",
+  "Aabr",
+  "Aabs",
+  "Aadm",
+  "Aaha",
+  "Aakb",
+  "Aall",
+  "Aalr",
+  "Aam2",
+  "Aamk",
+  "Aams",
+  "Aap1",
+  "Aap2",
+  "Aap3",
+  "Aap4",
+  "Aap5",
+  "Aasl",
+  "Aast",
+  "Aatk",
+  "Aatp",
+  "Aave",
+  "Aawa",
+  "Abdl",
+  "Abds",
+  "Abdt",
+  "Abgl",
+  "Abgm",
+  "Abgs",
+  "Ablo",
+  "Ablp",
+  "Abof",
+  "Abrf",
+  "Absk",
+  "Abtl",
+  "Abu2",
+  "Abu3",
+  "Abu5",
+  "Abun",
+  "Abur",
+  "Acan",
+  "Acdb",
+  "Acdh",
+  "Acef",
+  "Achd",
+  "Ache",
+  "Achl",
+  "Acht",
+  "Aclf",
+  "Acmg",
+  "Acn2",
+  "Acny",
+  "Aco2",
+  "Aco3",
+  "Acoa",
+  "Acoh",
+  "Acor",
+  "Acpf",
+  "Acri",
+  "Acrs",
+  "Acyc",
+  "Adch",
+  "Adcn",
+  "Adda",
+  "Adec",
+  "Adef",
+  "Adev",
+  "Adis",
+  "Adri",
+  "Adro",
+  "Adsm",
+  "Adt1",
+  "Adtg",
+  "Adtn",
+  "Adts",
+  "Advc",
+  "Advm",
+  "Aeat",
+  "Aegm",
+  "Aegr",
+  "Aeib",
+  "Aemk",
+  "Aenc",
+  "Aenr",
+  "Aens",
+  "Aent",
+  "Aenw",
+  "Aesn",
+  "Aesr",
+  "Aetf",
+  "Aeth",
+  "Aetl",
+  "Aews",
+  "Aexh",
+  "Aeye",
+  "Afa2",
+  "Afae",
+  "Afak",
+  "Afbb",
+  "Afbk",
+  "Afbt",
+  "Afih",
+  "Afin",
+  "Afio",
+  "Afir",
+  "Afiu",
+  "Afla",
+  "Aflk",
+  "Afod",
+  "Afr2",
+  "Afra",
+  "Afrb",
+  "Afrc",
+  "Afrz",
+  "Afsh",
+  "Afzy",
+  "Agho",
+  "Agld",
+  "Agra",
+  "Agyb",
+  "Agyd",
+  "Agyv",
+  "Ahan",
+  "Ahar",
+  "Ahea",
+  "Ahid",
+  "Ahlh",
+  "Ahnl",
+  "Ahpe",
+  "Ahr2",
+  "Ahr3",
+  "Ahri",
+  "Ahrl",
+  "Ahrp",
+  "Ahsb",
+  "Ahwd",
+  "Aien",
+  "Aihn",
+  "Aimp",
+  "Ainf",
+  "Aion",
+  "Aiun",
+  "Aivs",
+  "Alam",
+  "Aliq",
+  "Alit",
+  "Aloa",
+  "Aloc",
+  "Alsh",
+  "Amb2",
+  "Ambb",
+  "Ambd",
+  "Ambt",
+  "Amdf",
+  "Amec",
+  "Amed",
+  "Amel",
+  "Amfl",
+  "Amgi",
+  "Amgl",
+  "Amgr",
+  "Amic",
+  "Amil",
+  "Amim",
+  "Amin",
+  "Amls",
+  "Amnb",
+  "Amnx",
+  "Amnz",
+  "Amov",
+  "Amrf",
+  "Andm",
+  "Andt",
+  "Ane2",
+  "Aneu",
+  "Anh1",
+  "Anh2",
+  "Anhe",
+  "Ansk",
+  "Aoar",
+  "Aobk",
+  "Aobs",
+  "Aorb",
+  "Aosp",
+  "Aotr",
+  "Apak",
+  "Apg2",
+  "Aphx",
+  "Apig",
+  "Apit",
+  "Apiv",
+  "Aply",
+  "Apmf",
+  "Apo2",
+  "Apoi",
+  "Apos",
+  "Aprg",
+  "Aps2",
+  "Apsh",
+  "Apts",
+  "Apxf",
+  "Ara2",
+  "Arai",
+  "Arav",
+  "Arbr",
+  "Arej",
+  "Arel",
+  "Aren",
+  "Arep",
+  "Aret",
+  "Arev",
+  "Argd",
+  "Argl",
+  "Arll",
+  "Arlm",
+  "Arng",
+  "Aro1",
+  "Aro2",
+  "Aroa",
+  "Aroc",
+  "Arpb",
+  "Arpl",
+  "Arpm",
+  "Arsg",
+  "Arsk",
+  "Arsp",
+  "Arsq",
+  "Arst",
+  "Arsw",
+  "Asac",
+  "Asal",
+  "Asb1",
+  "Asb2",
+  "Asb3",
+  "Asd2",
+  "Asd3",
+  "Asdg",
+  "Asds",
+  "Ashm",
+  "Ashs",
+  "Asid",
+  "Asla",
+  "Aslo",
+  "Aslp",
+  "Asod",
+  "Asou",
+  "Asp1",
+  "Asp2",
+  "Asp3",
+  "Asp4",
+  "Asp5",
+  "Asp6",
+  "Aspa",
+  "Aspb",
+  "Aspd",
+  "Asph",
+  "Aspi",
+  "Aspl",
+  "Aspo",
+  "Aspp",
+  "Asps",
+  "Aspt",
+  "Aspy",
+  "Assk",
+  "Assp",
+  "Asta",
+  "Astd",
+  "Aste",
+  "Asth",
+  "Astn",
+  "Asud",
+  "Atau",
+  "Atdg",
+  "Atdp",
+  "Atlp",
+  "Atol",
+  "Atru",
+  "Atsp",
+  "Attu",
+  "Atwa",
+  "Auco",
+  "Augf",
+  "Augh",
+  "Auhf",
+  "Ault",
+  "Auns",
+  "Ausm",
+  "Auuf",
+  "Aven",
+  "Avng",
+  "Avul",
+  "Awan",
+  "Awar",
+  "Aweb",
+  "Awfb",
+  "Awh2",
+  "Awha",
+  "Awrg",
+  "Awrh",
+  "Awrp",
+  "Awrs",
+  "Ecen",
+  "Edem",
+  "Edmm",
+  "Eevi",
+  "Eevm",
+  "Efur",
+  "Eidm",
+  "Eill",
+  "Eilm",
+  "Ekee",
+  "Ekgg",
+  "Emfr",
+  "Emns",
+  "Emoo",
+  "Etyr",
+  "Ewar",
+  "Ewrd",
+  "Haah",
+  "Hamg",
+  "Hant",
+  "Hapm",
+  "Harf",
+  "Hart",
+  "Hblm",
+  "Hddt",
+  "Hdgo",
+  "Hgam",
+  "Hhkl",
+  "Hjai",
+  "Hjnd",
+  "Hkal",
+  "Hlgr",
+  "Hmbr",
+  "Hmgd",
+  "Hmkg",
+  "Hpal",
+  "Hpb1",
+  "Hpb2",
+  "Hssa",
+  "Huth",
+  "Hvsh",
+  "Hvwd",
+  "Naka",
+  "Nal2",
+  "Nal3",
+  "Nalc",
+  "Nalm",
+  "Nbbc",
+  "Nbrn",
+  "Nbst",
+  "Nfir",
+  "Nkjx",
+  "Nklj",
+  "Nmag",
+  "Nman",
+  "Nmsr",
+  "Nngs",
+  "Npbm",
+  "Npld",
+  "Nplh",
+  "Nrob",
+  "Nsjs",
+  "Nswt",
+  "Ntin",
+  "Obla",
+  "Ocb2",
+  "Ocbh",
+  "Odrt",
+  "Ofar",
+  "Ogld",
+  "Ogrh",
+  "Opgh",
+  "Orex",
+  "Orkn",
+  "Osam",
+  "Oshd",
+  "Otcc",
+  "Otch",
+  "Othr",
+  "Oths",
+  "SCae",
+  "SCc1",
+  "SCva",
+  "SNdc",
+  "SNdd",
+  "SNeq",
+  "SNin",
+  "Sbsk",
+  "Sbtl",
+  "Sca1",
+  "Sca2",
+  "Sca3",
+  "Sca4",
+  "Sca5",
+  "Sca6",
+  "Sch2",
+  "Sch3",
+  "Sch4",
+  "Sch5",
+  "Scri",
+  "Sdro",
+  "Slo2",
+  "Slo3",
+  "Sloa",
+  "Sshm",
+  "Suhf",
+  "Uanb",
+  "Ubal",
+  "Uclc",
+  "Ucrl",
+  "Udea",
+  "Udre",
+  "Udth",
+  "Uear",
+  "Uktl",
+  "Ulic",
+  "Umal",
+  "Usyl",
+  "Utic",
+  "Uvar",
+  "Uvng",
+  "Uwar",
+  "afac",
+  "ajen",
+  "amrc",
+  "anfg",
+  "ankh",
+  "arsc",
+  "arsh",
+  "asbl",
+  "axas",
+  "azhr",
+  "belv",
+  "bfhr",
+  "bgst",
+  "blba",
+  "brac",
+  "brag",
+  "bspd",
+  "btst",
+  "bzbe",
+  "bzbf",
+  "ccmd",
+  "ches",
+  "ciri",
+  "ckng",
+  "clfm",
+  "clsd",
+  "cnhn",
+  "cnob",
+  "cosl",
+  "crdt",
+  "crys",
+  "desc",
+  "dkfw",
+  "dphe",
+  "drph",
+  "dsum",
+  "dthb",
+  "dtsb",
+  "dust",
+  "eaoe",
+  "eaom",
+  "eaow",
+  "earc",
+  "eate",
+  "ebal",
+  "ebsh",
+  "echm",
+  "edcm",
+  "eden",
+  "edes",
+  "edob",
+  "edoc",
+  "edos",
+  "edot",
+  "edry",
+  "edtm",
+  "efdr",
+  "efon",
+  "egol",
+  "ehip",
+  "ehpr",
+  "eilw",
+  "emow",
+  "emtg",
+  "enec",
+  "engr",
+  "engs",
+  "ensh",
+  "envl",
+  "esaz",
+  "esen",
+  "eshd",
+  "eshy",
+  "espv",
+  "etoa",
+  "etoe",
+  "etol",
+  "etrp",
+  "etrs",
+  "even",
+  "evtl",
+  "ewsp",
+  "fgbd",
+  "fgdg",
+  "fgfh",
+  "fgrd",
+  "fgrg",
+  "fgsk",
+  "fgun",
+  "flag",
+  "frgd",
+  "frhg",
+  "fwss",
+  "gcel",
+  "gemt",
+  "gfor",
+  "gldo",
+  "glsk",
+  "gmfr",
+  "gobm",
+  "gold",
+  "gomn",
+  "gopr",
+  "grsl",
+  "gsou",
+  "guvi",
+  "gvsm",
+  "halt",
+  "harm",
+  "haro",
+  "hars",
+  "hatw",
+  "hbar",
+  "hbew",
+  "hbla",
+  "hbot",
+  "hbsh",
+  "hbth",
+  "hcas",
+  "hcth",
+  "hctw",
+  "hcun",
+  "hdes",
+  "hdhw",
+  "hfoo",
+  "hgra",
+  "hgry",
+  "hgtw",
+  "hgyr",
+  "hhdl",
+  "hhes",
+  "hhou",
+  "hkee",
+  "hkni",
+  "hlst",
+  "hlum",
+  "hmil",
+  "hmpr",
+  "hmtm",
+  "hmtt",
+  "horl",
+  "hpea",
+  "hphx",
+  "hprt",
+  "hpxe",
+  "hrdh",
+  "hrif",
+  "hrrh",
+  "hrtt",
+  "hshy",
+  "hslv",
+  "hsor",
+  "hspt",
+  "htow",
+  "hval",
+  "hvlt",
+  "hwat",
+  "hwt2",
+  "hwt3",
+  "hwtw",
+  "infs",
+  "iotw",
+  "iwbr",
+  "jdrn",
+  "jpnt",
+  "k3m1",
+  "k3m2",
+  "k3m3",
+  "kgal",
+  "klmm",
+  "kpin",
+  "ktrm",
+  "kybl",
+  "kygh",
+  "kymn",
+  "kysn",
+  "ledg",
+  "lgdh",
+  "lhst",
+  "lmbr",
+  "lnrn",
+  "lure",
+  "manh",
+  "mcou",
+  "mcri",
+  "mgtk",
+  "mlst",
+  "mnsf",
+  "mnst",
+  "modt",
+  "moon",
+  "mort",
+  "nadk",
+  "nadr",
+  "nadw",
+  "nahy",
+  "nalb",
+  "nanb",
+  "nanc",
+  "nane",
+  "nanm",
+  "nano",
+  "nanw",
+  "narg",
+  "nass",
+  "nba2",
+  "nbal",
+  "nban",
+  "nbda",
+  "nbdk",
+  "nbdm",
+  "nbdo",
+  "nbdr",
+  "nbds",
+  "nbdw",
+  "nbee",
+  "nbel",
+  "nbfl",
+  "nbld",
+  "nbnb",
+  "nbot",
+  "nbrg",
+  "nbse",
+  "nbsm",
+  "nbsp",
+  "nbsw",
+  "nbt1",
+  "nbt2",
+  "nbwd",
+  "nbwm",
+  "nbzd",
+  "nbzk",
+  "nbzw",
+  "ncap",
+  "ncat",
+  "ncaw",
+  "ncb0",
+  "ncb1",
+  "ncb2",
+  "ncb3",
+  "ncb4",
+  "ncb5",
+  "ncb6",
+  "ncb7",
+  "ncb8",
+  "ncb9",
+  "ncba",
+  "ncbb",
+  "ncbc",
+  "ncbd",
+  "ncbe",
+  "ncbf",
+  "nccd",
+  "ncco",
+  "nccr",
+  "nccu",
+  "ncea",
+  "ncen",
+  "ncer",
+  "ncfs",
+  "ncg1",
+  "ncg2",
+  "ncg3",
+  "ncgb",
+  "nchg",
+  "nchp",
+  "nchr",
+  "nchw",
+  "ncim",
+  "nckb",
+  "ncks",
+  "ncmw",
+  "ncnk",
+  "ncnt",
+  "ncop",
+  "ncp2",
+  "ncp3",
+  "ncpn",
+  "ncrb",
+  "nct1",
+  "nct2",
+  "ncta",
+  "ncte",
+  "nctl",
+  "ndch",
+  "nder",
+  "ndfl",
+  "ndgt",
+  "ndh0",
+  "ndh1",
+  "ndh2",
+  "ndh3",
+  "ndh4",
+  "ndke",
+  "ndkw",
+  "ndmg",
+  "ndmu",
+  "ndog",
+  "ndqn",
+  "ndqp",
+  "ndqs",
+  "ndqt",
+  "ndqv",
+  "ndr1",
+  "ndr2",
+  "ndr3",
+  "ndrb",
+  "ndrd",
+  "ndrf",
+  "ndrg",
+  "ndrh",
+  "ndrj",
+  "ndrk",
+  "ndrl",
+  "ndrm",
+  "ndrn",
+  "ndro",
+  "ndrp",
+  "ndrr",
+  "ndrs",
+  "ndrt",
+  "ndru",
+  "ndrv",
+  "ndrw",
+  "ndrz",
+  "ndsa",
+  "ndt1",
+  "ndt2",
+  "ndtb",
+  "ndth",
+  "ndtp",
+  "ndtr",
+  "ndtt",
+  "ndtw",
+  "ndwm",
+  "nech",
+  "necr",
+  "nef0",
+  "nef1",
+  "nef2",
+  "nef3",
+  "nef4",
+  "nef5",
+  "nef6",
+  "nef7",
+  "nefm",
+  "negf",
+  "negm",
+  "negt",
+  "negz",
+  "nehy",
+  "nelb",
+  "nele",
+  "nemi",
+  "nenc",
+  "nenf",
+  "nenp",
+  "nepl",
+  "nerd",
+  "ners",
+  "nerw",
+  "net1",
+  "net2",
+  "nfa1",
+  "nfa2",
+  "nfac",
+  "nfbr",
+  "nfel",
+  "nfgb",
+  "nfgl",
+  "nfgo",
+  "nfgt",
+  "nfgu",
+  "nfh0",
+  "nfh1",
+  "nflg",
+  "nfnp",
+  "nfod",
+  "nfoh",
+  "nfor",
+  "nfot",
+  "nfov",
+  "nfpc",
+  "nfpe",
+  "nfpl",
+  "nfps",
+  "nfpt",
+  "nfpu",
+  "nfr1",
+  "nfr2",
+  "nfra",
+  "nfrb",
+  "nfre",
+  "nfrg",
+  "nfrl",
+  "nfrm",
+  "nfro",
+  "nfrp",
+  "nfrs",
+  "nfrt",
+  "nfsh",
+  "nfsp",
+  "nft1",
+  "nft2",
+  "nftb",
+  "nftk",
+  "nftr",
+  "nftt",
+  "nfv0",
+  "nfv1",
+  "nfv2",
+  "nfv3",
+  "nfv4",
+  "ngad",
+  "ngbl",
+  "ngdk",
+  "nggd",
+  "nggg",
+  "nggm",
+  "nggr",
+  "ngh1",
+  "ngh2",
+  "ngir",
+  "nglm",
+  "ngme",
+  "ngna",
+  "ngnb",
+  "ngnh",
+  "ngni",
+  "ngno",
+  "ngns",
+  "ngnv",
+  "ngnw",
+  "ngob",
+  "ngog",
+  "ngol",
+  "ngos",
+  "ngow",
+  "ngrd",
+  "ngrk",
+  "ngrw",
+  "ngsp",
+  "ngst",
+  "ngt2",
+  "ngwr",
+  "ngz1",
+  "ngz2",
+  "ngz3",
+  "ngz4",
+  "ngza",
+  "ngzc",
+  "ngzd",
+  "nhar",
+  "nhcn",
+  "nhdc",
+  "nhea",
+  "nheb",
+  "nhef",
+  "nhem",
+  "nhew",
+  "nhfp",
+  "nhhr",
+  "nhmc",
+  "nhn2",
+  "nhns",
+  "nhrh",
+  "nhrq",
+  "nhrr",
+  "nhrw",
+  "nhyc",
+  "nhyd",
+  "nhyh",
+  "nhym",
+  "nico",
+  "nina",
+  "ninc",
+  "ninf",
+  "ninm",
+  "nitb",
+  "nith",
+  "nitp",
+  "nitr",
+  "nits",
+  "nitt",
+  "nitw",
+  "njg1",
+  "njga",
+  "njgb",
+  "njks",
+  "nkob",
+  "nkog",
+  "nkol",
+  "nkot",
+  "nlds",
+  "nlkl",
+  "nlpd",
+  "nlpr",
+  "nlps",
+  "nlrv",
+  "nlsn",
+  "nltc",
+  "nltl",
+  "nlur",
+  "nlv1",
+  "nlv2",
+  "nlv3",
+  "nmam",
+  "nmbg",
+  "nmcf",
+  "nmdm",
+  "nmdr",
+  "nmed",
+  "nmer",
+  "nmfs",
+  "nmg0",
+  "nmg1",
+  "nmg2",
+  "nmgd",
+  "nmgr",
+  "nmgv",
+  "nmgw",
+  "nmh0",
+  "nmh1",
+  "nmit",
+  "nmmu",
+  "nmoo",
+  "nmpe",
+  "nmpg",
+  "nmr0",
+  "nmr2",
+  "nmr3",
+  "nmr4",
+  "nmr5",
+  "nmr6",
+  "nmr7",
+  "nmr8",
+  "nmr9",
+  "nmra",
+  "nmrb",
+  "nmrc",
+  "nmrd",
+  "nmre",
+  "nmrf",
+  "nmrk",
+  "nmrl",
+  "nmrm",
+  "nmrr",
+  "nmrv",
+  "nmsc",
+  "nmsh",
+  "nmsn",
+  "nmtw",
+  "nmyr",
+  "nmys",
+  "nnad",
+  "nndk",
+  "nndr",
+  "nnfm",
+  "nnht",
+  "nnmg",
+  "nnrg",
+  "nnrs",
+  "nnsa",
+  "nnsg",
+  "nnsu",
+  "nnsw",
+  "nntg",
+  "nntt",
+  "nnwa",
+  "nnwl",
+  "nnwq",
+  "nnwr",
+  "nnws",
+  "nnzg",
+  "noga",
+  "nogl",
+  "nogm",
+  "nogn",
+  "nogo",
+  "nogr",
+  "nomg",
+  "now2",
+  "now3",
+  "nowb",
+  "nowe",
+  "nowk",
+  "nowl",
+  "npfl",
+  "npfm",
+  "npgf",
+  "npgr",
+  "npig",
+  "nplb",
+  "nplg",
+  "npn1",
+  "npn2",
+  "npn3",
+  "npn4",
+  "npn5",
+  "npn6",
+  "npng",
+  "npnw",
+  "nqb1",
+  "nqb2",
+  "nqb3",
+  "nqb4",
+  "nqbh",
+  "nrac",
+  "nrat",
+  "nrdk",
+  "nrdr",
+  "nrel",
+  "nrog",
+  "nrvd",
+  "nrvf",
+  "nrvi",
+  "nrvl",
+  "nrvs",
+  "nrwm",
+  "nrzb",
+  "nrzg",
+  "nrzm",
+  "nrzs",
+  "nrzt",
+  "nsat",
+  "nsbm",
+  "nsbs",
+  "nsc2",
+  "nsc3",
+  "nsca",
+  "nscb",
+  "nsce",
+  "nsea",
+  "nsel",
+  "nser",
+  "nsgb",
+  "nsgg",
+  "nsgh",
+  "nsgn",
+  "nsgt",
+  "nsha",
+  "nshe",
+  "nshf",
+  "nshp",
+  "nshr",
+  "nshw",
+  "nska",
+  "nske",
+  "nskf",
+  "nskg",
+  "nskk",
+  "nskm",
+  "nsko",
+  "nslf",
+  "nslh",
+  "nsll",
+  "nslm",
+  "nsln",
+  "nslr",
+  "nslv",
+  "nsno",
+  "nsnp",
+  "nsns",
+  "nsoc",
+  "nsog",
+  "nspb",
+  "nspc",
+  "nspd",
+  "nspg",
+  "nspi",
+  "nspp",
+  "nspr",
+  "nsqa",
+  "nsqe",
+  "nsqo",
+  "nsqt",
+  "nsra",
+  "nsrh",
+  "nsrn",
+  "nsrv",
+  "nsrw",
+  "nssn",
+  "nssp",
+  "nsth",
+  "nstl",
+  "nsts",
+  "nstw",
+  "nsty",
+  "nsw1",
+  "nsw2",
+  "nsw3",
+  "ntav",
+  "nten",
+  "nth0",
+  "nth1",
+  "nthl",
+  "nthr",
+  "ntka",
+  "ntkc",
+  "ntkf",
+  "ntkh",
+  "ntks",
+  "ntkt",
+  "ntkw",
+  "ntn2",
+  "ntn3",
+  "ntnt",
+  "ntor",
+  "ntrd",
+  "ntrg",
+  "ntrh",
+  "ntrs",
+  "ntrt",
+  "ntrv",
+  "ntt1",
+  "ntt2",
+  "ntws",
+  "ntx2",
+  "nubk",
+  "nubr",
+  "nubw",
+  "nvde",
+  "nvdg",
+  "nvdl",
+  "nvdw",
+  "nvil",
+  "nvk2",
+  "nvl2",
+  "nvlk",
+  "nvlw",
+  "nvr0",
+  "nvr1",
+  "nvr2",
+  "nvul",
+  "nw2w",
+  "nwad",
+  "nwar",
+  "nwat",
+  "nwc1",
+  "nwc2",
+  "nwc3",
+  "nwc4",
+  "nwe1",
+  "nwe2",
+  "nwe3",
+  "nwen",
+  "nwgs",
+  "nwgt",
+  "nwiz",
+  "nwld",
+  "nwlg",
+  "nwlt",
+  "nwna",
+  "nwnr",
+  "nwns",
+  "nwrg",
+  "nws1",
+  "nwwd",
+  "nwwf",
+  "nwwg",
+  "nwzd",
+  "nwzg",
+  "nwzr",
+  "nwzw",
+  "nzep",
+  "nzin",
+  "nzlc",
+  "nzof",
+  "nzom",
+  "oalt",
+  "obai",
+  "obar",
+  "obea",
+  "obot",
+  "ocat",
+  "ocbw",
+  "ocor",
+  "odef",
+  "odes",
+  "odkt",
+  "odoc",
+  "oeye",
+  "ofir",
+  "oflg",
+  "ofor",
+  "ofr2",
+  "ofro",
+  "ofrt",
+  "ogre",
+  "ogrk",
+  "ogru",
+  "ohun",
+  "ohwd",
+  "ojgn",
+  "okod",
+  "oli2",
+  "olig",
+  "omtg",
+  "onzg",
+  "oosc",
+  "opeo",
+  "orai",
+  "oshm",
+  "oshy",
+  "osld",
+  "oslo",
+  "osp1",
+  "osp2",
+  "osp3",
+  "osp4",
+  "ospm",
+  "ospw",
+  "ostr",
+  "osw1",
+  "osw2",
+  "osw3",
+  "oswy",
+  "otau",
+  "otbk",
+  "otbr",
+  "otot",
+  "otrb",
+  "otto",
+  "oven",
+  "ovlj",
+  "ovln",
+  "owad",
+  "owar",
+  "ownr",
+  "owtw",
+  "owyv",
+  "pams",
+  "pclr",
+  "pdi2",
+  "pdiv",
+  "penr",
+  "pghe",
+  "pgin",
+  "pgma",
+  "phea",
+  "phlt",
+  "pinv",
+  "plcl",
+  "pman",
+  "pmna",
+  "pnvl",
+  "pnvu",
+  "pomn",
+  "pres",
+  "prvt",
+  "pspd",
+  "rag1",
+  "ram1",
+  "ram2",
+  "ram3",
+  "ram4",
+  "rat3",
+  "rat6",
+  "rat9",
+  "ratc",
+  "ratf",
+  "rde0",
+  "rde1",
+  "rde2",
+  "rde3",
+  "rde4",
+  "rdis",
+  "rej1",
+  "rej2",
+  "rej3",
+  "rej4",
+  "rej5",
+  "rej6",
+  "rhe1",
+  "rhe2",
+  "rhe3",
+  "rhth",
+  "rin1",
+  "ritd",
+  "rlif",
+  "rma2",
+  "rman",
+  "rnec",
+  "rnsp",
+  "rots",
+  "rre1",
+  "rre2",
+  "rreb",
+  "rres",
+  "rspd",
+  "rspl",
+  "rsps",
+  "rst1",
+  "rugt",
+  "rump",
+  "rwat",
+  "rwiz",
+  "sand",
+  "sbch",
+  "sbok",
+  "scav",
+  "schl",
+  "sclp",
+  "scul",
+  "sehr",
+  "sfog",
+  "shar",
+  "shas",
+  "shcw",
+  "shdt",
+  "shea",
+  "shen",
+  "shhn",
+  "shrs",
+  "shtm",
+  "shwd",
+  "silk",
+  "skrt",
+  "sksh",
+  "skul",
+  "sman",
+  "sneg",
+  "sor1",
+  "sor2",
+  "sor3",
+  "sor4",
+  "sor5",
+  "sor6",
+  "sor7",
+  "sor8",
+  "sor9",
+  "sora",
+  "sorf",
+  "soul",
+  "spre",
+  "sprn",
+  "spro",
+  "spsh",
+  "srbd",
+  "sreg",
+  "sres",
+  "sror",
+  "srrc",
+  "srtl",
+  "ssan",
+  "ssil",
+  "stel",
+  "stpg",
+  "stre",
+  "stwa",
+  "stwp",
+  "sxpl",
+  "tbak",
+  "tbar",
+  "tbsm",
+  "tcas",
+  "tdex",
+  "tdx2",
+  "tels",
+  "texp",
+  "tfar",
+  "tgrh",
+  "tgxp",
+  "thdm",
+  "thle",
+  "tin2",
+  "tint",
+  "tkno",
+  "tlum",
+  "tmmt",
+  "tmsc",
+  "totw",
+  "tpow",
+  "tret",
+  "tsct",
+  "tst2",
+  "tstr",
+  "uabc",
+  "uabo",
+  "uaco",
+  "uaod",
+  "uarb",
+  "uban",
+  "ubdd",
+  "ubdr",
+  "ubon",
+  "ubot",
+  "ubsp",
+  "ucrm",
+  "ucry",
+  "ucs1",
+  "ucs2",
+  "ucs3",
+  "ucsB",
+  "ucsC",
+  "udes",
+  "uflg",
+  "ufro",
+  "ugar",
+  "ugho",
+  "ugol",
+  "ugrm",
+  "ugrv",
+  "uktg",
+  "uktn",
+  "uloc",
+  "umtw",
+  "unec",
+  "unp1",
+  "unp2",
+  "unpl",
+  "uobs",
+  "uplg",
+  "usap",
+  "usep",
+  "ushd",
+  "ushp",
+  "uske",
+  "uskm",
+  "uslh",
+  "uswb",
+  "utod",
+  "utom",
+  "uubs",
+  "uzg1",
+  "uzg2",
+  "uzig",
+  "vamp",
+  "vddl",
+  "vpur",
+  "war2",
+  "ward",
+  "wcyc",
+  "whwd",
+  "wild",
+  "will",
+  "wlsd",
+  "wneg",
+  "wneu",
+  "wolg",
+  "woms",
+  "wshs",
+  "wswd",
+  "wtlg",
+  "zcso",
+  "zhyd",
+  "zjug",
+  "zmar",
+  "zshv",
+  "zsmc",
+  "zzrg"
+)
+
+class UnitConstants {
+  Abomination: BaseUnitId = "uabo"
+  AbominationCinematic: BaseUnitId = "uabc"
+  Acolyte: BaseUnitId = "uaco"
+  AdvancedBoulderTower: BaseUnitId = "nbt2"
+  AdvancedColdTower: BaseUnitId = "ndt2"
+  AdvancedDeathTower: BaseUnitId = "ntx2"
+  AdvancedEnergyTower: BaseUnitId = "net2"
+  AdvancedFlameTower: BaseUnitId = "nft2"
+  Albatross: BaseUnitId = "nalb"
+  Alchemist: BaseUnitId = "Nalc"
+  AlchemistMorphLevel1: BaseUnitId = "Nalm"
+  AlchemistMorphLevel2: BaseUnitId = "Nal2"
+  AlchemistMorphLevel3: BaseUnitId = "Nal3"
+  AltarOfDarkness: BaseUnitId = "uaod"
+  AltarOfElders: BaseUnitId = "eate"
+  AltarOfKings: BaseUnitId = "halt"
+  AltarOfStorms: BaseUnitId = "oalt"
+  AltarOfTheDepths: BaseUnitId = "nnad"
+  AncientHydra: BaseUnitId = "nahy"
+  AncientOfLore: BaseUnitId = "eaoe"
+  AncientOfWar: BaseUnitId = "eaom"
+  AncientOfWind: BaseUnitId = "eaow"
+  AncientOfWonders: BaseUnitId = "eden"
+  AncientProtector: BaseUnitId = "etrp"
+  AncientSasquatch: BaseUnitId = "nsqa"
+  AncientWendigo: BaseUnitId = "nwna"
+  ApprenticeWizard: BaseUnitId = "nwiz"
+  ArachnathidEarthBorer: BaseUnitId = "nane"
+  ArcaneObservatory: BaseUnitId = "haro"
+  ArcaneSanctum: BaseUnitId = "hars"
+  ArcaneTower: BaseUnitId = "hatw"
+  ArcaneVault: BaseUnitId = "hvlt"
+  Archer: BaseUnitId = "earc"
+  Archer1: BaseUnitId = "nhea"
+  Archmage: BaseUnitId = "Hamg"
+  Archmage1: BaseUnitId = "Hant"
+  Archmage2: BaseUnitId = "Hjai"
+  Assassin: BaseUnitId = "nass"
+  AvatarOfVengeance: BaseUnitId = "espv"
+  Baine: BaseUnitId = "obai"
+  Bandit: BaseUnitId = "nban"
+  BanditLord: BaseUnitId = "nbld"
+  Banshee: BaseUnitId = "uban"
+  BarbedArachnathid: BaseUnitId = "nanb"
+  BarbedArachnathid1: BaseUnitId = "nanm"
+  Barracks: BaseUnitId = "hbar"
+  Barracks1: BaseUnitId = "obar"
+  BarrowDen: BaseUnitId = "nbwd"
+  Batrider: BaseUnitId = "otbr"
+  BattleGolem: BaseUnitId = "narg"
+  BearLevel1: BaseUnitId = "ngz1"
+  Beastiary: BaseUnitId = "obea"
+  Beastmaster: BaseUnitId = "Nbst"
+  Beastmaster1: BaseUnitId = "Orex"
+  BerserkElemental: BaseUnitId = "nelb"
+  BerserkQuilbeastLevel4: BaseUnitId = "nqb4"
+  BerserkWildkin: BaseUnitId = "nowk"
+  Berserker: BaseUnitId = "otbk"
+  BlackCitadel: BaseUnitId = "unp2"
+  BlackDragon: BaseUnitId = "nbwm"
+  BlackDragonRoost: BaseUnitId = "ndrk"
+  BlackDragonWhelp: BaseUnitId = "nbdr"
+  BlackDrake: BaseUnitId = "nbdk"
+  BlackSpider: BaseUnitId = "nspb"
+  Blacksmith: BaseUnitId = "hbla"
+  Blademaster: BaseUnitId = "Obla"
+  Blademaster1: BaseUnitId = "Nbbc"
+  Blademaster2: BaseUnitId = "Ogrh"
+  Blademaster3: BaseUnitId = "Osam"
+  BlademasterPossessed: BaseUnitId = "Opgh"
+  BloodElfEngineer: BaseUnitId = "nbee"
+  BloodElfLieutenant: BaseUnitId = "nbel"
+  BloodMage: BaseUnitId = "Hblm"
+  BloodMage1: BaseUnitId = "Hkal"
+  BloodWizard: BaseUnitId = "nwzw"
+  Bloodfiend: BaseUnitId = "nfgb"
+  BlueDragon: BaseUnitId = "nadr"
+  BlueDragonRoost: BaseUnitId = "ndru"
+  BlueDragonWhelp: BaseUnitId = "nadw"
+  BlueDragonspawnApprentice: BaseUnitId = "nbda"
+  BlueDragonspawnMeddler: BaseUnitId = "nbdm"
+  BlueDragonspawnOverseer: BaseUnitId = "nbdo"
+  BlueDragonspawnSorcerer: BaseUnitId = "nbds"
+  BlueDragonspawnWarrior: BaseUnitId = "nbdw"
+  BlueDrake: BaseUnitId = "nadk"
+  Boneyard: BaseUnitId = "ubon"
+  BookOfSummoningPedestal: BaseUnitId = "nbsm"
+  BoulderTower: BaseUnitId = "nbt1"
+  Brewmaster: BaseUnitId = "Npbm"
+  Brewmaster1: BaseUnitId = "Nsjs"
+  Brigand: BaseUnitId = "nbrg"
+  BronzeDragon: BaseUnitId = "nbzd"
+  BronzeDragonRoost: BaseUnitId = "ndrz"
+  BronzeDragonWhelp: BaseUnitId = "nbzw"
+  BronzeDrake: BaseUnitId = "nbzk"
+  BroodMother: BaseUnitId = "nsbm"
+  BurningArcher: BaseUnitId = "nskf"
+  Burrow: BaseUnitId = "otrb"
+  BurrowedBarbedArachnathid: BaseUnitId = "nbnb"
+  BurrowedCarrionBeetleLevel2: BaseUnitId = "ucsB"
+  BurrowedCarrionBeetleLevel3: BaseUnitId = "ucsC"
+  BurrowedCryptFiend: BaseUnitId = "ucrm"
+  CannonTower: BaseUnitId = "hctw"
+  Captain: BaseUnitId = "hcth"
+  CarrionBeetleLevel1: BaseUnitId = "ucs1"
+  CarrionBeetleLevel2: BaseUnitId = "ucs2"
+  CarrionBeetleLevel3: BaseUnitId = "ucs3"
+  Castle: BaseUnitId = "hcas"
+  CentaurArcher: BaseUnitId = "ncea"
+  CentaurDrudge: BaseUnitId = "ncer"
+  CentaurImpaler: BaseUnitId = "ncim"
+  CentaurKhan: BaseUnitId = "ncnk"
+  CentaurOutrunner: BaseUnitId = "ncen"
+  CentaurSorcerer: BaseUnitId = "ncks"
+  CentaurTent: BaseUnitId = "ncnt"
+  CentaurTent2: BaseUnitId = "nct1"
+  CentaurTent3: BaseUnitId = "nct2"
+  Chaplain: BaseUnitId = "nchp"
+  Chicken: BaseUnitId = "nech"
+  Child: BaseUnitId = "nvlk"
+  Child2: BaseUnitId = "nvk2"
+  Chimaera: BaseUnitId = "echm"
+  ChimaeraRoost: BaseUnitId = "edos"
+  CircleOfPower: BaseUnitId = "ncop"
+  CircleOfPowerLarge: BaseUnitId = "ncp3"
+  CircleOfPowerMedium: BaseUnitId = "ncp2"
+  CityBuilding0: BaseUnitId = "ncb0"
+  CityBuilding1: BaseUnitId = "ncb1"
+  CityBuilding10: BaseUnitId = "ncba"
+  CityBuilding11: BaseUnitId = "ncbb"
+  CityBuilding12: BaseUnitId = "ncbc"
+  CityBuilding13: BaseUnitId = "ncbd"
+  CityBuilding14: BaseUnitId = "ncbe"
+  CityBuilding15: BaseUnitId = "ncbf"
+  CityBuilding2: BaseUnitId = "ncb2"
+  CityBuilding3: BaseUnitId = "ncb3"
+  CityBuilding4: BaseUnitId = "ncb4"
+  CityBuilding5: BaseUnitId = "ncb5"
+  CityBuilding6: BaseUnitId = "ncb6"
+  CityBuilding7: BaseUnitId = "ncb7"
+  CityBuilding8: BaseUnitId = "ncb8"
+  CityBuilding9: BaseUnitId = "ncb9"
+  ClockwerkGoblin: BaseUnitId = "ncg1"
+  ClockwerkGoblin1: BaseUnitId = "ncg2"
+  ClockwerkGoblin2: BaseUnitId = "ncg3"
+  ClockwerkGoblin3: BaseUnitId = "ncgb"
+  ColdTower: BaseUnitId = "ndt1"
+  CoralBed: BaseUnitId = "nnfm"
+  CorruptedAncientOfWar: BaseUnitId = "ncaw"
+  CorruptedAncientProtector: BaseUnitId = "ncap"
+  CorruptedMoonWell: BaseUnitId = "ncmw"
+  CorruptedTreant: BaseUnitId = "nenc"
+  CorruptedTreeOfAges: BaseUnitId = "ncta"
+  CorruptedTreeOfEternity: BaseUnitId = "ncte"
+  CorruptedTreeOfLife: BaseUnitId = "nctl"
+  Couatl: BaseUnitId = "nwgs"
+  Crab: BaseUnitId = "ncrb"
+  Crypt: BaseUnitId = "usep"
+  CryptFiend: BaseUnitId = "ucry"
+  CryptLord: BaseUnitId = "Ucrl"
+  CryptLord1: BaseUnitId = "Uanb"
+  CrystalArachnathid: BaseUnitId = "nanc"
+  DalaranGuardTower: BaseUnitId = "ndgt"
+  DalaranMutant: BaseUnitId = "ndmu"
+  DalaranReject: BaseUnitId = "ndrj"
+  DarkKnight: BaseUnitId = "Hlgr"
+  DarkMinion: BaseUnitId = "ndr2"
+  DarkRanger: BaseUnitId = "Nbrn"
+  DarkRanger1: BaseUnitId = "Usyl"
+  DarkTroll: BaseUnitId = "ndtr"
+  DarkTrollBerserker: BaseUnitId = "ndtb"
+  DarkTrollHighPriest: BaseUnitId = "ndth"
+  DarkTrollShadowPriest: BaseUnitId = "ndtp"
+  DarkTrollTrapper: BaseUnitId = "ndtt"
+  DarkTrollWarlord: BaseUnitId = "ndtw"
+  DarkWizard: BaseUnitId = "nwzd"
+  DeathKnight: BaseUnitId = "Udea"
+  DeathKnightEvil: BaseUnitId = "Uear"
+  DeathRevenant: BaseUnitId = "nrvd"
+  DeathTower: BaseUnitId = "ntt1"
+  Deceiver: BaseUnitId = "nhdc"
+  DeeplordRevenant: BaseUnitId = "nlrv"
+  DefenderGolem: BaseUnitId = "nggd"
+  DefiledFountainOfLife: BaseUnitId = "ndfl"
+  Demigod: BaseUnitId = "Ecen"
+  Demolisher: BaseUnitId = "ocat"
+  DemonGate: BaseUnitId = "ndmg"
+  DemonHunter: BaseUnitId = "Edem"
+  DemonHunter1: BaseUnitId = "Eill"
+  DemonHunterDemonForm: BaseUnitId = "Edmm"
+  DemonHunterDemonForm1: BaseUnitId = "Eidm"
+  DemonHunterEvil: BaseUnitId = "Eevi"
+  DemonHunterMorphed: BaseUnitId = "Eilm"
+  DemonHunterMorphedEvil: BaseUnitId = "Eevm"
+  Destroyer: BaseUnitId = "ubsp"
+  DiabloCart: BaseUnitId = "nccd"
+  DimensionalGateFacingSoutheast: BaseUnitId = "ndke"
+  DimensionalGateFacingSouthwest: BaseUnitId = "ndkw"
+  DireFrostWolf: BaseUnitId = "nwwd"
+  DireMammoth: BaseUnitId = "nmdr"
+  DireQuilbeastLevel2: BaseUnitId = "nqb2"
+  DireWolf: BaseUnitId = "nwld"
+  DireWolfLevel2: BaseUnitId = "osw2"
+  DiseaseCloud: BaseUnitId = "uplg"
+  Dog: BaseUnitId = "ndog"
+  DoomGuardStandard: BaseUnitId = "nbal"
+  DoomGuardSummoned: BaseUnitId = "nba2"
+  DraeneiBarracks: BaseUnitId = "ndh3"
+  DraeneiChieftainsHut: BaseUnitId = "ndch"
+  DraeneiDarkslayer: BaseUnitId = "ndrd"
+  DraeneiDemolisher: BaseUnitId = "ncat"
+  DraeneiDisciple: BaseUnitId = "ndrm"
+  DraeneiGuardian: BaseUnitId = "ndrf"
+  DraeneiHarbinger: BaseUnitId = "ndrh"
+  DraeneiHaven: BaseUnitId = "ndh2"
+  DraeneiHut: BaseUnitId = "ndh0"
+  DraeneiHut2: BaseUnitId = "ndh1"
+  DraeneiLaborer: BaseUnitId = "ndrl"
+  DraeneiProtector: BaseUnitId = "ndrp"
+  DraeneiSeer: BaseUnitId = "ndrs"
+  DraeneiStalker: BaseUnitId = "ndrt"
+  DraeneiVindicator: BaseUnitId = "ndrn"
+  DraeneiWatcher: BaseUnitId = "ndrw"
+  DragonHawk: BaseUnitId = "nws1"
+  DragonRoost: BaseUnitId = "ndrb"
+  DragonTurtle: BaseUnitId = "nhyc"
+  DragonTurtle1: BaseUnitId = "ntrd"
+  DragonhawkRider: BaseUnitId = "hdhw"
+  Drakthul: BaseUnitId = "odkt"
+  Dreadlord: BaseUnitId = "Udre"
+  Dreadlord1: BaseUnitId = "Ubal"
+  Dreadlord2: BaseUnitId = "Udth"
+  Dreadlord3: BaseUnitId = "Umal"
+  Dreadlord4: BaseUnitId = "Utic"
+  Dreadlord5: BaseUnitId = "Uvar"
+  Dreadlord6: BaseUnitId = "Uvng"
+  DruidOfTheClawBearForm: BaseUnitId = "edcm"
+  DruidOfTheClawNightElfForm: BaseUnitId = "edoc"
+  DruidOfTheTalonNightElfForm: BaseUnitId = "edot"
+  DruidOfTheTalonStormCrowForm: BaseUnitId = "edtm"
+  Dryad: BaseUnitId = "edry"
+  DuneWorm: BaseUnitId = "ndwm"
+  DwarfCart: BaseUnitId = "nccr"
+  Earth: BaseUnitId = "npn3"
+  Earth1: BaseUnitId = "npn6"
+  EarthFuryTower: BaseUnitId = "negf"
+  ElderHydra: BaseUnitId = "nehy"
+  ElderJungleStalker: BaseUnitId = "njga"
+  ElderSage: BaseUnitId = "Naka"
+  ElderSasquatch: BaseUnitId = "nsqe"
+  ElderVoidwalker: BaseUnitId = "nvde"
+  ElderWendigo: BaseUnitId = "nwnr"
+  Emissary: BaseUnitId = "nemi"
+  EnchantedGemstoneObelisk: BaseUnitId = "ngob"
+  EnergyTower: BaseUnitId = "net1"
+  Enforcer: BaseUnitId = "nenf"
+  EngineerGazlowe: BaseUnitId = "negz"
+  EnragedElemental: BaseUnitId = "nele"
+  EnragedJungleStalker: BaseUnitId = "njgb"
+  EnragedWildkin: BaseUnitId = "nowe"
+  EntangledGoldMine: BaseUnitId = "egol"
+  EredarDiabolist: BaseUnitId = "nerd"
+  EredarSorcerer: BaseUnitId = "ners"
+  EredarWarlock: BaseUnitId = "nerw"
+  FacelessOneDeathbringer: BaseUnitId = "nfod"
+  FacelessOneTerror: BaseUnitId = "nfot"
+  FacelessOneTrickster: BaseUnitId = "nfor"
+  FaerieDragon: BaseUnitId = "efdr"
+  FallenPriest: BaseUnitId = "nhfp"
+  FarSeer: BaseUnitId = "Ofar"
+  FarSeer1: BaseUnitId = "Odrt"
+  FarSeer2: BaseUnitId = "Othr"
+  FarSeerUnmounted: BaseUnitId = "Oths"
+  Farm: BaseUnitId = "hhou"
+  FelBeast: BaseUnitId = "npfl"
+  FelBoar: BaseUnitId = "nfbr"
+  FelBurrow: BaseUnitId = "ocbw"
+  FelOrcGrunt: BaseUnitId = "nchg"
+  FelOrcKodoBeast: BaseUnitId = "nckb"
+  FelOrcRaider: BaseUnitId = "nchr"
+  FelOrcWarlock: BaseUnitId = "nchw"
+  FelPeon: BaseUnitId = "ncpn"
+  FelRavager: BaseUnitId = "npfm"
+  FelStalker: BaseUnitId = "nfel"
+  Felguard: BaseUnitId = "nfgu"
+  Fire: BaseUnitId = "npn1"
+  Fire1: BaseUnitId = "npn4"
+  FireRevenant: BaseUnitId = "nrvf"
+  Firelord: BaseUnitId = "Nfir"
+  FlameTower: BaseUnitId = "nft1"
+  FleshGolem: BaseUnitId = "nfgl"
+  FlyingMachine: BaseUnitId = "hgyr"
+  FlyingSheep: BaseUnitId = "nshf"
+  Footman: BaseUnitId = "hfoo"
+  ForestSpider: BaseUnitId = "nspg"
+  ForestTroll: BaseUnitId = "nftr"
+  ForestTrollBerserker: BaseUnitId = "nftb"
+  ForestTrollHighPriest: BaseUnitId = "nfsh"
+  ForestTrollHut: BaseUnitId = "nfh0"
+  ForestTrollHut2: BaseUnitId = "nfh1"
+  ForestTrollShadowPriest: BaseUnitId = "nfsp"
+  ForestTrollTrapper: BaseUnitId = "nftt"
+  ForestTrollWarlord: BaseUnitId = "nftk"
+  ForgottenOne: BaseUnitId = "nfgo"
+  Fortress: BaseUnitId = "ofrt"
+  FountainOfBlood: BaseUnitId = "nbfl"
+  FountainOfHealth: BaseUnitId = "nfoh"
+  FountainOfMana: BaseUnitId = "nmoo"
+  FountainOfPower: BaseUnitId = "nfnp"
+  Frog: BaseUnitId = "nfro"
+  FrostRevenant: BaseUnitId = "nrvs"
+  FrostWolf: BaseUnitId = "nwwf"
+  FrostWyrm: BaseUnitId = "ufro"
+  FrostmournePedestal: BaseUnitId = "nfrm"
+  FruitStand: BaseUnitId = "nfrt"
+  Furbolg: BaseUnitId = "nfrl"
+  FurbolgChampion: BaseUnitId = "nfrg"
+  FurbolgElderShaman: BaseUnitId = "nfre"
+  FurbolgHut: BaseUnitId = "nfr2"
+  FurbolgHut2: BaseUnitId = "nfr1"
+  FurbolgShaman: BaseUnitId = "nfrs"
+  FurbolgTracker: BaseUnitId = "nfrb"
+  FurbolgUrsaWarrior: BaseUnitId = "nfra"
+  GargantuanSeaTurtle: BaseUnitId = "ntrg"
+  Gargoyle: BaseUnitId = "ugar"
+  Garthok: BaseUnitId = "ogrk"
+  Ghost: BaseUnitId = "ngh1"
+  GhostlyArchmage: BaseUnitId = "Hgam"
+  Ghoul: BaseUnitId = "ugho"
+  GiantFrostWolf: BaseUnitId = "nwwg"
+  GiantPolarBear: BaseUnitId = "nplg"
+  GiantSeaTurtle: BaseUnitId = "ntrt"
+  GiantSkeletonWarrior: BaseUnitId = "nskg"
+  GiantSpider: BaseUnitId = "nsgt"
+  GiantWolf: BaseUnitId = "nwlg"
+  GlaiveThrower: BaseUnitId = "ebal"
+  Gnoll: BaseUnitId = "ngno"
+  GnollAssassin: BaseUnitId = "ngns"
+  GnollBrute: BaseUnitId = "ngnb"
+  GnollHut: BaseUnitId = "ngnh"
+  GnollHut2: BaseUnitId = "ngt2"
+  GnollOverseer: BaseUnitId = "ngnv"
+  GnollPoacher: BaseUnitId = "ngna"
+  GnollWarden: BaseUnitId = "ngnw"
+  GnollWarlord: BaseUnitId = "ngow"
+  GoblinBlaster: BaseUnitId = "ngbl"
+  GoblinLaboratory: BaseUnitId = "ngad"
+  GoblinLandMine: BaseUnitId = "nglm"
+  GoblinMerchant: BaseUnitId = "ngme"
+  GoblinShipyard: BaseUnitId = "nshp"
+  GoldMine: BaseUnitId = "ngol"
+  GrainWarehouse: BaseUnitId = "ngwr"
+  GraniteGolem: BaseUnitId = "nggr"
+  Graveyard: BaseUnitId = "ugrv"
+  GreatHall: BaseUnitId = "ogre"
+  GreaterDarkMinion: BaseUnitId = "ndr3"
+  GreaterSpiritBeastLevel3: BaseUnitId = "nsw3"
+  GreaterVoidwalker: BaseUnitId = "nvdg"
+  GreenDragon: BaseUnitId = "ngrd"
+  GreenDragonRoost: BaseUnitId = "ndrg"
+  GreenDragonWhelp: BaseUnitId = "ngrw"
+  GreenDrake: BaseUnitId = "ngdk"
+  Grunt: BaseUnitId = "ogru"
+  GryphonAviary: BaseUnitId = "hgra"
+  GryphonRider: BaseUnitId = "hgry"
+  GuardDog: BaseUnitId = "ngog"
+  GuardTower: BaseUnitId = "hgtw"
+  GuardianGolem: BaseUnitId = "nggg"
+  HallsOfTheDead: BaseUnitId = "unp1"
+  HarpyNest: BaseUnitId = "nhns"
+  HarpyNest2: BaseUnitId = "nhn2"
+  HarpyQueen: BaseUnitId = "nhrq"
+  HarpyRogue: BaseUnitId = "nhrr"
+  HarpyScout: BaseUnitId = "nhar"
+  HarpyStormHag: BaseUnitId = "nhrh"
+  HarpyWindwitch: BaseUnitId = "nhrw"
+  HauntedGoldMine: BaseUnitId = "ugol"
+  HawkLevel1: BaseUnitId = "nwe1"
+  Headhunter: BaseUnitId = "ohun"
+  HealingWard: BaseUnitId = "ohwd"
+  Heretic: BaseUnitId = "nhhr"
+  HermitCrab: BaseUnitId = "nhmc"
+  HighElfArchmage: BaseUnitId = "Haah"
+  HighElfFemale: BaseUnitId = "nhef"
+  HighElfMale: BaseUnitId = "nhem"
+  HighElvenBarracks: BaseUnitId = "nheb"
+  HighElvenFarm: BaseUnitId = "nefm"
+  HighElvenFarm1: BaseUnitId = "nef0"
+  HighElvenFarm2: BaseUnitId = "nef1"
+  HighElvenFarm3: BaseUnitId = "nef2"
+  HighElvenFarm4: BaseUnitId = "nef3"
+  HighElvenFarm5: BaseUnitId = "nef4"
+  HighElvenFarm6: BaseUnitId = "nef5"
+  HighElvenFarm7: BaseUnitId = "nef6"
+  HighElvenFarm8: BaseUnitId = "nef7"
+  HighElvenGuardTower: BaseUnitId = "negt"
+  HighKing: BaseUnitId = "Hssa"
+  Hippogryph: BaseUnitId = "ehip"
+  HippogryphRider: BaseUnitId = "ehpr"
+  HornOfCenariusPedestal: BaseUnitId = "nhcn"
+  HumanBattleship: BaseUnitId = "hbsh"
+  HumanFrigate: BaseUnitId = "hdes"
+  HumanShipyard: BaseUnitId = "hshy"
+  HumanTransportShip: BaseUnitId = "hbot"
+  HuntersHall: BaseUnitId = "edob"
+  Huntress: BaseUnitId = "esen"
+  Hydra: BaseUnitId = "nhyd"
+  HydraHatchling: BaseUnitId = "nhyh"
+  Hydralisk: BaseUnitId = "zhyd"
+  Hydromancer: BaseUnitId = "nhym"
+  IceRevenant: BaseUnitId = "nrvi"
+  IceTroll: BaseUnitId = "nitr"
+  IceTrollBerserker: BaseUnitId = "nits"
+  IceTrollHighPriest: BaseUnitId = "nith"
+  IceTrollHut: BaseUnitId = "nth1"
+  IceTrollHut2: BaseUnitId = "nth0"
+  IceTrollPriest: BaseUnitId = "nitp"
+  IceTrollTrapper: BaseUnitId = "nitt"
+  IceTrollWarlord: BaseUnitId = "nitw"
+  IcecrownObelisk: BaseUnitId = "nico"
+  IcetuskMammoth: BaseUnitId = "nmit"
+  IcyTreasureBox: BaseUnitId = "nitb"
+  InfectedGranary: BaseUnitId = "ngni"
+  Infernal: BaseUnitId = "ninf"
+  InfernalContraption: BaseUnitId = "ninc"
+  InfernalJuggernaut: BaseUnitId = "nina"
+  InfernalMachine: BaseUnitId = "ninm"
+  JailorKassan: BaseUnitId = "njks"
+  JungleStalker: BaseUnitId = "njg1"
+  Keep: BaseUnitId = "hkee"
+  KeeperOfTheGrove: BaseUnitId = "Ekee"
+  KeeperOfTheGrove1: BaseUnitId = "Efur"
+  KeeperOfTheGrove2: BaseUnitId = "Ekgg"
+  KeeperOfTheGrove3: BaseUnitId = "Emfr"
+  KeeperOfTheGrove4: BaseUnitId = "Emns"
+  KelThuzadGhost: BaseUnitId = "uktg"
+  KelThuzadNecromancer: BaseUnitId = "uktn"
+  Knight: BaseUnitId = "hkni"
+  Kobold: BaseUnitId = "nkob"
+  KoboldGeomancer: BaseUnitId = "nkog"
+  KoboldShoveler: BaseUnitId = "zshv"
+  KoboldTaskmaster: BaseUnitId = "nkol"
+  KoboldTunneler: BaseUnitId = "nkot"
+  KodoBeast: BaseUnitId = "okod"
+  KodoBeastRiderless: BaseUnitId = "oosc"
+  LavaSpawnLevel1: BaseUnitId = "nlv1"
+  LavaSpawnLevel2: BaseUnitId = "nlv2"
+  LavaSpawnLevel3: BaseUnitId = "nlv3"
+  LesserDarkMinion: BaseUnitId = "ndr1"
+  LesserSpiritBeastLevel1: BaseUnitId = "nsw1"
+  LesserVoidwalker: BaseUnitId = "nvdl"
+  Lich: BaseUnitId = "Ulic"
+  LichKingCinematicCampaignUnit: BaseUnitId = "nzlc"
+  LichLich: BaseUnitId = "Uktl"
+  LichLichCinematic: BaseUnitId = "Uclc"
+  LightningLizard: BaseUnitId = "nltl"
+  LightningRevenant: BaseUnitId = "nrvl"
+  Locust: BaseUnitId = "uloc"
+  LumberMill: BaseUnitId = "hlum"
+  MagicVault: BaseUnitId = "nmgv"
+  MagnataurDestroyer: BaseUnitId = "nmgd"
+  MagnataurReaver: BaseUnitId = "nmgr"
+  MagnataurWarrior: BaseUnitId = "nmgw"
+  MaidenOfPain: BaseUnitId = "ndqp"
+  MakruraDeepseer: BaseUnitId = "nlds"
+  MakruraPooldweller: BaseUnitId = "nlpd"
+  MakruraPrawn: BaseUnitId = "nlpr"
+  MakruraSnapper: BaseUnitId = "nlsn"
+  MakruraTidalLord: BaseUnitId = "nlkl"
+  MakruraTidecaller: BaseUnitId = "nltc"
+  Mammoth: BaseUnitId = "nmam"
+  Marine: BaseUnitId = "zmar"
+  Marketplace: BaseUnitId = "nmrk"
+  MasterSwordsman: BaseUnitId = "Hddt"
+  Mathog: BaseUnitId = "omtg"
+  MeatWagon: BaseUnitId = "umtw"
+  Medivh: BaseUnitId = "nmed"
+  MedivhRavenForm: BaseUnitId = "nmdm"
+  MercenaryCampAshenvale: BaseUnitId = "nmr5"
+  MercenaryCampBarrens: BaseUnitId = "nmr4"
+  MercenaryCampBlackCitadel: BaseUnitId = "nmrf"
+  MercenaryCampCityscape: BaseUnitId = "nmr8"
+  MercenaryCampDalaran: BaseUnitId = "nmr9"
+  MercenaryCampDungeon: BaseUnitId = "nmra"
+  MercenaryCampFelwood: BaseUnitId = "nmr6"
+  MercenaryCampIcecrownGlacier: BaseUnitId = "nmrd"
+  MercenaryCampLordaeronFall: BaseUnitId = "nmr2"
+  MercenaryCampLordaeronSummer: BaseUnitId = "nmer"
+  MercenaryCampLordaeronWinter: BaseUnitId = "nmr3"
+  MercenaryCampNorthrend: BaseUnitId = "nmr7"
+  MercenaryCampOutland: BaseUnitId = "nmre"
+  MercenaryCampSunkenRuins: BaseUnitId = "nmrc"
+  MercenaryCampUnderground: BaseUnitId = "nmrb"
+  MercenaryCampVillage: BaseUnitId = "nmr0"
+  Militia: BaseUnitId = "hmil"
+  Misha: BaseUnitId = "nmsh"
+  MishaLevel1: BaseUnitId = "ngzc"
+  MishaLevel2: BaseUnitId = "ngzd"
+  MishaLevel3: BaseUnitId = "ngza"
+  MishaLevel4: BaseUnitId = "ngz4"
+  MonsterLure: BaseUnitId = "nlur"
+  MoonWell: BaseUnitId = "emow"
+  MortarTeam: BaseUnitId = "hmtm"
+  MossCoveredGraniteGolem: BaseUnitId = "nggm"
+  MountainGiant: BaseUnitId = "emtg"
+  MountainKing: BaseUnitId = "Hmkg"
+  MountainKing1: BaseUnitId = "Hmbr"
+  MudGolem: BaseUnitId = "ngrk"
+  MurgulBloodGill: BaseUnitId = "nmbg"
+  MurgulCliffrunner: BaseUnitId = "nmcf"
+  MurgulHut0: BaseUnitId = "nmg0"
+  MurgulHut1: BaseUnitId = "nmg1"
+  MurgulMarauder: BaseUnitId = "nmrv"
+  MurgulReaver: BaseUnitId = "nnmg"
+  MurgulShadowcaster: BaseUnitId = "nmsc"
+  MurgulSlave: BaseUnitId = "nmpe"
+  MurgulSnarecaster: BaseUnitId = "nmsn"
+  MurgulTidewarrior: BaseUnitId = "nmtw"
+  MurlocFlesheater: BaseUnitId = "nmfs"
+  MurlocHuntsman: BaseUnitId = "nmrr"
+  MurlocHut0: BaseUnitId = "nmh0"
+  MurlocHut1: BaseUnitId = "nmh1"
+  MurlocHut2: BaseUnitId = "nmg2"
+  MurlocMutant: BaseUnitId = "nmmu"
+  MurlocNightcrawler: BaseUnitId = "nmrm"
+  MurlocPlaguebearer: BaseUnitId = "nmpg"
+  MurlocSorcerer: BaseUnitId = "Nmsr"
+  MurlocTiderunner: BaseUnitId = "nmrl"
+  NagaMyrmidon: BaseUnitId = "nmyr"
+  NagaRoyalGuard: BaseUnitId = "nnrg"
+  NagaSiren: BaseUnitId = "nnsw"
+  Naisha: BaseUnitId = "ensh"
+  Nazgrel: BaseUnitId = "onzg"
+  Necromancer: BaseUnitId = "unec"
+  Necropolis: BaseUnitId = "unpl"
+  NerubianQueen: BaseUnitId = "nnwq"
+  NerubianSeer: BaseUnitId = "nnwr"
+  NerubianSpiderLord: BaseUnitId = "nnws"
+  NerubianTower: BaseUnitId = "uzg2"
+  NerubianWarrior: BaseUnitId = "nnwa"
+  NerubianWebspinner: BaseUnitId = "nnwl"
+  NerubianZiggurat: BaseUnitId = "nnzg"
+  NetherDragon: BaseUnitId = "nndr"
+  NetherDragonHatchling: BaseUnitId = "nnht"
+  NetherDragonRoost: BaseUnitId = "ndro"
+  NetherDrake: BaseUnitId = "nndk"
+  NightElfBattleship: BaseUnitId = "ebsh"
+  NightElfFishingVillageCrestedSoutheastFacing: BaseUnitId = "nfv4"
+  NightElfFishingVillageCrestedSouthwestFacing: BaseUnitId = "nfv1"
+  NightElfFishingVillageOneStory: BaseUnitId = "nfv2"
+  NightElfFishingVillageRuinedCrested: BaseUnitId = "nvr2"
+  NightElfFishingVillageRuinedOneStory: BaseUnitId = "nvr1"
+  NightElfFishingVillageRuinedTwoStory: BaseUnitId = "nvr0"
+  NightElfFishingVillageTwoStorySoutheastFacing: BaseUnitId = "nfv3"
+  NightElfFishingVillageTwoStorySouthwestFacing: BaseUnitId = "nfv0"
+  NightElfFrigate: BaseUnitId = "edes"
+  NightElfRunner: BaseUnitId = "enec"
+  NightElfShipyard: BaseUnitId = "eshy"
+  NightElfTransportShip: BaseUnitId = "etrs"
+  ObsidianStatue: BaseUnitId = "uobs"
+  OgreLord: BaseUnitId = "nogl"
+  OgreMagi: BaseUnitId = "nomg"
+  OgreMauler: BaseUnitId = "nogm"
+  OgreWarrior: BaseUnitId = "nogr"
+  OrcCart: BaseUnitId = "ncco"
+  OrcFrigate: BaseUnitId = "odes"
+  OrcJuggernaught: BaseUnitId = "ojgn"
+  OrcJuggernaughtCinematic: BaseUnitId = "zjug"
+  OrcShipyard: BaseUnitId = "oshy"
+  OrcTransportShip: BaseUnitId = "obot"
+  OrcWarchief: BaseUnitId = "owar"
+  OrcWarlock: BaseUnitId = "nw2w"
+  Overlord: BaseUnitId = "nfov"
+  OverlordArachnathid: BaseUnitId = "nano"
+  OwlScoutLevel1: BaseUnitId = "nowl"
+  OwlScoutLevel2: BaseUnitId = "now2"
+  OwlScoutLevel3: BaseUnitId = "now3"
+  PackHorse: BaseUnitId = "hrdh"
+  Paladin: BaseUnitId = "Hpal"
+  Paladin1: BaseUnitId = "Hapm"
+  Paladin2: BaseUnitId = "Hart"
+  Paladin3: BaseUnitId = "Hdgo"
+  Paladin4: BaseUnitId = "Hhkl"
+  Paladin5: BaseUnitId = "Hmgd"
+  Paladin6: BaseUnitId = "Hpb1"
+  Paladin7: BaseUnitId = "Hpb2"
+  Paladin8: BaseUnitId = "Huth"
+  PaladinWieldingFrostmourne: BaseUnitId = "Harf"
+  Peasant: BaseUnitId = "hpea"
+  Penguin: BaseUnitId = "npng"
+  PenguinWaterborne: BaseUnitId = "npnw"
+  Peon: BaseUnitId = "opeo"
+  Phoenix: BaseUnitId = "hphx"
+  PhoenixEgg: BaseUnitId = "hpxe"
+  Pig: BaseUnitId = "npig"
+  PigFarm: BaseUnitId = "npgf"
+  PitLord: BaseUnitId = "Nplh"
+  PitLord1: BaseUnitId = "Nmag"
+  PitLord2: BaseUnitId = "Nman"
+  PitLord3: BaseUnitId = "Npld"
+  PlagueTreant: BaseUnitId = "nepl"
+  PocketFactoryLevel1: BaseUnitId = "nfac"
+  PocketFactoryLevel2: BaseUnitId = "nfa1"
+  PocketFactoryLevel3: BaseUnitId = "nfa2"
+  PoisonTreant: BaseUnitId = "nenp"
+  PolarBear: BaseUnitId = "nplb"
+  PolarFurbolg: BaseUnitId = "nfpl"
+  PolarFurbolgChampion: BaseUnitId = "nfpc"
+  PolarFurbolgElderShaman: BaseUnitId = "nfpe"
+  PolarFurbolgShaman: BaseUnitId = "nfps"
+  PolarFurbolgTracker: BaseUnitId = "nfpt"
+  PolarFurbolgUrsaWarrior: BaseUnitId = "nfpu"
+  Portal: BaseUnitId = "hprt"
+  PowerGenerator: BaseUnitId = "npgr"
+  Priest: BaseUnitId = "hmpr"
+  PriestessOfTheMoon: BaseUnitId = "Emoo"
+  PriestessOfTheMoon1: BaseUnitId = "Etyr"
+  PrimalPandaren: BaseUnitId = "nfrp"
+  PrisonWagon: BaseUnitId = "eilw"
+  QueenOfSuffering: BaseUnitId = "ndqs"
+  QuilbeastLevel1: BaseUnitId = "nqb1"
+  Quillboar: BaseUnitId = "nrzt"
+  QuillboarHunter: BaseUnitId = "nqbh"
+  Rabbit: BaseUnitId = "necr"
+  Raccoon: BaseUnitId = "nrac"
+  RagingBearLevel2: BaseUnitId = "ngz2"
+  RagingQuilbeastLevel3: BaseUnitId = "nqb3"
+  Raider: BaseUnitId = "orai"
+  Ranger: BaseUnitId = "Hvwd"
+  Ranger1: BaseUnitId = "Hjnd"
+  Rat: BaseUnitId = "nrat"
+  RazormaneBrute: BaseUnitId = "nrzb"
+  RazormaneChieftain: BaseUnitId = "nrzg"
+  RazormaneMedicineMan: BaseUnitId = "nrzm"
+  RazormaneScout: BaseUnitId = "nrzs"
+  RedDragon: BaseUnitId = "nrwm"
+  RedDragonRoost: BaseUnitId = "ndrr"
+  RedDragonWhelp: BaseUnitId = "nrdk"
+  RedDrake: BaseUnitId = "nrdr"
+  ReefElemental: BaseUnitId = "nrel"
+  RenegadeWizard: BaseUnitId = "nwzg"
+  ResurrectionStoneSoutheastFacing: BaseUnitId = "nbse"
+  ResurrectionStoneSouthwestFacing: BaseUnitId = "nbsw"
+  RevenantOfTheDepths: BaseUnitId = "ndrv"
+  RevenantOfTheSeas: BaseUnitId = "nsrv"
+  RevenantOfTheTides: BaseUnitId = "ntrv"
+  RiderlessHorse: BaseUnitId = "hhdl"
+  Rifleman: BaseUnitId = "hrif"
+  RockGolem: BaseUnitId = "ngst"
+  Rogue: BaseUnitId = "nrog"
+  RogueWizard: BaseUnitId = "nwzr"
+  RunnerHighElf: BaseUnitId = "hrrh"
+  SacrificialPit: BaseUnitId = "usap"
+  Salamander: BaseUnitId = "nslr"
+  Salamander1: BaseUnitId = "ndsa"
+  SalamanderHatchling: BaseUnitId = "nslh"
+  SalamanderLord: BaseUnitId = "nsll"
+  SalamanderVizier: BaseUnitId = "nslv"
+  Sammy: BaseUnitId = "zsmc"
+  Sapper: BaseUnitId = "ngsp"
+  SapphironLiving: BaseUnitId = "ubdr"
+  SapphironUndead: BaseUnitId = "ubdd"
+  Sasquatch: BaseUnitId = "nsqt"
+  SasquatchOracle: BaseUnitId = "nsqo"
+  Satyr: BaseUnitId = "nsty"
+  SatyrHellcaller: BaseUnitId = "nsth"
+  SatyrShadowdancer: BaseUnitId = "nsts"
+  SatyrSoulstealer: BaseUnitId = "nstl"
+  SatyrTrickster: BaseUnitId = "nsat"
+  ScoutTower: BaseUnitId = "hwtw"
+  SeaElemental: BaseUnitId = "nsel"
+  SeaGiant: BaseUnitId = "nsgn"
+  SeaGiantBehemoth: BaseUnitId = "nsgb"
+  SeaGiantHunter: BaseUnitId = "nsgh"
+  SeaTurtle: BaseUnitId = "ntrs"
+  SeaTurtleHatchling: BaseUnitId = "ntrh"
+  SeaWitch: BaseUnitId = "Nngs"
+  SeaWitch1: BaseUnitId = "Hvsh"
+  SeaWitch2: BaseUnitId = "Nswt"
+  Seal: BaseUnitId = "nsea"
+  Searinox: BaseUnitId = "nser"
+  SeersDen: BaseUnitId = "ndh4"
+  Sentry: BaseUnitId = "nwat"
+  SentryWard: BaseUnitId = "oeye"
+  SerpentWardLevel1: BaseUnitId = "osp1"
+  SerpentWardLevel2: BaseUnitId = "osp2"
+  SerpentWardLevel3: BaseUnitId = "osp3"
+  SerpentWardLevel4: BaseUnitId = "osp4"
+  Shade: BaseUnitId = "ushd"
+  ShadowHunter: BaseUnitId = "Oshd"
+  ShadowHunter1: BaseUnitId = "Orkn"
+  ShadowWolfLevel3: BaseUnitId = "osw3"
+  Shaman: BaseUnitId = "oshm"
+  Shandris: BaseUnitId = "eshd"
+  Sheep: BaseUnitId = "nshe"
+  SheepAmphibious: BaseUnitId = "nsha"
+  SheepWaterborne: BaseUnitId = "nshw"
+  Ship: BaseUnitId = "nbsp"
+  Shredder: BaseUnitId = "ngir"
+  Shrine: BaseUnitId = "nshr"
+  ShrineOfAzshara: BaseUnitId = "nnsa"
+  SiegeEngine: BaseUnitId = "hmtt"
+  SiegeEngineBarrage: BaseUnitId = "hrtt"
+  SiegeGolem: BaseUnitId = "nsgg"
+  SkeletalMage: BaseUnitId = "uskm"
+  SkeletalMarksman: BaseUnitId = "nskm"
+  SkeletalOrc: BaseUnitId = "nsko"
+  SkeletalOrcChampion: BaseUnitId = "nsoc"
+  SkeletalOrcGrunt: BaseUnitId = "nsog"
+  SkeletonArcher: BaseUnitId = "nsca"
+  SkeletonArcher1: BaseUnitId = "nska"
+  SkeletonWarrior: BaseUnitId = "uske"
+  SkeletonWarrior1: BaseUnitId = "nsce"
+  SkeletonWarrior2: BaseUnitId = "nske"
+  Skink: BaseUnitId = "nskk"
+  SkyBarge: BaseUnitId = "uarb"
+  SkyFuryTower: BaseUnitId = "negm"
+  Slaughterhouse: BaseUnitId = "uslh"
+  SlaveMaster: BaseUnitId = "owad"
+  SludgeFlinger: BaseUnitId = "nslf"
+  SludgeMinion: BaseUnitId = "nslm"
+  SludgeMonstrosity: BaseUnitId = "nsln"
+  SnapDragon: BaseUnitId = "nsnp"
+  SnarlmaneTheBloodgorger: BaseUnitId = "ngos"
+  SnowyOwl: BaseUnitId = "nsno"
+  Sorceress: BaseUnitId = "hsor"
+  SpawningGrounds: BaseUnitId = "nnsg"
+  Spellbreaker: BaseUnitId = "hspt"
+  Spider: BaseUnitId = "nspr"
+  SpiderCrabBehemoth: BaseUnitId = "nsc3"
+  SpiderCrabLimbripper: BaseUnitId = "nsc2"
+  SpiderCrabShorecrawler: BaseUnitId = "nscb"
+  Spiderling: BaseUnitId = "nspd"
+  SpiritBearLevel3: BaseUnitId = "ngz3"
+  SpiritBeastLevel2: BaseUnitId = "nsw2"
+  SpiritHawkLevel3: BaseUnitId = "nwe3"
+  SpiritLodge: BaseUnitId = "osld"
+  SpiritOfVengeance: BaseUnitId = "even"
+  SpiritPig: BaseUnitId = "nspp"
+  SpiritTower: BaseUnitId = "uzg1"
+  SpiritWalker: BaseUnitId = "ospw"
+  SpiritWalkerEthereal: BaseUnitId = "ospm"
+  SpiritWindRider: BaseUnitId = "oswy"
+  SpiritWolfLevel1: BaseUnitId = "osw1"
+  SpittingSpider: BaseUnitId = "nssp"
+  Stag: BaseUnitId = "nder"
+  StasisTrap: BaseUnitId = "otot"
+  StoneFormGargoyle: BaseUnitId = "ugrm"
+  StonemaulMagi: BaseUnitId = "nogn"
+  StonemaulOgre: BaseUnitId = "nogo"
+  StonemaulWarchief: BaseUnitId = "noga"
+  Storm: BaseUnitId = "npn2"
+  Storm1: BaseUnitId = "npn5"
+  StormWyrm: BaseUnitId = "nstw"
+  StormreaverApprentice: BaseUnitId = "nsra"
+  StormreaverHermit: BaseUnitId = "nsrh"
+  StormreaverNecrolyte: BaseUnitId = "nsrn"
+  StormreaverWarlock: BaseUnitId = "nsrw"
+  Stronghold: BaseUnitId = "ostr"
+  SubmergedNagaMyrmidon: BaseUnitId = "nmys"
+  SubmergedNagaRoyalGuard: BaseUnitId = "nnrs"
+  SubmergedSnapDragon: BaseUnitId = "nsbs"
+  Succubus: BaseUnitId = "ndqn"
+  SummonedPrawn: BaseUnitId = "nlps"
+  Summoner: BaseUnitId = "nnsu"
+  SupportColumn: BaseUnitId = "nspc"
+  Swordsman: BaseUnitId = "hhes"
+  SylvanasWindrunnerBanshee: BaseUnitId = "uswb"
+  Tauren: BaseUnitId = "otau"
+  TaurenChieftain: BaseUnitId = "Otch"
+  TaurenChieftain1: BaseUnitId = "Ocbh"
+  TaurenChieftainCinematic: BaseUnitId = "Otcc"
+  TaurenChieftainExpansion: BaseUnitId = "Ocb2"
+  TaurenTent: BaseUnitId = "ntnt"
+  TaurenTent2: BaseUnitId = "ntt2"
+  TaurenTotem: BaseUnitId = "otto"
+  Tavern: BaseUnitId = "ntav"
+  TempleOfTheDamned: BaseUnitId = "utod"
+  TempleOfTides: BaseUnitId = "nntt"
+  Tent: BaseUnitId = "nten"
+  Tent2: BaseUnitId = "ntn2"
+  Tent3: BaseUnitId = "ntn3"
+  Tentacle: BaseUnitId = "nfgt"
+  TerranMarine: BaseUnitId = "zcso"
+  Tharifas: BaseUnitId = "nthr"
+  ThunderHawkLevel2: BaseUnitId = "nwe2"
+  ThunderLizard2: BaseUnitId = "nthl"
+  TidalGuardian: BaseUnitId = "nntg"
+  TimberWolf: BaseUnitId = "nwlt"
+  Tinker: BaseUnitId = "Nrob"
+  Tinker1: BaseUnitId = "Ntin"
+  TombOfRelics: BaseUnitId = "utom"
+  Tornado: BaseUnitId = "ntor"
+  TownHall: BaseUnitId = "htow"
+  TransportShip: BaseUnitId = "nbot"
+  Treant: BaseUnitId = "efon"
+  TreeOfAges: BaseUnitId = "etoa"
+  TreeOfEternity: BaseUnitId = "etoe"
+  TreeOfLife: BaseUnitId = "etol"
+  TuskarrChieftain: BaseUnitId = "ntkc"
+  TuskarrFighter: BaseUnitId = "ntkf"
+  TuskarrHealer: BaseUnitId = "ntkh"
+  TuskarrSorcerer: BaseUnitId = "ntks"
+  TuskarrSpearman: BaseUnitId = "ntka"
+  TuskarrTrapper: BaseUnitId = "ntkt"
+  TuskarrWarrior: BaseUnitId = "ntkw"
+  UnbrokenDarkhunter: BaseUnitId = "nubk"
+  UnbrokenDarkweaver: BaseUnitId = "nubw"
+  UnbrokenRager: BaseUnitId = "nubr"
+  UndeadBattleship: BaseUnitId = "uubs"
+  UndeadCart: BaseUnitId = "nccu"
+  UndeadFrigate: BaseUnitId = "udes"
+  UndeadShipyard: BaseUnitId = "ushp"
+  UndeadTransportShip: BaseUnitId = "ubot"
+  VileTemptress: BaseUnitId = "ndqt"
+  VileTormentor: BaseUnitId = "ndqv"
+  VillagerFemale: BaseUnitId = "nvlw"
+  VillagerMale: BaseUnitId = "nvil"
+  VillagerMale2: BaseUnitId = "nvl2"
+  Voidwalker: BaseUnitId = "nvdw"
+  Voljin: BaseUnitId = "ovlj"
+  VoodooLounge: BaseUnitId = "ovln"
+  Vulture: BaseUnitId = "nvul"
+  Wagon: BaseUnitId = "hbew"
+  WarGolem: BaseUnitId = "nwrg"
+  WarMill: BaseUnitId = "ofor"
+  WarWagon: BaseUnitId = "nwar"
+  Warden: BaseUnitId = "Ewar"
+  Warden1: BaseUnitId = "Ewrd"
+  Warden2: BaseUnitId = "nssn"
+  Warlock: BaseUnitId = "Nklj"
+  Warlock1: BaseUnitId = "Ogld"
+  Warlock2: BaseUnitId = "Uwar"
+  WarlockCinematic: BaseUnitId = "Nkjx"
+  WarriorArachnathid: BaseUnitId = "nanw"
+  WatchTower: BaseUnitId = "owtw"
+  WatcherWard: BaseUnitId = "nwad"
+  WaterElementalLevel1: BaseUnitId = "hwat"
+  WaterElementalLevel2: BaseUnitId = "hwt2"
+  WaterElementalLevel3: BaseUnitId = "hwt3"
+  WateryMinionLevel1: BaseUnitId = "ncfs"
+  WateryMinionLevel2: BaseUnitId = "ntws"
+  WateryMinionLevel3: BaseUnitId = "nsns"
+  WayGate: BaseUnitId = "nwgt"
+  Wendigo: BaseUnitId = "nwen"
+  WendigoShaman: BaseUnitId = "nwns"
+  Wildkin: BaseUnitId = "nowb"
+  WindRider: BaseUnitId = "owyv"
+  WindRiderCage1: BaseUnitId = "nwc1"
+  WindRiderCage2: BaseUnitId = "nwc2"
+  WindRiderCage3: BaseUnitId = "nwc3"
+  WindRiderCage4: BaseUnitId = "nwc4"
+  WindRiderRiderless: BaseUnitId = "ownr"
+  Wisp: BaseUnitId = "ewsp"
+  WitchDoctor: BaseUnitId = "odoc"
+  WorkerBloodElf: BaseUnitId = "nhew"
+  Workshop: BaseUnitId = "harm"
+  Wraith: BaseUnitId = "ngh2"
+  Zeppelin: BaseUnitId = "nzep"
+  Zergling: BaseUnitId = "zzrg"
+  Ziggurat: BaseUnitId = "uzig"
+  Zombie: BaseUnitId = "nzom"
+  ZombieFemale: BaseUnitId = "nzof"
+  ZoneIndicatorCustomCampaign: BaseUnitId = "nzin"
+}
+
+class ItemConstants {
+  AlleriasFluteOfAccuracy: BaseItemId = "afac"
+  AmuletOfRecall: BaseItemId = "amrc"
+  AmuletOfSpellShield: BaseItemId = "spsh"
+  AmuletOfTheWild: BaseItemId = "wild"
+  AncestralStaff: BaseItemId = "axas"
+  AncientFigurine: BaseItemId = "anfg"
+  AncientJanggoOfEndurance: BaseItemId = "ajen"
+  AnkhOfReincarnation: BaseItemId = "ankh"
+  AntiMagicPotion: BaseItemId = "pams"
+  ArcaneScroll: BaseItemId = "arsc"
+  ArcaniteShield: BaseItemId = "arsh"
+  AssassinsBlade: BaseItemId = "asbl"
+  BattleStandard: BaseItemId = "btst"
+  BeltOfGiantStrengthPlus6: BaseItemId = "bgst"
+  BladebaneArmor: BaseItemId = "blba"
+  BloodKey: BaseItemId = "kybl"
+  BloodfeathersHeart: BaseItemId = "bfhr"
+  BlueDrakeEgg: BaseItemId = "fgbd"
+  BookOfTheDead: BaseItemId = "fgsk"
+  BootsOfQuelThalasPlus6: BaseItemId = "belv"
+  BootsOfSpeed: BaseItemId = "bspd"
+  BracerOfAgility: BaseItemId = "brag"
+  BundleOfLumber: BaseItemId = "lmbr"
+  CelestialOrbOfSouls: BaseItemId = "cosl"
+  Cheese: BaseItemId = "ches"
+  CircletOfNobility: BaseItemId = "cnob"
+  ClarityPotion: BaseItemId = "pclr"
+  ClawsOfAttackPlus12: BaseItemId = "ratc"
+  ClawsOfAttackPlus15: BaseItemId = "ratf"
+  ClawsOfAttackPlus3: BaseItemId = "rat3"
+  ClawsOfAttackPlus5: BaseItemId = "rat6"
+  ClawsOfAttackPlus8: BaseItemId = "rat9"
+  CloakOfFlames: BaseItemId = "clfm"
+  CloakOfShadows: BaseItemId = "clsd"
+  ClockworkPenguin: BaseItemId = "stpg"
+  CrownOfKingsPlus5: BaseItemId = "ckng"
+  CrownOfTheDeathlord: BaseItemId = "crdt"
+  CrystalBall: BaseItemId = "crys"
+  DemonicFigurine: BaseItemId = "fgdg"
+  DiamondOfSummoning: BaseItemId = "dsum"
+  DrektharsSpellbook: BaseItemId = "dtsb"
+  DruidPouch: BaseItemId = "drph"
+  DustOfAppearance: BaseItemId = "dust"
+  EmptyVial: BaseItemId = "bzbe"
+  EnchantedGemstone: BaseItemId = "engs"
+  EnchantedShield: BaseItemId = "shen"
+  EnchantedVial: BaseItemId = "envl"
+  EngravedScale: BaseItemId = "engr"
+  EssenceOfAszune: BaseItemId = "esaz"
+  FirehandGauntlets: BaseItemId = "frhg"
+  FlareGun: BaseItemId = "fgun"
+  FrostWyrmSkullShield: BaseItemId = "fwss"
+  Frostguard: BaseItemId = "frgd"
+  FullVial: BaseItemId = "bzbf"
+  GauntletsOfOgreStrengthPlus3: BaseItemId = "rst1"
+  GemFragment: BaseItemId = "gmfr"
+  GemOfTrueSeeing: BaseItemId = "gemt"
+  GerardsLostLedger: BaseItemId = "ledg"
+  GhostKey: BaseItemId = "kygh"
+  GlovesOfHaste: BaseItemId = "gcel"
+  GlovesOfSpellMastery: BaseItemId = "gvsm"
+  GlyphOfFortification: BaseItemId = "gfor"
+  GlyphOfOmniscience: BaseItemId = "gomn"
+  GlyphOfPurification: BaseItemId = "gopr"
+  GlyphOfUltravision: BaseItemId = "guvi"
+  GoblinLandMines: BaseItemId = "gobm"
+  GoblinNightScope: BaseItemId = "tels"
+  GoldCoins: BaseItemId = "gold"
+  GreaterReplenishmentPotion: BaseItemId = "rej4"
+  GreaterScrollOfReplenishment: BaseItemId = "rej6"
+  GrimoireOfSouls: BaseItemId = "grsl"
+  HealingSalve: BaseItemId = "hslv"
+  HealingWards: BaseItemId = "whwd"
+  HealthStone: BaseItemId = "hlst"
+  HeartOfAszune: BaseItemId = "azhr"
+  HelmOfBattlethirst: BaseItemId = "hbth"
+  HelmOfValor: BaseItemId = "hval"
+  HoodOfCunning: BaseItemId = "hcun"
+  HornOfCenarius: BaseItemId = "cnhn"
+  HornOfTheClouds: BaseItemId = "sfog"
+  HumanFlag: BaseItemId = "flag"
+  IceShard: BaseItemId = "shar"
+  IdolOfTheWild: BaseItemId = "iotw"
+  InfernoStone: BaseItemId = "infs"
+  IronwoodBranch: BaseItemId = "iwbr"
+  IvoryTower: BaseItemId = "tsct"
+  JadeRing: BaseItemId = "jdrn"
+  KegOfAle: BaseItemId = "kgal"
+  KegOfThunderwater: BaseItemId = "dkfw"
+  KelensDaggerOfEscape: BaseItemId = "desc"
+  KeyOfThreeMoons: BaseItemId = "k3m3"
+  KhadgarsGemOfHealth: BaseItemId = "rhth"
+  KhadgarsPipeOfInsight: BaseItemId = "kpin"
+  Killmaim: BaseItemId = "klmm"
+  LegionDoomHorn: BaseItemId = "lgdh"
+  LesserClarityPotion: BaseItemId = "plcl"
+  LesserReplenishmentPotion: BaseItemId = "rej2"
+  LesserScrollOfReplenishment: BaseItemId = "rej5"
+  LionsRing: BaseItemId = "lnrn"
+  MagicKeyChain: BaseItemId = "mgtk"
+  ManaStone: BaseItemId = "mnst"
+  MantleOfIntelligencePlus3: BaseItemId = "rin1"
+  ManualOfHealth: BaseItemId = "manh"
+  MaskOfDeath: BaseItemId = "modt"
+  MaulOfStrength: BaseItemId = "mlst"
+  MechanicalCritter: BaseItemId = "mcri"
+  MedallionOfCourage: BaseItemId = "mcou"
+  Mindstaff: BaseItemId = "mnsf"
+  MinorReplenishmentPotion: BaseItemId = "rej1"
+  MogrinsReport: BaseItemId = "mort"
+  MonsterLure: BaseItemId = "lure"
+  MoonKey: BaseItemId = "kymn"
+  Mooncrystal: BaseItemId = "k3m1"
+  Moonstone: BaseItemId = "moon"
+  NecklaceOfSpellImmunity: BaseItemId = "nspi"
+  NightElfFlag: BaseItemId = "nflg"
+  NoteToJainaProudmoore: BaseItemId = "jpnt"
+  OrbOfCorruption: BaseItemId = "ocor"
+  OrbOfDarkness: BaseItemId = "odef"
+  OrbOfFire: BaseItemId = "ofir"
+  OrbOfFire1: BaseItemId = "ofr2"
+  OrbOfFrost: BaseItemId = "ofro"
+  OrbOfKiljaeden: BaseItemId = "gldo"
+  OrbOfLightning: BaseItemId = "oli2"
+  OrbOfLightning1: BaseItemId = "olig"
+  OrbOfSlow: BaseItemId = "oslo"
+  OrbOfVenom: BaseItemId = "oven"
+  OrcFlag: BaseItemId = "oflg"
+  PartialKeyOfTheThreeMoons: BaseItemId = "k3m2"
+  PendantOfEnergy: BaseItemId = "penr"
+  PendantOfMana: BaseItemId = "pmna"
+  PeriaptOfVitality: BaseItemId = "prvt"
+  PhatLewt: BaseItemId = "phlt"
+  PotionOfDivinity: BaseItemId = "pdi2"
+  PotionOfDivinity1: BaseItemId = "pdiv"
+  PotionOfGreaterHealing: BaseItemId = "pghe"
+  PotionOfGreaterInvisibility: BaseItemId = "pgin"
+  PotionOfGreaterMana: BaseItemId = "pgma"
+  PotionOfHealing: BaseItemId = "phea"
+  PotionOfInvisibility: BaseItemId = "pinv"
+  PotionOfInvulnerability: BaseItemId = "pnvu"
+  PotionOfLesserInvulnerability: BaseItemId = "pnvl"
+  PotionOfMana: BaseItemId = "pman"
+  PotionOfOmniscience: BaseItemId = "pomn"
+  PotionOfRestoration: BaseItemId = "pres"
+  PotionOfSpeed: BaseItemId = "pspd"
+  RedDrakeEgg: BaseItemId = "fgrd"
+  ReplenishmentPotion: BaseItemId = "rej3"
+  RingOfProtectionPlus1: BaseItemId = "rde0"
+  RingOfProtectionPlus2: BaseItemId = "rde1"
+  RingOfProtectionPlus3: BaseItemId = "rde2"
+  RingOfProtectionPlus4: BaseItemId = "rde3"
+  RingOfProtectionPlus5: BaseItemId = "rde4"
+  RingOfRegeneration: BaseItemId = "rlif"
+  RingOfSuperiority: BaseItemId = "rnsp"
+  RingOfTheArchmagi: BaseItemId = "ram4"
+  RingOfTheArchmagi1: BaseItemId = "ram3"
+  RingOfTheArchmagi2: BaseItemId = "ram2"
+  RingOfTheArchmagi3: BaseItemId = "ram1"
+  RitualDagger: BaseItemId = "ritd"
+  RobeOfTheMagiPlus6: BaseItemId = "ciri"
+  RodOfNecromancy: BaseItemId = "rnec"
+  RuneOfDispelMagic: BaseItemId = "rdis"
+  RuneOfGreaterHealing: BaseItemId = "rhe3"
+  RuneOfGreaterMana: BaseItemId = "rma2"
+  RuneOfGreaterResurrection: BaseItemId = "rre2"
+  RuneOfHealing: BaseItemId = "rhe2"
+  RuneOfLesserHealing: BaseItemId = "rhe1"
+  RuneOfLesserResurrection: BaseItemId = "rre1"
+  RuneOfMana: BaseItemId = "rman"
+  RuneOfRebirth: BaseItemId = "rreb"
+  RuneOfRestoration: BaseItemId = "rres"
+  RuneOfShielding: BaseItemId = "rsps"
+  RuneOfSpeed: BaseItemId = "rspd"
+  RuneOfSpiritLink: BaseItemId = "rspl"
+  RuneOfTheWatcher: BaseItemId = "rwat"
+  RunedBracers: BaseItemId = "brac"
+  RunedGauntlets: BaseItemId = "rugt"
+  RustyMiningPick: BaseItemId = "rump"
+  SacredRelic: BaseItemId = "horl"
+  SacrificialSkull: BaseItemId = "skul"
+  ScepterOfAvarice: BaseItemId = "scav"
+  ScepterOfHealing: BaseItemId = "schl"
+  ScepterOfMastery: BaseItemId = "ccmd"
+  ScepterOfTheSea: BaseItemId = "rots"
+  ScourgeBoneChimes: BaseItemId = "sbch"
+  ScrollOfAnimateDead: BaseItemId = "sand"
+  ScrollOfHealing: BaseItemId = "shea"
+  ScrollOfMana: BaseItemId = "sman"
+  ScrollOfProtection: BaseItemId = "spro"
+  ScrollOfRegeneration: BaseItemId = "sreg"
+  ScrollOfRestoration: BaseItemId = "sres"
+  ScrollOfResurrection: BaseItemId = "srrc"
+  ScrollOfSpeed: BaseItemId = "shas"
+  ScrollOfTheBeast: BaseItemId = "sror"
+  ScrollOfTheUnholyLegion: BaseItemId = "scul"
+  ScrollOfTownPortal: BaseItemId = "stwp"
+  SearingBlade: BaseItemId = "srbd"
+  SecretLevelPowerup: BaseItemId = "sclp"
+  SeedOfExpulsion: BaseItemId = "sxpl"
+  SentryWards: BaseItemId = "wswd"
+  Serathil: BaseItemId = "srtl"
+  ShadowOrbFragment: BaseItemId = "sorf"
+  ShadowOrbPlus1: BaseItemId = "sor1"
+  ShadowOrbPlus10: BaseItemId = "sora"
+  ShadowOrbPlus2: BaseItemId = "sor2"
+  ShadowOrbPlus3: BaseItemId = "sor3"
+  ShadowOrbPlus4: BaseItemId = "sor4"
+  ShadowOrbPlus5: BaseItemId = "sor5"
+  ShadowOrbPlus6: BaseItemId = "sor6"
+  ShadowOrbPlus7: BaseItemId = "sor7"
+  ShadowOrbPlus8: BaseItemId = "sor8"
+  ShadowOrbPlus9: BaseItemId = "sor9"
+  ShamanClaws: BaseItemId = "shcw"
+  ShamanicTotem: BaseItemId = "shtm"
+  ShieldOfHonor: BaseItemId = "shhn"
+  ShieldOfTheDeathlord: BaseItemId = "shdt"
+  ShimmerglazeRoast: BaseItemId = "shrs"
+  Shimmerweed: BaseItemId = "shwd"
+  SkeletalArtifact: BaseItemId = "skrt"
+  SkullOfGuldan: BaseItemId = "glsk"
+  SkullShield: BaseItemId = "sksh"
+  SlippersOfAgilityPlus3: BaseItemId = "rag1"
+  SobiMask: BaseItemId = "rwiz"
+  Soul: BaseItemId = "soul"
+  SoulGem: BaseItemId = "gsou"
+  SpellBook: BaseItemId = "sbok"
+  SpiderRing: BaseItemId = "sprn"
+  SpiderSilkBroach: BaseItemId = "silk"
+  SpikedCollar: BaseItemId = "fgfh"
+  StaffOfNegation: BaseItemId = "sneg"
+  StaffOfPreservation: BaseItemId = "spre"
+  StaffOfReanimation: BaseItemId = "stre"
+  StaffOfSanctuary: BaseItemId = "ssan"
+  StaffOfSilence: BaseItemId = "ssil"
+  StaffOfTeleportation: BaseItemId = "stel"
+  StoneToken: BaseItemId = "fgrg"
+  SturdyWarAxe: BaseItemId = "stwa"
+  SunKey: BaseItemId = "kysn"
+  TalismanOfEvasion: BaseItemId = "evtl"
+  TalismanOfTheWild: BaseItemId = "totw"
+  TheHeartOfSearinox: BaseItemId = "sehr"
+  TheLionHornOfStormwind: BaseItemId = "lhst"
+  ThunderLizardEgg: BaseItemId = "thle"
+  ThunderPhoenixEgg: BaseItemId = "dphe"
+  ThunderbloomBulb: BaseItemId = "dthb"
+  ThunderlizardDiamond: BaseItemId = "thdm"
+  TinyAltarOfKings: BaseItemId = "tbak"
+  TinyBarracks: BaseItemId = "tbar"
+  TinyBlacksmith: BaseItemId = "tbsm"
+  TinyCastle: BaseItemId = "tcas"
+  TinyFarm: BaseItemId = "tfar"
+  TinyGreatHall: BaseItemId = "tgrh"
+  TinyLumberMill: BaseItemId = "tlum"
+  TomeOfAgility: BaseItemId = "tdex"
+  TomeOfAgilityPlus2: BaseItemId = "tdx2"
+  TomeOfExperience: BaseItemId = "texp"
+  TomeOfGreaterExperience: BaseItemId = "tgxp"
+  TomeOfIntelligence: BaseItemId = "tint"
+  TomeOfIntelligencePlus2: BaseItemId = "tin2"
+  TomeOfKnowledge: BaseItemId = "tpow"
+  TomeOfPower: BaseItemId = "tkno"
+  TomeOfRetraining: BaseItemId = "tret"
+  TomeOfSacrifices: BaseItemId = "tmsc"
+  TomeOfStrength: BaseItemId = "tstr"
+  TomeOfStrengthPlus2: BaseItemId = "tst2"
+  TotemOfMight: BaseItemId = "tmmt"
+  UndeadFlag: BaseItemId = "uflg"
+  UrnOfKingTerenas: BaseItemId = "ktrm"
+  VampiricPotion: BaseItemId = "vamp"
+  VineOfPurification: BaseItemId = "vpur"
+  VoodooDoll: BaseItemId = "vddl"
+  WandOfIllusion: BaseItemId = "will"
+  WandOfLightningShield: BaseItemId = "wlsd"
+  WandOfManaStealing: BaseItemId = "woms"
+  WandOfNegation: BaseItemId = "wneg"
+  WandOfNeutralization: BaseItemId = "wneu"
+  WandOfShadowsight: BaseItemId = "wshs"
+  WandOfTheWind: BaseItemId = "wcyc"
+  WarsongBattleDrums: BaseItemId = "war2"
+  WarsongBattleDrums1: BaseItemId = "ward"
+  WirtsLeg: BaseItemId = "wtlg"
+  WirtsOtherLeg: BaseItemId = "wolg"
+}
+
+class AbilityConstants {
+  AOEDamageUponDeathBigMine: BaseAbilityId = "Amnz"
+  AOEDamageUponDeathGoblinMine: BaseAbilityId = "Amnx"
+  AOEDamageUponDeathSapper: BaseAbilityId = "Adda"
+  AbolishMagic: BaseAbilityId = "Aadm"
+  AbolishMagic1: BaseAbilityId = "Andm"
+  AbolishMagicNeutralHostile: BaseAbilityId = "ACdm"
+  AbolishMagicNeutralHostileSecondPosition: BaseAbilityId = "ACd2"
+  AbsorbMana: BaseAbilityId = "Aabs"
+  AcidBomb: BaseAbilityId = "ANab"
+  AerialShackles: BaseAbilityId = "Amls"
+  Alarm: BaseAbilityId = "Aalr"
+  AncestralSpirit: BaseAbilityId = "Aast"
+  AnimalWarTrainingIcon: BaseAbilityId = "Ahan"
+  AnimateDead: BaseAbilityId = "AUan"
+  AnimateDeadNeutralHostileNeutralHostile: BaseAbilityId = "ACad"
+  AnimateDeadNew: BaseAbilityId = "AUa2"
+  AntiMagicShell: BaseAbilityId = "Aams"
+  AntiMagicShellMagicResistance: BaseAbilityId = "Aam2"
+  AntiMagicShellNeutralHostile: BaseAbilityId = "ACam"
+  Attack: BaseAbilityId = "Aatk"
+  AttributeBonus: BaseAbilityId = "Aamk"
+  AuraOfBlight: BaseAbilityId = "Aabr"
+  Avatar: BaseAbilityId = "AHav"
+  AvatarNeutral: BaseAbilityId = "ANav"
+  Banish: BaseAbilityId = "AHbn"
+  BanishNeutralHostile: BaseAbilityId = "ACbn"
+  Barrage: BaseAbilityId = "Aroc"
+  Bash: BaseAbilityId = "AHbh"
+  BashItem: BaseAbilityId = "AIbx"
+  BashNeutralHostile1: BaseAbilityId = "ACbh"
+  BashNeutralHostile2: BaseAbilityId = "ANbh"
+  BattleRoar: BaseAbilityId = "ANbr"
+  BattleStations: BaseAbilityId = "Abtl"
+  BattleStationsFelOrcBurrow: BaseAbilityId = "Sbtl"
+  BearForm: BaseAbilityId = "Abrf"
+  Berserk: BaseAbilityId = "Absk"
+  BerserkItem: BaseAbilityId = "AIxk"
+  BerserkerUpgrade: BaseAbilityId = "Sbsk"
+  BerserkerUpgradeIcon: BaseAbilityId = "Aobk"
+  BigBadVoodoo: BaseAbilityId = "AOvd"
+  BlackArrow: BaseAbilityId = "ANba"
+  BlackArrowNeutralHostile: BaseAbilityId = "ACbk"
+  Bladestorm: BaseAbilityId = "AOww"
+  BlightDispelLarge: BaseAbilityId = "Abdl"
+  BlightDispelSmall: BaseAbilityId = "Abds"
+  BlightGrowthLarge: BaseAbilityId = "Abgl"
+  BlightGrowthSmall: BaseAbilityId = "Abgs"
+  BlightPlacement: BaseAbilityId = "Ablp"
+  BlightedGoldMineAbility: BaseAbilityId = "Abgm"
+  Blink: BaseAbilityId = "AEbl"
+  BlinkItemVersion: BaseAbilityId = "AIbk"
+  BlinkNeutral: BaseAbilityId = "ANbl"
+  Blizzard: BaseAbilityId = "AHbz"
+  BlizzardNeutralHostile: BaseAbilityId = "ACbz"
+  Bloodlust: BaseAbilityId = "Ablo"
+  BloodlustNeutralHostile1: BaseAbilityId = "ACbl"
+  BloodlustNeutralHostile2: BaseAbilityId = "ACbb"
+  BouncingMissileFilter: BaseAbilityId = "Amgi"
+  BreathOfFire: BaseAbilityId = "ANbf"
+  BreathOfFireChen: BaseAbilityId = "ANcf"
+  BreathOfFireNeutralHostile: BaseAbilityId = "ACbc"
+  BreathOfFrost: BaseAbilityId = "ACbf"
+  BrillianceAura: BaseAbilityId = "AHab"
+  BrillianceAuraNeutralHostile: BaseAbilityId = "ACba"
+  BruteStrengthIcon: BaseAbilityId = "Aobs"
+  BuildHuman: BaseAbilityId = "AHbu"
+  BuildNaga: BaseAbilityId = "AGbu"
+  BuildNeutral: BaseAbilityId = "ANbu"
+  BuildNightElf: BaseAbilityId = "AEbu"
+  BuildOrc: BaseAbilityId = "AObu"
+  BuildTinyAltarOfKings: BaseAbilityId = "AIbh"
+  BuildTinyBarracks: BaseAbilityId = "AIbs"
+  BuildTinyBlacksmith: BaseAbilityId = "AIbb"
+  BuildTinyCastle: BaseAbilityId = "AIbl"
+  BuildTinyFarm: BaseAbilityId = "AIbf"
+  BuildTinyGreatHall: BaseAbilityId = "AIbg"
+  BuildTinyLumberMill: BaseAbilityId = "AIbr"
+  BuildTinyScoutTower: BaseAbilityId = "AIbt"
+  BuildUndead: BaseAbilityId = "AUbu"
+  BuildingDamageAuraTornado: BaseAbilityId = "Atdg"
+  BundleOfLumber: BaseAbilityId = "AIlu"
+  BurningOil: BaseAbilityId = "Abof"
+  BurrowCryptFiend: BaseAbilityId = "Abur"
+  BurrowDetectionFliersObsolete: BaseAbilityId = "Abdt"
+  BurrowNeutralHostile: BaseAbilityId = "Abu5"
+  BurrowScarabLvl2: BaseAbilityId = "Abu2"
+  BurrowScarabLvl3: BaseAbilityId = "Abu3"
+  CallToArmsPeasant: BaseAbilityId = "Amil"
+  CallToArmsTownHall: BaseAbilityId = "Amic"
+  Cannibalize: BaseAbilityId = "Acan"
+  Cannibalize1: BaseAbilityId = "Acn2"
+  CannibalizeNeutralHostile: BaseAbilityId = "ACcn"
+  CargoHoldDeath: BaseAbilityId = "Achd"
+  CargoHoldGoblinZeppelin: BaseAbilityId = "Sch3"
+  CargoHoldMeatWagon: BaseAbilityId = "Sch2"
+  CargoHoldOrcBurrow: BaseAbilityId = "Abun"
+  CargoHoldShip: BaseAbilityId = "Sch5"
+  CargoHoldTank: BaseAbilityId = "Sch4"
+  CarrionBeetles: BaseAbilityId = "AUcb"
+  CarrionSwarm: BaseAbilityId = "AUcs"
+  CarrionSwarmNeutralHostile: BaseAbilityId = "ACca"
+  ChainLightning: BaseAbilityId = "AOcl"
+  ChainLightningItem: BaseAbilityId = "AIcl"
+  ChainLightningNeutralHostile: BaseAbilityId = "ACcl"
+  ChangeTimeOfDay: BaseAbilityId = "AIct"
+  Channel: BaseAbilityId = "ANcl"
+  ChaosCargoLoad: BaseAbilityId = "Achl"
+  ChargeGoldAndLumber: BaseAbilityId = "AAns"
+  Charm: BaseAbilityId = "ANch"
+  CharmNeutralHostile: BaseAbilityId = "ACch"
+  ChemicalRage: BaseAbilityId = "ANcr"
+  ChestOfGold: BaseAbilityId = "AIgo"
+  ClarityPotion: BaseAbilityId = "AIpr"
+  CleavingAttack: BaseAbilityId = "ANca"
+  CleavingAttackNeutralHostile: BaseAbilityId = "ACce"
+  Cloud: BaseAbilityId = "Aclf"
+  CloudOfFog: BaseAbilityId = "AIfg"
+  ClusterRockets: BaseAbilityId = "ANcs"
+  ClusterRocketsUpgradeLevel1: BaseAbilityId = "ANc1"
+  ClusterRocketsUpgradeLevel2: BaseAbilityId = "ANc2"
+  ClusterRocketsUpgradeLevel3: BaseAbilityId = "ANc3"
+  ColdArrows: BaseAbilityId = "AHca"
+  ColdArrowsNeutralHostile: BaseAbilityId = "ACcw"
+  CommandAura: BaseAbilityId = "ACac"
+  ControlMagic: BaseAbilityId = "Acmg"
+  ControlMagicItem: BaseAbilityId = "AIcm"
+  CorporealForm: BaseAbilityId = "Acpf"
+  CorrosiveBreath: BaseAbilityId = "Acor"
+  CreateCorpse: BaseAbilityId = "Agyd"
+  Cripple: BaseAbilityId = "Acri"
+  CrippleNeutralHostile: BaseAbilityId = "ACcr"
+  CrippleWarlock: BaseAbilityId = "Scri"
+  CriticalStrike: BaseAbilityId = "AOcr"
+  CriticalStrikeItem: BaseAbilityId = "AIcs"
+  CriticalStrikeNeutralHostile: BaseAbilityId = "ACct"
+  CrowForm: BaseAbilityId = "Amrf"
+  CrushingWave: BaseAbilityId = "ACcv"
+  CrushingWaveLesser: BaseAbilityId = "ACc2"
+  CrushingWaveLesser1: BaseAbilityId = "ACc3"
+  Curse: BaseAbilityId = "Acrs"
+  CurseNeutralHostile: BaseAbilityId = "ACcs"
+  Cyclone: BaseAbilityId = "Acyc"
+  Cyclone1: BaseAbilityId = "Acny"
+  CycloneCenarius: BaseAbilityId = "SCc1"
+  CycloneItem: BaseAbilityId = "AIcy"
+  CycloneNeutralHostile: BaseAbilityId = "ACcy"
+  DarkConversionMalganis: BaseAbilityId = "ANdc"
+  DarkConversionMalganisFast: BaseAbilityId = "SNdc"
+  DarkPortalArchimonde: BaseAbilityId = "ANdp"
+  DarkRitual: BaseAbilityId = "AUdr"
+  DarkSummoning: BaseAbilityId = "AUds"
+  DeathAndDecay: BaseAbilityId = "AUdd"
+  DeathAndDecayNeutralHostile: BaseAbilityId = "SNdd"
+  DeathCoil: BaseAbilityId = "AUdc"
+  DeathCoilNeutralHostile: BaseAbilityId = "ACdc"
+  DeathPact: BaseAbilityId = "AUdp"
+  DeathPactItem: BaseAbilityId = "AIdp"
+  Defend: BaseAbilityId = "Adef"
+  DefendPassiveDefenseItem: BaseAbilityId = "AIdd"
+  Demolish: BaseAbilityId = "ANde"
+  DemolishUpgradeLevel1: BaseAbilityId = "ANd1"
+  DemolishUpgradeLevel2: BaseAbilityId = "ANd2"
+  DemolishUpgradeLevel3: BaseAbilityId = "ANd3"
+  DestroyerForm: BaseAbilityId = "Aave"
+  DetectorSentryWard: BaseAbilityId = "Adt1"
+  Detonate: BaseAbilityId = "Adtn"
+  DevotionAura: BaseAbilityId = "AHad"
+  DevotionAuraNeutralHostile: BaseAbilityId = "ACav"
+  Devour: BaseAbilityId = "Adev"
+  DevourCargo: BaseAbilityId = "Advc"
+  DevourMagic: BaseAbilityId = "Advm"
+  DevourMagicNeutralHostile: BaseAbilityId = "ACde"
+  DevourNeutralHostile: BaseAbilityId = "ACdv"
+  DiseaseCloudAbomination: BaseAbilityId = "Aap1"
+  DiseaseCloudAnimateDead: BaseAbilityId = "Aap5"
+  DiseaseCloudMeatWagon: BaseAbilityId = "Apts"
+  DiseaseCloudNeutralHostile: BaseAbilityId = "Aap3"
+  DiseaseCloudNeutralHostileNoDamage: BaseAbilityId = "Aap4"
+  DiseaseCloudPlagueWard: BaseAbilityId = "Aap2"
+  Disenchant: BaseAbilityId = "Adcn"
+  DisenchantOld: BaseAbilityId = "Adch"
+  Dismount: BaseAbilityId = "Adec"
+  DispelMagic: BaseAbilityId = "Adis"
+  DispelMagicNeutralHostile: BaseAbilityId = "Adsm"
+  DivineShield: BaseAbilityId = "AHds"
+  DivineShieldNeutralHostile: BaseAbilityId = "ACds"
+  Doom: BaseAbilityId = "ANdo"
+  DropCorpse: BaseAbilityId = "Amed"
+  DropPilot: BaseAbilityId = "Atdp"
+  DrunkenBrawler: BaseAbilityId = "ANdb"
+  DrunkenBrawlerChen: BaseAbilityId = "Acdb"
+  DrunkenHaze: BaseAbilityId = "ANdh"
+  DrunkenHazeChen: BaseAbilityId = "Acdh"
+  DustOfAppearance: BaseAbilityId = "AItb"
+  Earthquake: BaseAbilityId = "AOeq"
+  EarthquakeNeutralHostile: BaseAbilityId = "SNeq"
+  EatTree: BaseAbilityId = "Aeat"
+  ElunesGrace: BaseAbilityId = "Aegr"
+  EnduranceAura: BaseAbilityId = "AOae"
+  EnduranceAuraCairne: BaseAbilityId = "AOr2"
+  EnduranceAuraNeutralHostile: BaseAbilityId = "SCae"
+  EngineeringUpgrade: BaseAbilityId = "ANeg"
+  Ensnare: BaseAbilityId = "ANen"
+  Ensnare1: BaseAbilityId = "Aens"
+  EnsnareNeutralHostile: BaseAbilityId = "ACen"
+  EntangleGoldMine: BaseAbilityId = "Aent"
+  EntangledGoldMineAbility: BaseAbilityId = "Aegm"
+  EntanglingRoots: BaseAbilityId = "AEer"
+  EntanglingRootsNeutralHostile1: BaseAbilityId = "Aenr"
+  EntanglingRootsNeutralHostile2: BaseAbilityId = "Aenw"
+  EnvenomedSpears: BaseAbilityId = "Aven"
+  EnvenomedWeaponsNeutralHostile: BaseAbilityId = "ACvs"
+  EssenceOfBlight: BaseAbilityId = "Arpl"
+  Ethereal: BaseAbilityId = "Aetl"
+  EtherealForm: BaseAbilityId = "Aetf"
+  Evasion: BaseAbilityId = "AEev"
+  EvasionItem: BaseAbilityId = "AIev"
+  EvasionNeutralHostile: BaseAbilityId = "ACev"
+  EvasionNeutralHostile100Percent: BaseAbilityId = "ACes"
+  ExhumeCorpses: BaseAbilityId = "Aexh"
+  Factory: BaseAbilityId = "ANfy"
+  FaerieFire: BaseAbilityId = "Afae"
+  FaerieFireMorph: BaseAbilityId = "Afa2"
+  FaerieFireNeutralHostile: BaseAbilityId = "ACff"
+  FanOfKnives: BaseAbilityId = "AEfk"
+  FarSight: BaseAbilityId = "AOfs"
+  Feedback: BaseAbilityId = "Afbb"
+  FeedbackArcaneTower: BaseAbilityId = "Afbt"
+  FeedbackSpellbreaker: BaseAbilityId = "Afbk"
+  FeralSpirit: BaseAbilityId = "AOsf"
+  FeralSpirit1: BaseAbilityId = "ACs7"
+  FeralSpiritNeutralHostile: BaseAbilityId = "ACsf"
+  FeralSpiritNeutralHostilePig: BaseAbilityId = "ACs9"
+  FingerOfDeathArchimonde: BaseAbilityId = "ANfd"
+  FingerOfDeathItem: BaseAbilityId = "AIfz"
+  FingerOfDeathNeutralHostile: BaseAbilityId = "Afod"
+  FingerOfPainNeutralHostile: BaseAbilityId = "ACfd"
+  FingerOfPainNeutralHostile1: BaseAbilityId = "ACf3"
+  FireboltNeutralHostile: BaseAbilityId = "ANfb"
+  FireboltNeutralHostile1: BaseAbilityId = "ACfb"
+  FireboltWarlock: BaseAbilityId = "Awfb"
+  FlakCannons: BaseAbilityId = "Aflk"
+  FlameStrike: BaseAbilityId = "AHfs"
+  FlameStrikeNeutralHostile: BaseAbilityId = "ACfs"
+  FlameStrikeNeutralHostile2: BaseAbilityId = "ANfs"
+  Flare: BaseAbilityId = "Afla"
+  FlareGun: BaseAbilityId = "AIfa"
+  FlyingMachineBombs: BaseAbilityId = "Agyb"
+  ForceOfNature: BaseAbilityId = "AEfn"
+  ForceOfNatureNeutralHostile: BaseAbilityId = "ACfr"
+  ForkedLightning: BaseAbilityId = "ANfl"
+  ForkedLightningNeutralHostile: BaseAbilityId = "ACfl"
+  FragmentationShards: BaseAbilityId = "Afsh"
+  FreezingBreath: BaseAbilityId = "Afrz"
+  Frenzy: BaseAbilityId = "Afzy"
+  FrostArmor: BaseAbilityId = "AUfa"
+  FrostArmorAutocast: BaseAbilityId = "AUfu"
+  FrostArmorAutocast1: BaseAbilityId = "ACfu"
+  FrostArmorAutocastNeutralHostile: BaseAbilityId = "ACf2"
+  FrostArmorNeutralHostile: BaseAbilityId = "ACfa"
+  FrostArrows: BaseAbilityId = "ANfa"
+  FrostAttack: BaseAbilityId = "Afra"
+  FrostAttack1: BaseAbilityId = "Afr2"
+  FrostAttackNewHasIcon: BaseAbilityId = "Afrc"
+  FrostBolt: BaseAbilityId = "ACcb"
+  FrostBreath: BaseAbilityId = "Afrb"
+  FrostNova: BaseAbilityId = "AUfn"
+  FrostNovaNeutralHostile: BaseAbilityId = "ACfn"
+  GatherAcolyteGold: BaseAbilityId = "Aaha"
+  GatherWispGoldAndLumber: BaseAbilityId = "Awha"
+  GatherWispGoldAndLumberAncientSpirits: BaseAbilityId = "Awh2"
+  GenericItemRejuvEffect: BaseAbilityId = "AIp1"
+  GenericItemRejuvEffectII: BaseAbilityId = "AIp2"
+  GenericItemRejuvEffectIII: BaseAbilityId = "AIp3"
+  GenericItemRejuvEffectIV: BaseAbilityId = "AIp4"
+  GenericItemRejuvEffectV: BaseAbilityId = "AIp5"
+  GenericItemRejuvEffectVI: BaseAbilityId = "AIp6"
+  GetCorpse: BaseAbilityId = "Amel"
+  Ghost: BaseAbilityId = "Agho"
+  GhostVisible: BaseAbilityId = "Aeth"
+  GhoulFrenzyIcon: BaseAbilityId = "Augf"
+  GlyphOfFortification: BaseAbilityId = "AIgf"
+  GlyphOfFortification1: BaseAbilityId = "AIgu"
+  GoldMineAbility: BaseAbilityId = "Agld"
+  GreaterRuneResurrection: BaseAbilityId = "APrr"
+  HardenedSkin: BaseAbilityId = "Assk"
+  HardenedSkin1: BaseAbilityId = "Ansk"
+  HarvestArchimondesGhoulsLumber: BaseAbilityId = "Ahr2"
+  HarvestGhoulsLumber: BaseAbilityId = "Ahrl"
+  HarvestGoblinShreddersLumber: BaseAbilityId = "Ahr3"
+  HarvestGoldAndLumber: BaseAbilityId = "Ahar"
+  HarvestNeutralGoldAndLumber: BaseAbilityId = "ANha"
+  Heal: BaseAbilityId = "Ahea"
+  HealNeutralHostile1: BaseAbilityId = "Anhe"
+  HealNeutralHostile2: BaseAbilityId = "Anh1"
+  HealNeutralHostile3: BaseAbilityId = "Anh2"
+  HealingSalve: BaseAbilityId = "AIrl"
+  HealingSpray: BaseAbilityId = "ANhs"
+  HealingWardAuraHealingWard: BaseAbilityId = "Aoar"
+  HealingWardItem: BaseAbilityId = "AIhw"
+  HealingWardNeutralHostile: BaseAbilityId = "AChw"
+  HealingWardWitchDoctor: BaseAbilityId = "Ahwd"
+  HealingWave: BaseAbilityId = "AOhw"
+  HealingWaveNeutralHostile: BaseAbilityId = "AChv"
+  HealingWaveRokhan: BaseAbilityId = "ANhw"
+  Hero: BaseAbilityId = "AHer"
+  Hex: BaseAbilityId = "AOhx"
+  HexNeutralHostile: BaseAbilityId = "AChx"
+  HexRokhan: BaseAbilityId = "ANhx"
+  HolyLight: BaseAbilityId = "AHhb"
+  HolyLightItem: BaseAbilityId = "AIhl"
+  HowlOfTerror: BaseAbilityId = "ANht"
+  HowlOfTerrorNeutralHostile: BaseAbilityId = "Acht"
+  HurlBoulder: BaseAbilityId = "ACtb"
+  Immolation: BaseAbilityId = "AEim"
+  ImmolationNeutralHostile: BaseAbilityId = "ACim"
+  Impale: BaseAbilityId = "AUim"
+  ImpaleNeutralHostile: BaseAbilityId = "ACmp"
+  ImprovedBowsIcon: BaseAbilityId = "Aeib"
+  ImprovedLumberHarvestingImprovedLumberHarvestingAdvancedLumberHarvestingIcon: BaseAbilityId = "Ahlh"
+  Incinerate: BaseAbilityId = "ANic"
+  IncinerateArrow: BaseAbilityId = "ANia"
+  InciteUnholyFrenzy: BaseAbilityId = "Auuf"
+  Inferno: BaseAbilityId = "AUin"
+  InfernoNeutralHostile: BaseAbilityId = "ANin"
+  InfernoTichondrius: BaseAbilityId = "SNin"
+  InnerFire: BaseAbilityId = "Ainf"
+  InnerFireNeutralHostile: BaseAbilityId = "ACif"
+  InventoryHero: BaseAbilityId = "AInv"
+  Invisibility: BaseAbilityId = "Aivs"
+  InvulnerableNeutral: BaseAbilityId = "Avul"
+  ItemAgilityGain: BaseAbilityId = "AIam"
+  ItemAgilityGainPlus2: BaseAbilityId = "AIgm"
+  ItemAnimateDead: BaseAbilityId = "AIan"
+  ItemAntiMagicShell: BaseAbilityId = "AIxs"
+  ItemAreaDetection: BaseAbilityId = "AIta"
+  ItemAreaHealOrManaRegain: BaseAbilityId = "AIra"
+  ItemAreaHealing: BaseAbilityId = "AIha"
+  ItemAreaHealingGreater: BaseAbilityId = "AIhb"
+  ItemAreaManaRegain: BaseAbilityId = "AImr"
+  ItemAreaTreeOrWallDamage: BaseAbilityId = "AIdm"
+  ItemArmorBonusPlus1: BaseAbilityId = "AId1"
+  ItemArmorBonusPlus10: BaseAbilityId = "AId0"
+  ItemArmorBonusPlus2: BaseAbilityId = "AId2"
+  ItemArmorBonusPlus3: BaseAbilityId = "AId3"
+  ItemArmorBonusPlus4: BaseAbilityId = "AId4"
+  ItemArmorBonusPlus5: BaseAbilityId = "AId5"
+  ItemArmorBonusPlus7: BaseAbilityId = "AId7"
+  ItemArmorBonusPlus8: BaseAbilityId = "AId8"
+  ItemAttackBlackArrowBonus: BaseAbilityId = "AIdf"
+  ItemAttackCorruptionBonus: BaseAbilityId = "AIcb"
+  ItemAttackFireBonus: BaseAbilityId = "AIfb"
+  ItemAttackFireBonusGuldan: BaseAbilityId = "AIgd"
+  ItemAttackFrostBonus: BaseAbilityId = "AIob"
+  ItemAttackHealReductionBonus: BaseAbilityId = "AIf2"
+  ItemAttackLightningBonus: BaseAbilityId = "AIlb"
+  ItemAttackLightningBonusNew: BaseAbilityId = "AIll"
+  ItemAttackPoisonBonus: BaseAbilityId = "AIpb"
+  ItemAttackSlowBonus: BaseAbilityId = "AIsb"
+  ItemAttackSpeedBonusGlovesOfHaste: BaseAbilityId = "AIsx"
+  ItemAttackSpeedBonusGreater: BaseAbilityId = "AIs2"
+  ItemBlackArrow: BaseAbilityId = "ANbs"
+  ItemBlueDragonspawnOverseerSummon: BaseAbilityId = "AIff"
+  ItemBlueDrakeSummon: BaseAbilityId = "AIfd"
+  ItemCaptureTheFlag: BaseAbilityId = "AIfl"
+  ItemCaptureTheFlagHuman: BaseAbilityId = "AIfm"
+  ItemCaptureTheFlagNightElf: BaseAbilityId = "AIfn"
+  ItemCaptureTheFlagOrc: BaseAbilityId = "AIfo"
+  ItemCaptureTheFlagUndead: BaseAbilityId = "AIfe"
+  ItemChainDispel: BaseAbilityId = "AIdc"
+  ItemCommand: BaseAbilityId = "AIco"
+  ItemDamageBonusPlus1: BaseAbilityId = "AItg"
+  ItemDamageBonusPlus10: BaseAbilityId = "AItn"
+  ItemDamageBonusPlus12: BaseAbilityId = "AItc"
+  ItemDamageBonusPlus15: BaseAbilityId = "AItf"
+  ItemDamageBonusPlus2: BaseAbilityId = "AIth"
+  ItemDamageBonusPlus20: BaseAbilityId = "AItx"
+  ItemDamageBonusPlus3: BaseAbilityId = "AIat"
+  ItemDamageBonusPlus4: BaseAbilityId = "AIti"
+  ItemDamageBonusPlus5: BaseAbilityId = "AItj"
+  ItemDamageBonusPlus6: BaseAbilityId = "AIt6"
+  ItemDamageBonusPlus7: BaseAbilityId = "AItk"
+  ItemDamageBonusPlus8: BaseAbilityId = "AItl"
+  ItemDamageBonusPlus9: BaseAbilityId = "AIt9"
+  ItemDispel: BaseAbilityId = "AIdi"
+  ItemDispelWithCooldown: BaseAbilityId = "AIds"
+  ItemDivineShield: BaseAbilityId = "AIdv"
+  ItemDoomGuardSummon: BaseAbilityId = "AIfu"
+  ItemExperienceGain: BaseAbilityId = "AIem"
+  ItemExperienceGainGreater: BaseAbilityId = "AIe2"
+  ItemFelStalkerSummon: BaseAbilityId = "AIfh"
+  ItemFreezeDamageBonus: BaseAbilityId = "AIzb"
+  ItemFurbolgTrackerSummon: BaseAbilityId = "AIut"
+  ItemHealOrManaRegain: BaseAbilityId = "AIre"
+  ItemHealingGreater: BaseAbilityId = "AIh2"
+  ItemHealingLeast: BaseAbilityId = "AIhx"
+  ItemHealingLesser: BaseAbilityId = "AIh1"
+  ItemHeroStatBonusPlus10Agility: BaseAbilityId = "AIaz"
+  ItemHeroStatBonusPlus1Agility: BaseAbilityId = "AIa1"
+  ItemHeroStatBonusPlus1AllStats: BaseAbilityId = "AIx1"
+  ItemHeroStatBonusPlus1Intelligence: BaseAbilityId = "AIi1"
+  ItemHeroStatBonusPlus1Strength: BaseAbilityId = "AIs1"
+  ItemHeroStatBonusPlus2AllStats: BaseAbilityId = "AIx2"
+  ItemHeroStatBonusPlus3Agility: BaseAbilityId = "AIa3"
+  ItemHeroStatBonusPlus3AllStats: BaseAbilityId = "AIx3"
+  ItemHeroStatBonusPlus3Intelligence: BaseAbilityId = "AIi3"
+  ItemHeroStatBonusPlus3Strength: BaseAbilityId = "AIs3"
+  ItemHeroStatBonusPlus4Agility: BaseAbilityId = "AIa4"
+  ItemHeroStatBonusPlus4AllStats: BaseAbilityId = "AIx4"
+  ItemHeroStatBonusPlus4Intelligence: BaseAbilityId = "AIi4"
+  ItemHeroStatBonusPlus4Strength: BaseAbilityId = "AIs4"
+  ItemHeroStatBonusPlus5Agility: BaseAbilityId = "AIa5"
+  ItemHeroStatBonusPlus5AllStats: BaseAbilityId = "AIx5"
+  ItemHeroStatBonusPlus5Intelligence: BaseAbilityId = "AIi5"
+  ItemHeroStatBonusPlus5Strength: BaseAbilityId = "AIs5"
+  ItemHeroStatBonusPlus6Agility: BaseAbilityId = "AIa6"
+  ItemHeroStatBonusPlus6Intelligence: BaseAbilityId = "AIi6"
+  ItemHeroStatBonusPlus6Strength: BaseAbilityId = "AIs6"
+  ItemIceRevenantSummon: BaseAbilityId = "AIir"
+  ItemIllusions: BaseAbilityId = "AIil"
+  ItemImmolation: BaseAbilityId = "AIcf"
+  ItemIntOrAgiOrStrGain: BaseAbilityId = "AIxm"
+  ItemIntelligenceGain: BaseAbilityId = "AIim"
+  ItemIntelligenceGainPlus2: BaseAbilityId = "AItm"
+  ItemLevelGain: BaseAbilityId = "AIlm"
+  ItemLifeBonusGreater: BaseAbilityId = "AIl2"
+  ItemLifeBonusLeast: BaseAbilityId = "AIlf"
+  ItemLifeBonusLeast1: BaseAbilityId = "AIlz"
+  ItemLifeBonusLesser: BaseAbilityId = "AIl1"
+  ItemLifeRegeneration: BaseAbilityId = "Arel"
+  ItemLifeRegenerationLesser: BaseAbilityId = "Arll"
+  ItemLifeSteal: BaseAbilityId = "AIva"
+  ItemManaBonus100: BaseAbilityId = "AImz"
+  ItemManaBonus200: BaseAbilityId = "AI2m"
+  ItemManaBonus75: BaseAbilityId = "AImv"
+  ItemManaBonusGreater: BaseAbilityId = "AIbm"
+  ItemManaBonusLeast: BaseAbilityId = "AImb"
+  ItemManaRegainGreater: BaseAbilityId = "AIm2"
+  ItemManaRegainLesser: BaseAbilityId = "AIm1"
+  ItemManaRegeneration: BaseAbilityId = "AIrm"
+  ItemMoveSpeedBonus: BaseAbilityId = "AIms"
+  ItemOrcishBattleStandard: BaseAbilityId = "AIfx"
+  ItemPermanentDamageGainItemAttackDamageGain: BaseAbilityId = "AIaa"
+  ItemPermanentLifeGainLesser: BaseAbilityId = "AIpx"
+  ItemPermanentLifeGainPlus50: BaseAbilityId = "AImh"
+  ItemPlaceGoblinLandMine: BaseAbilityId = "AIpm"
+  ItemPurge1: BaseAbilityId = "AIlp"
+  ItemPurge2: BaseAbilityId = "AIpg"
+  ItemPurge3: BaseAbilityId = "AIps"
+  ItemPurgeWandOfNegation: BaseAbilityId = "AIpw"
+  ItemRecall: BaseAbilityId = "AIrt"
+  ItemReincarnation: BaseAbilityId = "AIrc"
+  ItemResurrection: BaseAbilityId = "AIrs"
+  ItemResurrectionCooldown: BaseAbilityId = "AIrx"
+  ItemRevealEntireMap: BaseAbilityId = "AIrv"
+  ItemRockGolemSummon: BaseAbilityId = "AIfr"
+  ItemSightRangeBonus: BaseAbilityId = "AIsi"
+  ItemSilence: BaseAbilityId = "AIse"
+  ItemSkeletonSummon: BaseAbilityId = "AIfs"
+  ItemSlowOrbVersion: BaseAbilityId = "AIos"
+  ItemSoulPossession: BaseAbilityId = "Asou"
+  ItemSoulTheft: BaseAbilityId = "AIso"
+  ItemStrengthGain: BaseAbilityId = "AIsm"
+  ItemStrengthGainPlus2: BaseAbilityId = "AInm"
+  ItemTemporaryAreaArmorBonus: BaseAbilityId = "AIda"
+  ItemTemporaryAreaArmorBonusWithLifeAndManaHealing: BaseAbilityId = "AIdb"
+  ItemTemporaryInvisibilityGreater: BaseAbilityId = "AIv2"
+  ItemTemporaryInvisibilityLesser: BaseAbilityId = "AIv1"
+  ItemTemporaryInvulnerability: BaseAbilityId = "AIvu"
+  ItemTemporaryInvulnerabilityDivinity: BaseAbilityId = "AIvg"
+  ItemTemporaryInvulnerabilityLesser: BaseAbilityId = "AIvl"
+  ItemTemporarySpeedBonus: BaseAbilityId = "AIsp"
+  ItemTownPortal: BaseAbilityId = "AItp"
+  ItemTransmute: BaseAbilityId = "AIts"
+  ItemUrsaWarriorSummon: BaseAbilityId = "AIuw"
+  ItemWeb: BaseAbilityId = "AIwb"
+  KaboomClockwerkGoblinLevel1: BaseAbilityId = "Asdg"
+  KaboomClockwerkGoblinLevel2: BaseAbilityId = "Asd2"
+  KaboomClockwerkGoblinLevel3: BaseAbilityId = "Asd3"
+  KaboomGoblinSapper: BaseAbilityId = "Asds"
+  LeastHealingSlowCooldown: BaseAbilityId = "AIh3"
+  LesserClarityPotion: BaseAbilityId = "AIpl"
+  LesserRuneResurrection: BaseAbilityId = "APrl"
+  LifeDrain: BaseAbilityId = "ANdr"
+  LifeDrainNeutralHostile: BaseAbilityId = "ACdr"
+  LifeRegenerationAuraNeutral: BaseAbilityId = "ACnr"
+  LifeStealFrostmourne: BaseAbilityId = "SCva"
+  LightningAttack: BaseAbilityId = "Alit"
+  LightningShield: BaseAbilityId = "Alsh"
+  LightningShieldItem: BaseAbilityId = "AIls"
+  LightningShieldNeutralHostile: BaseAbilityId = "ACls"
+  LiquidFire: BaseAbilityId = "Aliq"
+  LoadEntangledGoldMine: BaseAbilityId = "Aenc"
+  LoadGoblinZeppelin: BaseAbilityId = "Aloa"
+  LoadOrcBurrow: BaseAbilityId = "Sloa"
+  LoadPilot: BaseAbilityId = "Atlp"
+  LoadShips: BaseAbilityId = "Slo3"
+  LoadWisp: BaseAbilityId = "Slo2"
+  Locust: BaseAbilityId = "Aloc"
+  LocustSwarm: BaseAbilityId = "AUls"
+  LongRiflesIcon: BaseAbilityId = "Ahri"
+  MagicDefense: BaseAbilityId = "Amdf"
+  MagicSentryHumanTowers: BaseAbilityId = "Adts"
+  ManaBurn: BaseAbilityId = "AEmb"
+  ManaBurnNeutralHostile1: BaseAbilityId = "Ambd"
+  ManaBurnNeutralHostile2: BaseAbilityId = "Amnb"
+  ManaBurnNeutralHostile3: BaseAbilityId = "Ambb"
+  ManaFlare: BaseAbilityId = "Amfl"
+  ManaRegenerationLifeRegenerationAuraNeutral: BaseAbilityId = "ANre"
+  ManaShield: BaseAbilityId = "ANms"
+  ManaShieldNeutralHostile: BaseAbilityId = "ACmf"
+  MarksmanshipIcon: BaseAbilityId = "Aemk"
+  MassTeleport: BaseAbilityId = "AHmt"
+  MaulNeutralHostile3OrMaul: BaseAbilityId = "ANb2"
+  MechanicalCritter: BaseAbilityId = "Amec"
+  MeleeColdDamageBonus: BaseAbilityId = "AIft"
+  MeleeFireDamageBonus: BaseAbilityId = "AIfw"
+  MeleeLightningDamageBonus: BaseAbilityId = "AIlx"
+  Metamorphosis: BaseAbilityId = "AEme"
+  MetamorphosisEvilIllidan: BaseAbilityId = "AEvi"
+  MetamorphosisIllidan: BaseAbilityId = "AEIl"
+  MindRot: BaseAbilityId = "ANmr"
+  MineExplodingGoblinLandMine: BaseAbilityId = "Amin"
+  MirrorImage: BaseAbilityId = "AOmi"
+  Monsoon: BaseAbilityId = "ANmo"
+  Monsoon1: BaseAbilityId = "ACmo"
+  MonsterLure: BaseAbilityId = "AImo"
+  MoonGlaive: BaseAbilityId = "Amgl"
+  MoonGlaiveNaisha: BaseAbilityId = "Amgr"
+  MountHippogryph: BaseAbilityId = "Aco2"
+  MountHippogryphOld: BaseAbilityId = "Acoa"
+  Move: BaseAbilityId = "Amov"
+  OnFire: BaseAbilityId = "Afir"
+  OnFireHuman: BaseAbilityId = "Afih"
+  OnFireNightElf: BaseAbilityId = "Afin"
+  OnFireOrc: BaseAbilityId = "Afio"
+  OnFireUndead: BaseAbilityId = "Afiu"
+  OrbOfAnnihilation: BaseAbilityId = "Afak"
+  PackMule: BaseAbilityId = "Apak"
+  Parasite: BaseAbilityId = "ANpa"
+  Parasite1: BaseAbilityId = "ACpa"
+  PenguinSqueek: BaseAbilityId = "AIpz"
+  PermanentImmolationNeutralHostile1: BaseAbilityId = "ANpi"
+  PermanentImmolationNeutralHostile2: BaseAbilityId = "Apig"
+  PermanentInvisibility: BaseAbilityId = "Apiv"
+  PhaseShift: BaseAbilityId = "Apsh"
+  Phoenix: BaseAbilityId = "AHpx"
+  PhoenixFire: BaseAbilityId = "Apxf"
+  PhoenixFireFlyer: BaseAbilityId = "Apmf"
+  PhoenixIcon: BaseAbilityId = "Ahpe"
+  PhoenixMorphingEggRelated: BaseAbilityId = "Aphx"
+  PickUpArcher: BaseAbilityId = "Aco3"
+  PickUpArcherOld: BaseAbilityId = "Acoh"
+  Pillage: BaseAbilityId = "Asal"
+  PocketFactory: BaseAbilityId = "ANsy"
+  PocketFactoryUpgrade1: BaseAbilityId = "ANs1"
+  PocketFactoryUpgrade2: BaseAbilityId = "ANs2"
+  PocketFactoryUpgrade3: BaseAbilityId = "ANs3"
+  PoisonArrows: BaseAbilityId = "AEpa"
+  PoisonSting: BaseAbilityId = "Apoi"
+  PoisonStingOrbOfVenom: BaseAbilityId = "Apo2"
+  Polymorph: BaseAbilityId = "Aply"
+  PolymorphNeutralHostile: BaseAbilityId = "ACpy"
+  Possession: BaseAbilityId = "Apos"
+  PossessionChanneling: BaseAbilityId = "Aps2"
+  PossessionNeutralHostile: BaseAbilityId = "ACps"
+  PowerupAreaHealing: BaseAbilityId = "APh2"
+  PowerupAreaHealingGreater: BaseAbilityId = "APh3"
+  PowerupAreaHealingLesser: BaseAbilityId = "APh1"
+  PowerupDispel: BaseAbilityId = "APdi"
+  Prioritize: BaseAbilityId = "Aatp"
+  PulverizeNeutralHostile: BaseAbilityId = "ACpv"
+  PulverizePulverize: BaseAbilityId = "Awar"
+  Purge: BaseAbilityId = "Aprg"
+  Purge1: BaseAbilityId = "Apg2"
+  PurgeNeutralHostile: BaseAbilityId = "ACpu"
+  QuillSpray: BaseAbilityId = "ANak"
+  RainOfChaosArchimonde: BaseAbilityId = "ANrc"
+  RainOfChaosBalnazzar: BaseAbilityId = "ANr3"
+  RainOfFire: BaseAbilityId = "ANrf"
+  RainOfFireNeutralHostile1: BaseAbilityId = "ACrg"
+  RainOfFireNeutralHostile2: BaseAbilityId = "ACrf"
+  RaiseDead: BaseAbilityId = "Arai"
+  RaiseDeadItem: BaseAbilityId = "AIrd"
+  RaiseDeadNeutralHostile: BaseAbilityId = "ACrd"
+  Rally: BaseAbilityId = "ARal"
+  RandomItem: BaseAbilityId = "AIri"
+  RayOfDisruption: BaseAbilityId = "Ache"
+  ReanimationSpecialCampaignItem: BaseAbilityId = "AInd"
+  Rebirth: BaseAbilityId = "AIrb"
+  RegenerationAuraItem: BaseAbilityId = "AIgx"
+  Reincarnation: BaseAbilityId = "AOre"
+  Reincarnation1: BaseAbilityId = "ANr2"
+  ReincarnationCairne: BaseAbilityId = "AOr3"
+  ReincarnationMannoroth: BaseAbilityId = "ANrn"
+  ReincarnationNeutralHostile: BaseAbilityId = "ACrn"
+  ReinforcedBurrowsUpgrade: BaseAbilityId = "Arbr"
+  ReinforcedDefensesIcon: BaseAbilityId = "Aorb"
+  Rejuvenation: BaseAbilityId = "Arej"
+  RejuvenationFurbolg: BaseAbilityId = "ACr2"
+  RejuvenationNeutralHostile: BaseAbilityId = "ACrj"
+  Renew: BaseAbilityId = "Aren"
+  Repair: BaseAbilityId = "Arep"
+  RepairHuman: BaseAbilityId = "Ahrp"
+  Replenish: BaseAbilityId = "Arpb"
+  ReplenishMana: BaseAbilityId = "Amb2"
+  ReplenishManaAndLife: BaseAbilityId = "Ambt"
+  ResistantSkin: BaseAbilityId = "Arsk"
+  ResistantSkinNeutralHostile1: BaseAbilityId = "ACrk"
+  ResistantSkinNeutralHostile2: BaseAbilityId = "ACsk"
+  Restore: BaseAbilityId = "Arst"
+  Resurrection: BaseAbilityId = "AHre"
+  ReturnGold: BaseAbilityId = "Argd"
+  ReturnGoldAndLumber: BaseAbilityId = "Argl"
+  ReturnLumber: BaseAbilityId = "Arlm"
+  Reveal: BaseAbilityId = "Andt"
+  Reveal1: BaseAbilityId = "AHta"
+  Revenge: BaseAbilityId = "Arng"
+  ReviveHero: BaseAbilityId = "Arev"
+  ReviveHeroInstantly: BaseAbilityId = "Aawa"
+  RitualDaggerInstantHeal: BaseAbilityId = "AIdg"
+  RitualDaggerRegenerate: BaseAbilityId = "AIg2"
+  Roar: BaseAbilityId = "Aroa"
+  RoarItem: BaseAbilityId = "AIrr"
+  RoarMorph: BaseAbilityId = "Ara2"
+  RoarNeutralHostile: BaseAbilityId = "ACro"
+  RoarSkeletalOrcChampion: BaseAbilityId = "ACr1"
+  RoboGoblin: BaseAbilityId = "ANrg"
+  RoboGoblinUpgradeLevel1: BaseAbilityId = "ANg1"
+  RoboGoblinUpgradeLevel2: BaseAbilityId = "ANg2"
+  RoboGoblinUpgradeLevel3: BaseAbilityId = "ANg3"
+  RootAncientProtector: BaseAbilityId = "Aro2"
+  RootAncients: BaseAbilityId = "Aro1"
+  RuneAreaHealOrManaRegain: BaseAbilityId = "APra"
+  RuneAreaManaRegain: BaseAbilityId = "APmr"
+  RuneAreaManaRegainGreater: BaseAbilityId = "APmg"
+  RuneOfSpeed: BaseAbilityId = "APsa"
+  RuneOfTheWatcher: BaseAbilityId = "APwt"
+  SacrificeAcolyte: BaseAbilityId = "Alam"
+  SacrificeSacrificialPit: BaseAbilityId = "Asac"
+  Scout: BaseAbilityId = "AEst"
+  ScrollOfHaste: BaseAbilityId = "AIsa"
+  ScrollOfRegeneration: BaseAbilityId = "AIsl"
+  SearingArrows: BaseAbilityId = "AHfa"
+  SearingArrowsNeutralHostile: BaseAbilityId = "ACsa"
+  SelectHero: BaseAbilityId = "Aneu"
+  SelectUnit: BaseAbilityId = "Ane2"
+  SellItems: BaseAbilityId = "Asid"
+  SellUnits: BaseAbilityId = "Asud"
+  Sentinel: BaseAbilityId = "Aesn"
+  SentinelNaisha: BaseAbilityId = "Aesr"
+  SentryWard: BaseAbilityId = "Aeye"
+  SentryWardItem: BaseAbilityId = "AIsw"
+  SerpentWard: BaseAbilityId = "AOsw"
+  SerpentWardRokhan: BaseAbilityId = "Arsw"
+  ShadeIcon: BaseAbilityId = "Augh"
+  ShadowMeld: BaseAbilityId = "Ashm"
+  ShadowMeldAkama: BaseAbilityId = "Ahid"
+  ShadowMeldInstant: BaseAbilityId = "Sshm"
+  ShadowMeldItem: BaseAbilityId = "AIhm"
+  ShadowOrbAbility: BaseAbilityId = "AIdn"
+  ShadowStrike: BaseAbilityId = "AEsh"
+  Shockwave: BaseAbilityId = "AOsh"
+  Shockwave1: BaseAbilityId = "ANsh"
+  ShockwaveCairne: BaseAbilityId = "AOs2"
+  ShockwaveNeutralHostile: BaseAbilityId = "ACsh"
+  ShockwaveTrap: BaseAbilityId = "ACst"
+  ShopPurchaseItem: BaseAbilityId = "Apit"
+  ShopSharingAlliedBldg: BaseAbilityId = "Aall"
+  Silence: BaseAbilityId = "ANsi"
+  SilenceNeutralHostile: BaseAbilityId = "ACsi"
+  SiphonMana: BaseAbilityId = "AHdr"
+  SiphonManaNeutralHostile: BaseAbilityId = "ACsm"
+  SkeletalMasteryIcon: BaseAbilityId = "Ausm"
+  SlamNeutralHostile: BaseAbilityId = "ACtc"
+  SlamThunderLizard: BaseAbilityId = "ACt2"
+  Sleep: BaseAbilityId = "AUsl"
+  Sleep1: BaseAbilityId = "ACsp"
+  SleepAlways: BaseAbilityId = "Asla"
+  SleepNeutralHostile: BaseAbilityId = "ACsl"
+  Slow: BaseAbilityId = "Aslo"
+  SlowAuraTornado: BaseAbilityId = "Aasl"
+  SlowNeutralHostile: BaseAbilityId = "ACsw"
+  SlowOrbOfSlowNew: BaseAbilityId = "AIno"
+  SlowPoison: BaseAbilityId = "Aspo"
+  SlowPoisonItem: BaseAbilityId = "AIsz"
+  SoulBurn: BaseAbilityId = "ANso"
+  SoulPreservationMalganis: BaseAbilityId = "ANsl"
+  SpawnHydra: BaseAbilityId = "Aspy"
+  SpawnHydraHatchling: BaseAbilityId = "Aspt"
+  SpawnSkeletonProbablyBlackArrow: BaseAbilityId = "Asod"
+  SpawnSpiderlingsNeutralHostile: BaseAbilityId = "Assp"
+  SpawnSpidersNeutralHostile: BaseAbilityId = "Aspd"
+  SpawnTentacle: BaseAbilityId = "ACtn"
+  SpellBook: BaseAbilityId = "Aspb"
+  SpellDamageReduction: BaseAbilityId = "AIsr"
+  SpellImmunity: BaseAbilityId = "Amim"
+  SpellImmunityItem: BaseAbilityId = "AImx"
+  SpellImmunityNeutralHostile: BaseAbilityId = "ACmi"
+  SpellImmunitySpellImmunityArchimonde: BaseAbilityId = "ACm2"
+  SpellImmunitySpellImmunityDragon: BaseAbilityId = "ACm3"
+  SpellShieldAmulet: BaseAbilityId = "ANss"
+  SpellShieldRune: BaseAbilityId = "ANse"
+  SpellSteal: BaseAbilityId = "Asps"
+  Sphere: BaseAbilityId = "Asph"
+  SphereVengeanceLevel1: BaseAbilityId = "Asp1"
+  SphereVengeanceLevel2: BaseAbilityId = "Asp2"
+  SphereVengeanceLevel3: BaseAbilityId = "Asp3"
+  SphereVengeanceLevel4: BaseAbilityId = "Asp4"
+  SphereVengeanceLevel5: BaseAbilityId = "Asp5"
+  SphereVengeanceLevel6: BaseAbilityId = "Asp6"
+  SpiderAttack: BaseAbilityId = "Aspa"
+  SpikedBarricades: BaseAbilityId = "Aspi"
+  SpikedBarricadesSpikedBarricadesImprovedSpikedBarricadesIcon: BaseAbilityId = "Aosp"
+  SpikedCarapace: BaseAbilityId = "AUts"
+  SpikedShell: BaseAbilityId = "ANth"
+  SpikedShell22ButtonPos: BaseAbilityId = "ANt2"
+  SpiritBeast: BaseAbilityId = "ACs8"
+  SpiritLink: BaseAbilityId = "Aspl"
+  SpiritLinkArea: BaseAbilityId = "Aspp"
+  SpiritOfVengeance: BaseAbilityId = "Avng"
+  SpiritTouch: BaseAbilityId = "Arpm"
+  StaffOfPreservation: BaseAbilityId = "ANpr"
+  StaffOfSanctuary: BaseAbilityId = "ANsa"
+  StaffOfTeleportation: BaseAbilityId = "AImt"
+  Stampede: BaseAbilityId = "ANst"
+  StampedeRexxar: BaseAbilityId = "Arsp"
+  StandDown: BaseAbilityId = "Astd"
+  Starfall: BaseAbilityId = "AEsf"
+  StarfallMorePowerful: BaseAbilityId = "AEsb"
+  StasisTrap: BaseAbilityId = "Asta"
+  Steal: BaseAbilityId = "Aste"
+  StoneForm: BaseAbilityId = "Astn"
+  StormBolt: BaseAbilityId = "AHtb"
+  StormBolt1: BaseAbilityId = "ANsb"
+  StormCrowForm: BaseAbilityId = "Arav"
+  StormEarthAndFire: BaseAbilityId = "ANef"
+  StormEarthAndFireChen: BaseAbilityId = "Acef"
+  StormHammers: BaseAbilityId = "Asth"
+  SubmergeMyrmidon: BaseAbilityId = "Asb1"
+  SubmergeRoyalGuard: BaseAbilityId = "Asb2"
+  SubmergeSnapDragon: BaseAbilityId = "Asb3"
+  SummonBear: BaseAbilityId = "ANsg"
+  SummonHawk: BaseAbilityId = "ANsw"
+  SummonHeadhunterItem: BaseAbilityId = "AIsh"
+  SummonLavaSpawn: BaseAbilityId = "ANlm"
+  SummonMishaRexxar: BaseAbilityId = "Arsg"
+  SummonPrawns: BaseAbilityId = "Aslp"
+  SummonQuilbeast: BaseAbilityId = "ANsq"
+  SummonQuilbeastRexxar: BaseAbilityId = "Arsq"
+  SummonSeaElemental: BaseAbilityId = "ACwe"
+  SummonWaterElemental: BaseAbilityId = "AHwe"
+  SummoningRitual: BaseAbilityId = "Ahnl"
+  SunderingBlades: BaseAbilityId = "Ahsb"
+  Taunt: BaseAbilityId = "Atau"
+  TauntNeutralHostile: BaseAbilityId = "ANta"
+  ThornsAura: BaseAbilityId = "AEah"
+  ThornsAuraNeutralHostile: BaseAbilityId = "ACah"
+  ThunderClap: BaseAbilityId = "AHtc"
+  TomeOfRetraining: BaseAbilityId = "Aret"
+  Tornado: BaseAbilityId = "ANto"
+  TornadoSpinTornado: BaseAbilityId = "Atsp"
+  TornadoWanderTornado: BaseAbilityId = "Atwa"
+  Tranquility: BaseAbilityId = "AEtq"
+  Transmute: BaseAbilityId = "ANtm"
+  TreeOfLifeUpgradeAbility: BaseAbilityId = "Atol"
+  TrollRegenerationIcon: BaseAbilityId = "Aotr"
+  TrueSightFlyingMachine: BaseAbilityId = "Agyv"
+  TrueSightNeutral1: BaseAbilityId = "Adtg"
+  TrueSightNeutral2: BaseAbilityId = "ANtr"
+  TrueSightShade: BaseAbilityId = "Atru"
+  TrueshotAura: BaseAbilityId = "AEar"
+  TrueshotAuraNeutralHostile: BaseAbilityId = "ACat"
+  Turret: BaseAbilityId = "Attu"
+  Ultravision: BaseAbilityId = "Ault"
+  UltravisionItem: BaseAbilityId = "AIuv"
+  UndefinedGrommash: BaseAbilityId = "Sca6"
+  UndefinedGrunt: BaseAbilityId = "Sca1"
+  UndefinedItem: BaseAbilityId = "AIin"
+  UndefinedItem1: BaseAbilityId = "AIad"
+  UndefinedItem2: BaseAbilityId = "AIcd"
+  UndefinedItem3: BaseAbilityId = "AIwd"
+  UndefinedItem4: BaseAbilityId = "AIba"
+  UndefinedItem5: BaseAbilityId = "AIav"
+  UndefinedItem6: BaseAbilityId = "AIar"
+  UndefinedItem7: BaseAbilityId = "AIae"
+  UndefinedItem8: BaseAbilityId = "AIau"
+  UndefinedKodoBeast: BaseAbilityId = "Sca4"
+  UndefinedLesser: BaseAbilityId = "AIrn"
+  UndefinedNeutralHostile: BaseAbilityId = "ACss"
+  UndefinedPeon: BaseAbilityId = "Sca5"
+  UndefinedRaider: BaseAbilityId = "Sca2"
+  UndefinedShaman: BaseAbilityId = "Sca3"
+  UnholyAura: BaseAbilityId = "AUau"
+  UnholyAuraNeutralHostile: BaseAbilityId = "ACua"
+  UnholyFrenzy: BaseAbilityId = "Auhf"
+  UnholyFrenzyItem: BaseAbilityId = "AIuf"
+  UnholyFrenzyNeutralHostile: BaseAbilityId = "ACuf"
+  UnholyFrenzyWarlock: BaseAbilityId = "Suhf"
+  UnitInventoryHuman: BaseAbilityId = "Aihn"
+  UnitInventoryNightElf: BaseAbilityId = "Aien"
+  UnitInventoryOrc: BaseAbilityId = "Aion"
+  UnitInventoryUndead: BaseAbilityId = "Aiun"
+  UnloadAirTransportsGoblinZeppelin: BaseAbilityId = "Adro"
+  UnloadInstantEntangledMine: BaseAbilityId = "Adri"
+  UnloadSeaTransports: BaseAbilityId = "Sdro"
+  UnstableConcoction: BaseAbilityId = "Auco"
+  UnsummonBuilding: BaseAbilityId = "Auns"
+  VampiricAura: BaseAbilityId = "AUav"
+  VampiricAuraNeutralHostile: BaseAbilityId = "ACvp"
+  VampiricPotion: BaseAbilityId = "AIpv"
+  Vengeance: BaseAbilityId = "AEsv"
+  Volcano: BaseAbilityId = "ANvc"
+  VoodooSpirits: BaseAbilityId = "AOls"
+  VorpalBlades: BaseAbilityId = "Aimp"
+  WandOfShadowsight: BaseAbilityId = "Ashs"
+  WanderNeutral: BaseAbilityId = "Awan"
+  WarClub: BaseAbilityId = "Agra"
+  WarDrums: BaseAbilityId = "Aakb"
+  WarStomp: BaseAbilityId = "AOws"
+  WarStomp1: BaseAbilityId = "AOw2"
+  WarStompNeutralHostile1NeutralHostile: BaseAbilityId = "Awrs"
+  WarStompNeutralHostile2NeutralHostile: BaseAbilityId = "Awrh"
+  WarStompNeutralHostile3NeutralHostile: BaseAbilityId = "Awrg"
+  WateryMinion: BaseAbilityId = "ANwm"
+  WateryMinionItem: BaseAbilityId = "AIwm"
+  WaygateAbility: BaseAbilityId = "Awrp"
+  Web: BaseAbilityId = "Aweb"
+  WebNeutralHostile: BaseAbilityId = "ACwb"
+  WellSpringIcon: BaseAbilityId = "Aews"
+  WindWalk: BaseAbilityId = "AOwk"
+  WindWalkNeutralHostile: BaseAbilityId = "ANwk"
+}
+
+Units: UnitConstants = new {}
+Items: ItemConstants = new {}
+Abilities: AbilityConstants = new {}

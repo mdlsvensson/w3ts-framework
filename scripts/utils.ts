@@ -17,12 +17,20 @@ export interface IProjectConfig {
 }
 
 /**
- * Load an object from a JSON file.
+ * Load an object from a JSON file, automatically merging config.local.json if loading config.json.
  * @param fname The JSON file
  */
 export function loadJsonFile(fname: string) {
   try {
-    return JSON.parse(fs.readFileSync(fname).toString());
+    const data = JSON.parse(fs.readFileSync(fname).toString());
+    if (fname === "config.json" || fname.endsWith("/config.json") || fname.endsWith("\\config.json")) {
+      const localFname = fname.replace(/config\.json$/, "config.local.json");
+      if (fs.existsSync(localFname)) {
+        const localData = JSON.parse(fs.readFileSync(localFname).toString());
+        return { ...data, ...localData };
+      }
+    }
+    return data;
   } catch (e: any) {
     logger.error(e.toString());
     return {};
@@ -103,6 +111,11 @@ export function compileMap(config: IProjectConfig) {
 
   logger.info("Modifying tsconfig.json to work with war3-transformer...");
   updateTSConfig(config.mapFolder);
+
+  if (fs.existsSync("objects/objects.pkl")) {
+    logger.info("Evaluating Pkl object data...");
+    execSync("pkl eval -f json objects/objects.pkl -o src/generated/objects.json", { stdio: "inherit" });
+  }
 
   logger.info("Transpiling TypeScript to Lua...");
   execSync('tstl -p tsconfig.json', { stdio: 'inherit' });

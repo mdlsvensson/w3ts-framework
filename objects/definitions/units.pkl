@@ -1,0 +1,6 @@
+module wc3.definitions.units
+
+import "../schema.pkl" as schema
+import "../bases.pkl" as bases
+
+units: Mapping<String, schema.RegularUnit> = new {}

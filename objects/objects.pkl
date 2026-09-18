@@ -1,0 +1,37 @@
+amends "schema.pkl"
+
+import "definitions/heroes.pkl" as defHeroes
+import "definitions/buildings.pkl" as defBuildings
+import "definitions/units.pkl" as defUnits
+import "definitions/items.pkl" as defItems
+import "definitions/abilities.pkl" as defAbilities
+import "definitions/buffs.pkl" as defBuffs
+import "definitions/upgrades.pkl" as defUpgrades
+
+heroes {
+  ...defHeroes.heroes
+}
+
+buildings {
+  ...defBuildings.buildings
+}
+
+units {
+  ...defUnits.units
+}
+
+items {
+  ...defItems.items
+}
+
+abilities {
+  ...defAbilities.abilities
+}
+
+buffs {
+  ...defBuffs.buffs
+}
+
+upgrades {
+  ...defUpgrades.upgrades
+}

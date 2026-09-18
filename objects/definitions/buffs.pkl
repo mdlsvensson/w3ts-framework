@@ -1,0 +1,6 @@
+module wc3.definitions.buffs
+
+import "../schema.pkl" as schema
+import "../bases.pkl" as bases
+
+buffs: Mapping<String, schema.Buff> = new {}

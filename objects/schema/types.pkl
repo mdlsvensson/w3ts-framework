@@ -1,0 +1,62 @@
+module wc3.schema.types
+
+import "../bases.pkl" as bases
+
+/// Standardized 4-character rawcode ID rules:
+/// 1. Hero IDs: MUST start with an uppercase letter ([A-Z]) (required by WC3 engine for hero handles)
+typealias HeroId = String(
+  length == 4 &&
+  matches(Regex("^[A-Z][A-Za-z0-9]{3}$")) &&
+  !bases.AllStandardIds.contains(this)
+)
+
+/// 2. Regular Unit IDs: MUST start with a lowercase letter ([a-z]) to prevent WC3 engine hero conflicts
+typealias UnitId = String(
+  length == 4 &&
+  matches(Regex("^[a-z][A-Za-z0-9]{3}$")) &&
+  !bases.AllStandardIds.contains(this)
+)
+
+/// 3. Building IDs: Standardized lowercase rawcode ([a-z])
+typealias BuildingId = String(
+  length == 4 &&
+  matches(Regex("^[a-z][A-Za-z0-9]{3}$")) &&
+  !bases.AllStandardIds.contains(this)
+)
+
+/// 4. Item IDs: Standardized rawcode starting with 'I'
+typealias ItemId = String(
+  length == 4 &&
+  matches(Regex("^I[A-Za-z0-9]{3}$")) &&
+  !bases.AllStandardIds.contains(this)
+)
+
+/// 5. Ability IDs: Standardized rawcode starting with 'A'
+typealias AbilityId = String(
+  length == 4 &&
+  matches(Regex("^A[A-Za-z0-9]{3}$")) &&
+  !bases.AllStandardIds.contains(this)
+)
+
+/// 6. Buff IDs: Standardized rawcode starting with 'B'
+typealias BuffId = String(
+  length == 4 &&
+  matches(Regex("^B[A-Za-z0-9]{3}$")) &&
+  !bases.AllStandardIds.contains(this)
+)
+
+/// 7. Upgrade IDs: Standardized rawcode starting with 'R'
+typealias UpgradeId = String(
+  length == 4 &&
+  matches(Regex("^R[A-Za-z0-9]{3}$")) &&
+  !bases.AllStandardIds.contains(this)
+)
+
+/// Primary Hero attribute
+typealias PrimaryAttribute = "STR" | "AGI" | "INT"
+
+/// Warcraft III Armor defense types
+typealias ArmorType = "Small" | "Medium" | "Large" | "Fortified" | "Normal" | "Hero" | "Divine" | "Unarmored"
+
+/// Warcraft III Attack weapon types
+typealias WeaponType = "Normal" | "Pierce" | "Siege" | "Spells" | "Chaos" | "Magic" | "Hero"

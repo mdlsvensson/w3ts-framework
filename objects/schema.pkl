@@ -1,0 +1,53 @@
+module wc3.schema
+
+import "bases.pkl" as bases
+import "schema/types.pkl" as types
+import "schema/common.pkl" as common
+import "schema/units.pkl" as unitsModule
+import "schema/items.pkl" as itemsModule
+import "schema/abilities.pkl" as abilitiesModule
+import "schema/buffs.pkl" as buffsModule
+import "schema/upgrades.pkl" as upgradesModule
+
+/// Hidden friendly constants available for autocomplete (e.g. bases.Units.Paladin)
+hidden Units = bases.Units
+hidden Items = bases.Items
+hidden Abilities = bases.Abilities
+
+// Re-exported rawcode ID types & enums
+typealias HeroId = types.HeroId
+typealias UnitId = types.UnitId
+typealias BuildingId = types.BuildingId
+typealias ItemId = types.ItemId
+typealias AbilityId = types.AbilityId
+typealias BuffId = types.BuffId
+typealias UpgradeId = types.UpgradeId
+typealias PrimaryAttribute = types.PrimaryAttribute
+typealias ArmorType = types.ArmorType
+typealias WeaponType = types.WeaponType
+
+// Re-exported base classes
+typealias Wc3Object = common.Wc3Object
+typealias VisualObject = common.VisualObject
+typealias CostableObject = common.CostableObject
+
+// Re-exported entity classes
+typealias BaseUnit = unitsModule.BaseUnit
+typealias MobileUnit = unitsModule.MobileUnit
+typealias CombatUnit = unitsModule.MobileUnit
+typealias RegularUnit = unitsModule.RegularUnit
+typealias Hero = unitsModule.Hero
+typealias Building = unitsModule.Building
+typealias Item = itemsModule.Item
+typealias Ability = abilitiesModule.Ability
+typealias Buff = buffsModule.Buff
+typealias Upgrade = upgradesModule.Upgrade
+
+// Top-level object registries
+heroes: Mapping<String, Hero> = new {}
+units: Mapping<String, RegularUnit> = new {}
+buildings: Mapping<String, Building> = new {}
+items: Mapping<String, Item> = new {}
+abilities: Mapping<String, Ability> = new {}
+buffs: Mapping<String, Buff> = new {}
+upgrades: Mapping<String, Upgrade> = new {}
