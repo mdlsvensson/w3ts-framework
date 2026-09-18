@@ -92,4 +92,6 @@ Add or change commands in `deno.json`. Keep `package.json` forwarding aliases on
 
 Keep build code under `scripts/` and game code under `src/`. If your editor uses the Deno language server, scope it to `scripts/`; game source still belongs to the Warcraft/TSTL TypeScript configuration.
 
+The checked-in `.vscode/settings.json` sets both `deno.enablePaths` to `./scripts` and `deno.config` to `./deno.json`. The explicit config path lets the language server discover the root dependency manifest even when only the scripts directory is enabled. Node types use an explicit npm specifier in `deno.json` so the editor and CLI resolve the same package. After changing these settings, run **Deno: Restart Language Server** if old import diagnostics remain.
+
 After toolchain changes, run the tests, type checks, and full build. A clean install is especially valuable for changes involving package resolution, because existing npm installations can conceal undeclared dependencies.

@@ -2,7 +2,7 @@
   "nodeModulesDir": "auto",
   "compilerOptions": {
     "strict": true,
-    "types": ["node"],
+    "types": ["npm:@types/node@22.15.17"],
     "lib": ["deno.window", "esnext"]
   },
   "tasks": {

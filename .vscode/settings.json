@@ -1,5 +1,6 @@
 {
   "deno.enable": true,
+  "deno.config": "./deno.json",
   "deno.enablePaths": [
     "./scripts"
   ]

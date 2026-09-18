@@ -400,6 +400,9 @@
     }
   },
   "workspace": {
+    "dependencies": [
+      "npm:@types/node@22.15.17"
+    ],
     "packageJson": {
       "dependencies": [
         "npm:@types/fs-extra@11.0.4",
