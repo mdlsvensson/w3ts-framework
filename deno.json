@@ -1,0 +1,20 @@
+{
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "strict": true,
+    "types": ["node"],
+    "lib": ["deno.window", "esnext"]
+  },
+  "tasks": {
+    "build": "deno run -A scripts/build.ts",
+    "test": "deno run -A scripts/test.ts",
+    "test:unit": "deno test -A scripts/tests/run.ts",
+    "typecheck": "deno check scripts/*.ts scripts/tests/*.ts && deno run -A npm:typescript@5.8.2/tsc --noEmit -p tsconfig.json",
+    "objects:eval": "deno run -A scripts/evaluate-objects.ts",
+    "schema:gen": "deno run -A scripts/generate-pkl-schema.ts",
+    "bases:gen": "deno run -A scripts/generate-pkl-bases.ts && deno task schema:gen",
+    "build:defs": "deno run -A scripts/dev.ts",
+    "dev": "deno run -A scripts/watch.ts"
+  },
+  "fmt": { "exclude": ["node_modules", "dist", "maps", "objects/bases.pkl", "objects/schema/generated", "src/generated"] }
+}

@@ -1,6 +1,8 @@
-import * as fs from "fs-extra";
-import { logger } from "./utils";
-import { loadProjectConfig } from "./config";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+import fs from "fs-extra";
+import { logger } from "./utils.ts";
+import { loadProjectConfig } from "./config.ts";
 const War3TSTLHelper = require("war3tstlhelper");
 
 const config = loadProjectConfig();

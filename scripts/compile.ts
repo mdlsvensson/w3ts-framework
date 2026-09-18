@@ -1,9 +1,12 @@
-import { execFileSync } from "child_process";
-import * as fs from "fs-extra";
-import * as path from "path";
-import { IProjectConfig, loadJsonFile } from "./config";
-import { injectObjectData } from "./object-files";
-import { logger } from "./utils";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+import { execFileSync } from "node:child_process";
+import fs from "fs-extra";
+import * as path from "node:path";
+import { IProjectConfig, loadJsonFile } from "./config.ts";
+import { injectObjectData } from "./object-files.ts";
+import { logger } from "./utils.ts";
+import { evaluateObjects } from "./evaluate-objects.ts";
 const luamin = require("luamin");
 
 /** Emit an isolated config beside the source config to preserve relative paths. */
@@ -25,8 +28,7 @@ export function compileMap(config: IProjectConfig): string {
   if (!fs.existsSync(path.join(source, "war3map.lua"))) throw new Error(`Missing ${source}/war3map.lua. Save the base map with Lua enabled.`);
 
   logger.info("Evaluating Pkl object data...");
-  fs.ensureDirSync("src/generated");
-  execFileSync("pkl", ["eval", "-f", "json", "objects/objects.pkl", "-o", "src/generated/objects.json"], { stdio: "inherit" });
+  evaluateObjects();
 
   // Only replace this map's staging directory, after verifying the resolved path.
   const dist = path.resolve("dist");
@@ -40,7 +42,7 @@ export function compileMap(config: IProjectConfig): string {
   const buildConfig = createBuildConfig(config);
   try {
     logger.info("Transpiling TypeScript to Lua...");
-    execFileSync(process.execPath, [require.resolve("typescript-to-lua/dist/tstl.js"), "-p", buildConfig], { stdio: "inherit" });
+    execFileSync(Deno.execPath(), ["run", "-A", require.resolve("typescript-to-lua/dist/tstl.js"), "-p", buildConfig], { stdio: "inherit" });
   } finally {
     fs.removeSync(buildConfig);
   }

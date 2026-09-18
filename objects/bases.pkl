@@ -1,5 +1,5 @@
 /// Generated Warcraft III Base Object IDs and Constants
-/// Run `npm run bases:gen` to regenerate.
+/// Run `deno task bases:gen` to regenerate.
 module wc3.bases
 
 typealias BaseUnitId =

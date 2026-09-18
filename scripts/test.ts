@@ -1,7 +1,7 @@
-import { execFile } from "child_process";
-import { loadProjectConfig } from "./config";
-import { compileMap } from "./compile";
-import { logger, runCli } from "./utils";
+import { execFile } from "node:child_process";
+import { loadProjectConfig } from "./config.ts";
+import { compileMap } from "./compile.ts";
+import { logger, runCli } from "./utils.ts";
 
 function main(): void {
   const config = loadProjectConfig();
@@ -11,7 +11,8 @@ function main(): void {
   const args = [...(config.winePath ? [config.gameExecutable] : []), "-loadfile", mapPath, ...config.launchArgs];
   const env = { ...process.env, ...(config.winePrefix ? { WINEPREFIX: config.winePrefix } : {}) };
   logger.info(`Launching map '${filename}'...`);
-  execFile(executable, args, { env }, error => {
+  // Deno defaults windowsHide to true; Warcraft III needs a visible GUI window.
+  execFile(executable, args, { env, windowsHide: false }, error => {
     if (error) {
       logger.error(`Could not launch Warcraft III: ${error.message}`);
       process.exitCode = 1;
@@ -19,4 +20,4 @@ function main(): void {
   });
 }
 
-if (require.main === module) runCli(main);
+if (import.meta.main) runCli(main);

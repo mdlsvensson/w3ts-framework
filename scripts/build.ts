@@ -1,9 +1,9 @@
-import * as fs from "fs-extra";
-import * as path from "path";
-import War3Map from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/map";
-import { getFilesInDirectory, logger, toArrayBuffer, runCli } from "./utils";
-import { loadProjectConfig } from "./config";
-import { compileMap } from "./compile";
+import fs from "fs-extra";
+import * as path from "node:path";
+import { War3Map } from "./warcraft-library.ts";
+import { getFilesInDirectory, logger, toArrayBuffer, runCli } from "./utils.ts";
+import { loadProjectConfig } from "./config.ts";
+import { compileMap } from "./compile.ts";
 
 function main() {
   const config = loadProjectConfig();
@@ -52,4 +52,4 @@ export function createMapFromDir(output: string, dir: string) {
   logger.info("Finished!");
 }
 
-if (require.main === module) runCli(main);
+if (import.meta.main) runCli(main);

@@ -1,9 +1,8 @@
-import * as fs from "fs-extra";
-import * as path from "path";
-import { ObjectData, ModificationFiles } from "war3-objectdata-th/dist/cjs/objectdata";
-import SimpleFile from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/w3u/file";
-import LevelFile from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/w3d/file";
-import { applyObjectData } from "./object-data";
+import fs from "fs-extra";
+import * as path from "node:path";
+import { ObjectData, ModificationFiles } from "war3-objectdata-th/dist/cjs/objectdata.js";
+import { SimpleFile, LevelFile } from "./warcraft-library.ts";
+import { applyObjectData } from "./object-data.ts";
 
 /** The transformer omits buffs/upgrades; handle every object table here. */
 export function injectObjectData(mapDir: string, manifest: unknown): void {

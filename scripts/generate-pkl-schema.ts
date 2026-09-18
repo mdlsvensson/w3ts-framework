@@ -1,6 +1,8 @@
-import * as fs from "fs";
-import * as path from "path";
-import { friendlyPropertyName } from "./object-data";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { friendlyPropertyName } from "./object-data.ts";
 
 const { UnitProps } = require("war3-objectdata-th/dist/cjs/generated/units.js");
 const { ItemProps } = require("war3-objectdata-th/dist/cjs/generated/items.js");
@@ -67,7 +69,7 @@ function generatePropsClass(
 ): string {
   const lines: string[] = [];
   lines.push(`/// Auto-generated Warcraft III properties from Blizzard metadata`);
-  lines.push(`/// Run \`npm run schema:gen\` to regenerate.`);
+  lines.push(`/// Run \`deno task schema:gen\` to regenerate.`);
   lines.push(`module ${moduleName}`);
   lines.push("");
 

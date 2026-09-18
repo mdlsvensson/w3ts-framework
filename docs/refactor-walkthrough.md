@@ -1,6 +1,6 @@
 # Walkthrough: from Pkl definitions to a playable map
 
-The main architectural change is that **the Node build pipeline now owns Pkl object injection**. Previously, `src/main.ts` invoked the object loader inside a `compiletime(...)` callback. Now, `scripts/compile.ts` runs that work explicitly after Lua transpilation.
+The main architectural change is that **the Deno build pipeline now owns Pkl object injection**. Previously, `src/main.ts` invoked the object loader inside a `compiletime(...)` callback. Now, `scripts/compile.ts` runs that work explicitly after Lua transpilation.
 
 You still author objects in Pkl and gameplay in TypeScript. The change makes the build steps easier to follow, gives all seven object categories the same processing path, and keeps build-only code outside the Lua source tree.
 
@@ -8,20 +8,20 @@ You still author objects in Pkl and gameplay in TypeScript. The change makes the
 
 | Environment | Code | When it runs | What it can use |
 | --- | --- | --- | --- |
-| Your computer, through Node.js | `scripts/*.ts` | While building, generating files, or launching the game | Filesystem, Pkl CLI, compiler, binary object-data libraries |
+| Your computer, through Deno | `scripts/*.ts` | While building, generating files, or launching the game | Filesystem, Pkl CLI, compiler, binary object-data libraries |
 | Warcraft III, through Lua | Gameplay in `src/main.ts` | After the map loads | Warcraft natives and `w3ts` handles such as units and timers |
 
-The `compiletime(...)` constants in `src/main.ts` are an exception: the transformer evaluates those expressions on your computer and embeds their results in the game script. That is how the build date and compiler version strings get into the map. The game does not run Node.js or Pkl.
+The `compiletime(...)` constants in `src/main.ts` are an exception: the transformer evaluates those expressions on your computer and embeds their results in the game script. That is how the build date and compiler version strings get into the map. The game does not run Deno or Pkl.
 
-`tsconfig.scripts.json` checks the Node scripts. `tsconfig.json` configures the game source and TypeScript-to-Lua compilation. `npm run typecheck` checks both projects.
+`deno.json` configures the build scripts, checked by `deno check`. `tsconfig.json` configures the game source and TypeScript-to-Lua compilation. `deno task typecheck` checks both projects, using the pinned TypeScript 5.8.2 compiler for game code. See [Deno migration notes](deno-migration.md) for the compatibility boundary with the upstream Node template.
 
 ## 2. Follow one build from beginning to end
 
-Run `npm run build` from the repository root. Its entry point is `scripts/build.ts`.
+Run `deno task build` from the repository root. Its entry point is `scripts/build.ts`.
 
 ```mermaid
 flowchart TD
-    Command["npm run build"] --> Config["config.ts: load and validate configuration"]
+    Command["deno task build"] --> Config["config.ts: load and validate configuration"]
     Config --> Compile["compile.ts: compileMap"]
     Pkl["objects/definitions/*.pkl"] --> Manifest["objects/objects.pkl"]
     Manifest --> Eval["Pkl evaluation"]
@@ -49,7 +49,7 @@ The paths in the diagram use the default configuration. Here is what each stage 
 8. **Merge scripts.** The generated Lua bundle is appended to the staged `war3map.lua`, with a separating newline. Optional minification happens here.
 9. **Package the archive.** `compileMap()` returns the staged directory. `createMapFromDir()` imports its files into a `.w3x` archive under `outputFolder`.
 
-`dist/map.w3x` is a **directory** used during compilation. `dist/bin/map.w3x` is the **packaged file** produced by `npm run build`.
+`dist/map.w3x` is a **directory** used during compilation. `dist/bin/map.w3x` is the **packaged file** produced by `deno task build`.
 
 ## 3. Learn the new module boundaries
 
@@ -172,7 +172,7 @@ The two-pass loader validates the manifest before creating custom objects. That 
 
 | Area | Original implementation | Current implementation |
 | --- | --- | --- |
-| Object injection | Callback inside `src/main.ts` | Explicit Node build stage after transpilation |
+| Object injection | Callback inside `src/main.ts` | Explicit Deno build stage after transpilation |
 | Category handling | Repeated loops; buffs/upgrades omitted | Shared category dispatch for all seven categories |
 | Property aliases | Global substitutions applied to every category | Resolution against the actual base object's fields |
 | Nullable fields | Could overwrite inherited values | Skipped, preserving inheritance |
@@ -196,13 +196,13 @@ The generated unit class still extends `Wc3Object` directly. `VisualObject` and 
 
 | Command | What it proves |
 | --- | --- |
-| `npm run objects:eval` | Your Pkl definitions evaluate successfully |
-| `npm run test:unit` | Regression behavior passes without Pkl or Warcraft III |
-| `npm run typecheck` | Node scripts and game source satisfy their TypeScript configurations |
-| `npm run build` | Pkl evaluation, transpilation, object injection, and archive creation complete |
-| `npm test` | Compiles the staged map and attempts to launch Warcraft III |
+| `deno task objects:eval` | Your Pkl definitions evaluate successfully |
+| `deno task test:unit` | Regression behavior passes without Pkl or Warcraft III |
+| `deno task typecheck` | Deno scripts and game source satisfy their TypeScript configurations |
+| `deno task build` | Pkl evaluation, transpilation, object injection, and archive creation complete |
+| `deno task test` | Compiles the staged map and attempts to launch Warcraft III |
 
-`npm test` retains its original game-launch meaning. It does not run the regression suite and does not package a new archive through `build.ts`.
+`deno task test` retains its original game-launch meaning. It does not run the regression suite and does not package a new archive through `build.ts`.
 
 The regression suite covers inheritance and aliases, item-specific fields, binary save/load for all seven categories, invalid manifests, existing-ID collisions, buff/upgrade file persistence, local configuration merging, and temporary compiler configuration isolation.
 

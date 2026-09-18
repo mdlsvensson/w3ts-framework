@@ -1,5 +1,5 @@
 /// Auto-generated Warcraft III properties from Blizzard metadata
-/// Run `npm run schema:gen` to regenerate.
+/// Run `deno task schema:gen` to regenerate.
 module wc3.schema.generated.units_props
 
 import "../common.pkl" as base

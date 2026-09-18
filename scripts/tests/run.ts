@@ -1,15 +1,14 @@
 import assert from "node:assert/strict";
-import { test } from "node:test";
-import * as fs from "fs-extra";
-import * as os from "os";
-import * as path from "path";
+const test = Deno.test;
+import fs from "fs-extra";
+import * as os from "node:os";
+import * as path from "node:path";
 import { ObjectData } from "war3-objectdata-th";
-import SimpleFile from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/w3u/file";
-import LevelFile from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/w3d/file";
-import { applyObjectData } from "../object-data";
-import { injectObjectData } from "../object-files";
-import { loadProjectConfig } from "../config";
-import { createBuildConfig } from "../compile";
+import { SimpleFile, LevelFile } from "../warcraft-library.ts";
+import { applyObjectData } from "../object-data.ts";
+import { injectObjectData } from "../object-files.ts";
+import { loadProjectConfig } from "../config.ts";
+import { createBuildConfig } from "../compile.ts";
 
 test("unit aliases, null inheritance, lists and explicit property overrides", () => {
   const data = new ObjectData();

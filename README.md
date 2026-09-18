@@ -6,7 +6,25 @@ Read the [refactor walkthrough](docs/refactor-walkthrough.md) for the build flow
 
 ## Setup
 
-Install Node.js/npm and the Apple Pkl CLI (`pkl` must be on PATH), then run `npm ci` from the repository root. Warcraft III is required only for launching the map. Keep the unpacked base map in `maps/map.w3x` and save its script as Lua in the World Editor.
+Install Deno 2.9.6 or newer within Deno 2, and the Apple Pkl CLI. From the repository root, run:
+
+```powershell
+deno install --frozen
+deno task typecheck
+deno task test:unit
+deno task build
+```
+
+The supported workflow requires no separate Node.js or npm installation. This remains a fork of the Node-based `wc3-ts-template`: its npm libraries and TypeScript-to-Lua compiler run through Deno's Node compatibility layer. `package.json` retains dependency metadata and optional npm command aliases; `deno.json` owns task definitions and `deno.lock` locks dependency resolution. Use Deno for dependency installation.
+
+Pkl must be on PATH, or set `PKL_EXECUTABLE` to its executable path in your terminal. For example:
+
+```powershell
+$env:PKL_EXECUTABLE = 'C:\path\to\pkl.exe'
+deno task build
+```
+
+Warcraft III is required only for launching the map. Keep the unpacked base map in `maps/map.w3x` and save its script as Lua in the World Editor.
 
 Override machine-specific settings in the ignored `config.local.json`:
 
@@ -22,18 +40,18 @@ Overrides replace top-level values from `config.json`, including the complete `l
 
 | Command | Purpose |
 | --- | --- |
-| `npm run build` | Evaluate Pkl, transpile Lua, inject object data, and package `dist/bin/map.w3x` |
-| `npm run build -- -minify` | Build with Lua minification |
-| `npm test` | Build and launch the staged map in Warcraft III |
-| `npm run test:unit` | Run regression tests without Pkl or Warcraft III |
-| `npm run typecheck` | Check Node build scripts and game code separately |
-| `npm run objects:eval` | Evaluate the Pkl manifest into `src/generated/objects.json` |
-| `npm run schema:gen` | Regenerate Pkl properties from dependency metadata |
-| `npm run bases:gen` | Regenerate base constants and property schemas |
-| `npm run build:defs` | Generate TypeScript declarations from the base map's Lua globals |
-| `npm run dev` | Watch Pkl definitions and map Lua globals |
+| `deno task build` | Evaluate Pkl, transpile Lua, inject object data, and package `dist/bin/map.w3x` |
+| `deno task build -minify` | Build with Lua minification |
+| `deno task test` | Build and launch the staged map in Warcraft III |
+| `deno task test:unit` | Run regression tests without Pkl or Warcraft III |
+| `deno task typecheck` | Check Deno scripts, then game code using the pinned TypeScript 5.8.2 compiler |
+| `deno task objects:eval` | Evaluate the Pkl manifest into `src/generated/objects.json` |
+| `deno task schema:gen` | Regenerate Pkl properties from dependency metadata |
+| `deno task bases:gen` | Regenerate base constants and property schemas |
+| `deno task build:defs` | Generate TypeScript declarations from the base map's Lua globals |
+| `deno task dev` | Watch Pkl definitions and map Lua globals |
 
-`npm test` retains the template's game-launch behavior. Use `npm run test:unit` for automated checks.
+`deno task test` retains the template's game-launch behavior. Use `deno task test:unit` for automated checks.
 
 ## Authoring objects
 
@@ -64,6 +82,10 @@ Ability numeric fields such as `cooldown` and `manaCost` are scalars, matching t
 - `scripts/build.ts`: archive packaging; `scripts/test.ts`: game launch.
 - `objects/schema/`: authoring types and generated engine properties.
 
-Node-only build code uses `tsconfig.scripts.json` and stays outside the Lua source tree. Builds evaluate Pkl once and write an ignored `tsconfig.build.<pid>.json`, removed after transpilation. Tracked `tsconfig.json` remains portable. Object injection runs after the transformer so its output is preserved.
+Deno build code uses `deno.json` and stays outside the Lua source tree. Builds evaluate Pkl once and write an ignored `tsconfig.build.<pid>.json`, removed after transpilation. Tracked `tsconfig.json` remains portable. Object injection runs after the transformer so its output is preserved.
+
+`scripts/warcraft-library.ts` adapts the upstream library's CommonJS constructor exports. `scripts/watch.ts` replaces `npm-watch` using Deno file events. The compiler subprocess runs with `Deno.execPath()`; it does not launch Node. Build tasks use `-A` because the template's compiler, compile-time callbacks, file generators, and game launcher need filesystem and process access.
+
+See the [Deno migration notes](docs/deno-migration.md) for compatibility decisions and the verified migration path.
 
 Tests cover property normalization, inheritance, invalid manifests, ID collisions, binary round trips for all categories, file persistence, configuration overrides, and compiler configuration isolation. Full build validation additionally requires Pkl; gameplay validation requires Warcraft III.

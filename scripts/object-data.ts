@@ -1,5 +1,5 @@
 import { ObjectData } from "war3-objectdata-th";
-import type { Container, IDs } from "war3-objectdata-th/dist/cjs/container";
+import type { Container, IDs } from "war3-objectdata-th/dist/cjs/container.js";
 
 export interface LoadedObjectDef {
   id?: string;

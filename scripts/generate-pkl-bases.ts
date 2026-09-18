@@ -1,5 +1,7 @@
-import * as fs from "fs";
-import * as path from "path";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+import * as fs from "node:fs";
+import * as path from "node:path";
 const { Units, Items, Abilities } = require("war3-objectdata-th");
 
 function cleanIdentifier(name: string): string {
@@ -23,7 +25,7 @@ function generateBasesPkl(): string {
 
   const lines: string[] = [];
   lines.push("/// Generated Warcraft III Base Object IDs and Constants");
-  lines.push("/// Run `npm run bases:gen` to regenerate.");
+  lines.push("/// Run `deno task bases:gen` to regenerate.");
   lines.push("module wc3.bases");
   lines.push("");
 
