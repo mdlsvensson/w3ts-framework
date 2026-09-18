@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
+import { friendlyPropertyName } from "./object-data";
 
 const { UnitProps } = require("war3-objectdata-th/dist/cjs/generated/units.js");
 const { ItemProps } = require("war3-objectdata-th/dist/cjs/generated/items.js");
@@ -50,15 +51,7 @@ const PKL_KEYWORDS = new Set([
 ]);
 
 function cleanPropName(name: string): string {
-  // Normalize undefined suffixes from war3-objectdata-th generator
-  if (name === "tintingColor1Redundefined") return "tintingColorRed";
-  if (name === "tintingColor2Greenundefined") return "tintingColorGreen";
-  if (name === "tintingColor3Blueundefined") return "tintingColorBlue";
-  if (name.endsWith("undefined")) {
-    name = name.slice(0, -"undefined".length);
-  }
-  if (name === "type") return "movementType";
-  if (name === "class") return "upgradeClass";
+  name = friendlyPropertyName(name);
   if (PKL_KEYWORDS.has(name)) {
     return `\`${name}\``;
   }

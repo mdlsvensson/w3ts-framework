@@ -6,13 +6,15 @@
   "license": "MIT",
   "main": "src/main.ts",
   "scripts": {
-    "bases:gen": "ts-node --transpile-only scripts/generate-pkl-bases.ts && npm run schema:gen",
-    "schema:gen": "ts-node --transpile-only scripts/generate-pkl-schema.ts",
+    "bases:gen": "ts-node --project tsconfig.scripts.json scripts/generate-pkl-bases.ts && npm run schema:gen",
+    "schema:gen": "ts-node --project tsconfig.scripts.json scripts/generate-pkl-schema.ts",
     "objects:eval": "pkl eval -f json objects/objects.pkl -o src/generated/objects.json",
-    "test": "npm run objects:eval && ts-node --transpile-only scripts/test.ts",
-    "build": "npm run objects:eval && ts-node --transpile-only scripts/build.ts",
+    "test": "ts-node --project tsconfig.scripts.json scripts/test.ts",
+    "build": "ts-node --project tsconfig.scripts.json scripts/build.ts",
     "dev": "npm-watch",
-    "build:defs": "ts-node scripts/dev"
+    "build:defs": "ts-node --project tsconfig.scripts.json scripts/dev",
+    "test:unit": "ts-node --project tsconfig.scripts.json scripts/tests/run.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.scripts.json && tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
     "w3ts": "^3.0.2"

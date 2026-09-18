@@ -1,8 +1,9 @@
 import * as fs from "fs-extra";
-import { loadJsonFile, logger } from "./utils";
+import { logger } from "./utils";
+import { loadProjectConfig } from "./config";
 const War3TSTLHelper = require("war3tstlhelper");
 
-const config = loadJsonFile("config.json");
+const config = loadProjectConfig();
 
 // Create definitions file for generated globals
 const luaFile = `./maps/${config.mapFolder}/war3map.lua`;
@@ -15,4 +16,5 @@ try {
 } catch (err: any) {
     logger.error(err.toString());
     logger.error(`There was an error generating the definition file for '${luaFile}'`);
+    process.exitCode = 1;
 }

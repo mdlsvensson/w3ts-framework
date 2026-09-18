@@ -19,9 +19,9 @@
     "plugins": [
       {
         "transform": "war3-transformer",
-        "mapDir": "C:/Users/mdlsvensson/Repo/w3ts-framework/maps/map.w3x",
-        "entryFile": "C:/Users/mdlsvensson/Repo/w3ts-framework/src/main.ts",
-        "outputDir": "C:/Users/mdlsvensson/Repo/w3ts-framework/dist/map.w3x"
+        "mapDir": "maps/map.w3x",
+        "entryFile": "src/main.ts",
+        "outputDir": "dist/map.w3x"
       }
     ],
     "types": [

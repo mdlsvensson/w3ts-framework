@@ -8,4 +8,5 @@ import "generated/buffs_props.pkl" as generated
 /// Inherits all 27 buff properties from `GeneratedBuffProps`.
 open class Buff extends generated.GeneratedBuffProps {
   id: types.BuffId
+  base: String(length == 4 && matches(Regex("^[A-Za-z0-9]{4}$")))
 }

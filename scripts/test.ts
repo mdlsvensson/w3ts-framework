@@ -1,31 +1,22 @@
-import {exec, execFile, execSync} from "child_process";
-import {loadJsonFile, logger, compileMap, IProjectConfig} from "./utils";
+import { execFile } from "child_process";
+import { loadProjectConfig } from "./config";
+import { compileMap } from "./compile";
+import { logger, runCli } from "./utils";
 
-function main() {
-  const config: IProjectConfig = loadJsonFile("config.json");
-  const result = compileMap(config);
-
-  if (!result) {
-    logger.error(`Failed to compile map.`);
-    return;
-  }
-
-  const cwd = process.cwd();
-  const filename = `${cwd}/dist/${config.mapFolder}`;
-
-  logger.info(`Launching map "${filename.replace(/\\/g, "/")}"...`);
-
-  if(config.winePath) {
-    const wineFilename = `"Z:${filename}"`
-    const prefix = config.winePrefix ? `WINEPREFIX=${config.winePrefix}` : ''
-    execSync(`${prefix} ${config.winePath} "${config.gameExecutable}" ${["-loadfile", wineFilename, ...config.launchArgs].join(' ')}`, { stdio: 'ignore' });
-  } else {
-    execFile(config.gameExecutable, ["-loadfile", filename, ...config.launchArgs], (err: any) => {
-      if (err && err.code === 'ENOENT') {
-        logger.error(`No such file or directory "${config.gameExecutable}". Make sure gameExecutable is configured properly in config.json.`);
-      }
-    });
-  }
+function main(): void {
+  const config = loadProjectConfig();
+  const filename = compileMap(config);
+  const executable = config.winePath || config.gameExecutable;
+  const mapPath = config.winePath ? `Z:${filename.replace(/\//g, "\\")}` : filename;
+  const args = [...(config.winePath ? [config.gameExecutable] : []), "-loadfile", mapPath, ...config.launchArgs];
+  const env = { ...process.env, ...(config.winePrefix ? { WINEPREFIX: config.winePrefix } : {}) };
+  logger.info(`Launching map '${filename}'...`);
+  execFile(executable, args, { env }, error => {
+    if (error) {
+      logger.error(`Could not launch Warcraft III: ${error.message}`);
+      process.exitCode = 1;
+    }
+  });
 }
 
-main();
+if (require.main === module) runCli(main);

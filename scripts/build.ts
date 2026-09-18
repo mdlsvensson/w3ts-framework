@@ -1,31 +1,23 @@
 import * as fs from "fs-extra";
 import * as path from "path";
-import War3Map from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/map"
-import { compileMap, getFilesInDirectory, loadJsonFile, logger, toArrayBuffer, IProjectConfig } from "./utils";
+import War3Map from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/map";
+import { getFilesInDirectory, logger, toArrayBuffer, runCli } from "./utils";
+import { loadProjectConfig } from "./config";
+import { compileMap } from "./compile";
 
 function main() {
-  const config: IProjectConfig = loadJsonFile("config.json");
-  const minify = process.argv[2] === '-minify' || config.minifyScript
+  const config = loadProjectConfig();
+  const minify = process.argv.includes("-minify") || config.minifyScript;
 
-  if(minify !== config.minifyScript){
-    logger.warn(`minifyScript has been overridden by command line argument "-minify"`)
-    config.minifyScript = minify
+  if (minify !== config.minifyScript) {
+    logger.info('Enabling minification from command line argument "-minify".');
+    config.minifyScript = minify;
   }
-
-
-  const result = compileMap(config);
-
-  if (!result) {
-    logger.error(`Failed to compile map.`);
-    return;
-  }
+  const mapDir = compileMap(config);
 
   logger.info(`Creating w3x archive...`);
-  if (!fs.existsSync(config.outputFolder)) {
-    fs.mkdirSync(config.outputFolder);
-  }
-
-  createMapFromDir(`${config.outputFolder}/${config.mapFolder}`, `./dist/${config.mapFolder}`);
+  fs.ensureDirSync(config.outputFolder);
+  createMapFromDir(path.join(config.outputFolder, config.mapFolder), mapDir);
 }
 
 /**
@@ -41,20 +33,18 @@ export function createMapFromDir(output: string, dir: string) {
 
   for (const fileName of files) {
     const contents = toArrayBuffer(fs.readFileSync(fileName));
-    const archivePath = path.relative(dir, fileName);
+    const archivePath = path.relative(dir, fileName).replace(/\\/g, "/");
     const imported = map.import(archivePath, contents);
 
     if (!imported) {
-      logger.warn("Failed to import " + archivePath);
-      continue;
+      throw new Error("Failed to import " + archivePath);
     }
   }
 
   const result = map.save();
 
   if (!result) {
-    logger.error("Failed to save archive.");
-    return;
+    throw new Error("Failed to save archive.");
   }
 
   fs.writeFileSync(output, new Uint8Array(result));
@@ -62,4 +52,4 @@ export function createMapFromDir(output: string, dir: string) {
   logger.info("Finished!");
 }
 
-main();
+if (require.main === module) runCli(main);

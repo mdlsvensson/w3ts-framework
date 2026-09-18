@@ -8,4 +8,5 @@ import "generated/upgrades_props.pkl" as generated
 /// Inherits all 37 upgrade properties from `GeneratedUpgradeProps`.
 open class Upgrade extends generated.GeneratedUpgradeProps {
   id: types.UpgradeId
+  base: String(length == 4 && matches(Regex("^[A-Za-z0-9]{4}$")))
 }

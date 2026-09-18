@@ -92,3 +92,4 @@ typings/
 
 # Local developer configuration overrides
 config.local.json
+tsconfig.build.*.json

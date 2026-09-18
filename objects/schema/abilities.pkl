@@ -11,11 +11,5 @@ open class Ability extends generated.GeneratedAbilityProps {
   id: types.AbilityId
   base: bases.BaseAbilityId
 
-  // Multi-level fields convenient aliases
-  cooldown: List<Number>?
-  manaCost: List<Int>?
-  castRange: List<Int>?
-  durationHero: List<Number>?
-  durationNormal: List<Number>?
-  areaOfEffect: List<Number>?
+  // Numeric fields inherit the scalar types supported by war3-objectdata-th.
 }
