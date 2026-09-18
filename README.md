@@ -2,6 +2,8 @@
 
 A Warcraft III map framework based on `wc3-ts-template`, with TypeScript game code and declarative Pkl object definitions.
 
+Read the [refactor walkthrough](docs/refactor-walkthrough.md) for the build flow, module responsibilities, a custom-unit example, and a comparison with the original implementation.
+
 ## Setup
 
 Install Node.js/npm and the Apple Pkl CLI (`pkl` must be on PATH), then run `npm ci` from the repository root. Warcraft III is required only for launching the map. Keep the unpacked base map in `maps/map.w3x` and save its script as Lua in the World Editor.
