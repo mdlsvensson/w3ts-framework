@@ -86,6 +86,8 @@ Deno build code uses `deno.json` and stays outside the Lua source tree. Builds e
 
 `scripts/warcraft-library.ts` adapts the upstream library's CommonJS constructor exports. `scripts/watch.ts` replaces `npm-watch` using Deno file events. The compiler subprocess runs with `Deno.execPath()`; it does not launch Node. Build tasks use `-A` because the template's compiler, compile-time callbacks, file generators, and game launcher need filesystem and process access.
 
+File utilities now use Deno and `@std/fs`; logging uses console output and synchronous appends to `project.log`. Pkl and compiler subprocesses use `Deno.Command` with explicit failure checks. The Warcraft III launcher retains `node:child_process` to preserve the verified `windowsHide: false` behavior on Windows. The compiler and Warcraft npm libraries still use Deno's Node compatibility layer.
+
 See the [Deno migration notes](docs/deno-migration.md) for compatibility decisions and the verified migration path.
 
 Tests cover property normalization, inheritance, invalid manifests, ID collisions, binary round trips for all categories, file persistence, configuration overrides, and compiler configuration isolation. Full build validation additionally requires Pkl; gameplay validation requires Warcraft III.

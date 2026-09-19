@@ -1,28 +1,41 @@
-import fs from "fs-extra";
 import * as path from "node:path";
-import { createLogger, format, transports } from "winston";
 
-export function toArrayBuffer(buffer: Buffer): ArrayBuffer {
+export function toArrayBuffer(buffer: Uint8Array): ArrayBuffer {
   return Uint8Array.from(buffer).buffer;
 }
 
 export function getFilesInDirectory(dir: string): string[] {
-  return fs.readdirSync(dir).sort().flatMap(file => {
+  return Array.from(Deno.readDirSync(dir), entry => entry.name).sort().flatMap(file => {
     const filename = path.join(dir, file);
-    return fs.lstatSync(filename).isDirectory() ? getFilesInDirectory(filename) : [filename];
+    return Deno.lstatSync(filename).isDirectory ? getFilesInDirectory(filename) : [filename];
   });
 }
 
-export const logger = createLogger({
-  format: format.combine(format.timestamp(), format.printf(({ level, message, timestamp }) => `[${timestamp}] ${level}: ${message}`)),
-  transports: [new transports.Console(), new transports.File({ filename: "project.log" })],
-});
+function log(level: "info" | "error", message: string): void {
+  const line = `[${new Date().toISOString()}] ${level}: ${message}`;
+  if (level === "error") console.error(line);
+  else console.log(line);
+  Deno.writeTextFileSync("project.log", line + "\n", { append: true });
+}
+
+export const logger = {
+  info: (message: string) => log("info", message),
+  error: (message: string) => log("error", message),
+};
+
+/** Deno commands do not throw on a nonzero exit status. */
+export function runCommand(executable: string, args: string[]): void {
+  const status = new Deno.Command(executable, {
+    args, stdin: "inherit", stdout: "inherit", stderr: "inherit",
+  }).outputSync();
+  if (!status.success) throw new Error(`${executable} failed with exit code ${status.code}${status.signal ? ` (${status.signal})` : ""}.`);
+}
 
 export function runCli(action: () => void): void {
   try {
     action();
   } catch (error) {
     logger.error(error instanceof Error ? error.message : String(error));
-    process.exitCode = 1;
+    Deno.exitCode = 1;
   }
 }

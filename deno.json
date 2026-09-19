@@ -51,5 +51,8 @@
   },
   "lock": {
     "frozen": true
+  },
+  "imports": {
+    "@std/fs": "jsr:@std/fs@1.0.24"
   }
 }

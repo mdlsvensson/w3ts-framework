@@ -1,4 +1,4 @@
-import fs from "fs-extra";
+import { existsSync } from "@std/fs";
 import * as path from "node:path";
 import { ObjectData, ModificationFiles } from "war3-objectdata-th/dist/cjs/objectdata.js";
 import { SimpleFile, LevelFile } from "./warcraft-library.ts";
@@ -12,9 +12,9 @@ export function injectObjectData(mapDir: string, manifest: unknown): void {
   for (const extension of [...simple, ...leveled]) {
     for (const skin of [false, true]) {
       const filename = path.join(mapDir, `war3map${skin ? "Skin" : ""}.${extension}`);
-      if (!fs.existsSync(filename)) continue;
+      if (!existsSync(filename)) continue;
       const file = (leveled as readonly string[]).includes(extension) ? new LevelFile() : new SimpleFile();
-      file.load(fs.readFileSync(filename));
+      file.load(Deno.readFileSync(filename));
       // Both file formats implement the same load/save interface.
       Object.assign(files, { [`${extension}${skin ? "Skin" : ""}`]: file });
     }
@@ -25,6 +25,6 @@ export function injectObjectData(mapDir: string, manifest: unknown): void {
   for (const [key, file] of Object.entries(data.save())) {
     if (!file) continue;
     const extension = key.replace(/Skin$/, "");
-    fs.writeFileSync(path.join(mapDir, `war3map${key.endsWith("Skin") ? "Skin" : ""}.${extension}`), new Uint8Array(file.save()));
+    Deno.writeFileSync(path.join(mapDir, `war3map${key.endsWith("Skin") ? "Skin" : ""}.${extension}`), new Uint8Array(file.save()));
   }
 }

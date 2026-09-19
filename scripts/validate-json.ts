@@ -1,4 +1,4 @@
-import fs from "fs-extra";
+import { existsSync } from "@std/fs";
 import * as path from "node:path";
 import { loadProjectConfig } from "./config.ts";
 
@@ -10,7 +10,7 @@ export interface ValidationResult {
 
 export function validateJsonSyntax(filePath: string): ValidationResult {
   try {
-    const content = fs.readFileSync(filePath, "utf8");
+    const content = Deno.readTextFileSync(filePath);
     JSON.parse(content);
     return { file: filePath, valid: true };
   } catch (error) {
@@ -19,7 +19,7 @@ export function validateJsonSyntax(filePath: string): ValidationResult {
   }
 }
 
-export function validateProjectJsonFiles(rootDir = process.cwd()): ValidationResult[] {
+export function validateProjectJsonFiles(rootDir = Deno.cwd()): ValidationResult[] {
   const filesToCheck = [
     "config.json",
     "deno.json",
@@ -28,14 +28,14 @@ export function validateProjectJsonFiles(rootDir = process.cwd()): ValidationRes
   ];
 
   const localConfig = path.join(rootDir, "config.local.json");
-  if (fs.existsSync(localConfig)) {
+  if (existsSync(localConfig)) {
     filesToCheck.push("config.local.json");
   }
 
   const results: ValidationResult[] = [];
   for (const relativePath of filesToCheck) {
     const fullPath = path.join(rootDir, relativePath);
-    if (fs.existsSync(fullPath)) {
+    if (existsSync(fullPath)) {
       results.push(validateJsonSyntax(fullPath));
     }
   }
@@ -43,7 +43,7 @@ export function validateProjectJsonFiles(rootDir = process.cwd()): ValidationRes
   return results;
 }
 
-export function runValidation(rootDir = process.cwd()): boolean {
+export function runValidation(rootDir = Deno.cwd()): boolean {
   console.log("Validating JSON configuration files...");
   const jsonResults = validateProjectJsonFiles(rootDir);
   let hasErrors = false;

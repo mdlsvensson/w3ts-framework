@@ -1,6 +1,5 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-import * as fs from "node:fs";
 import * as path from "node:path";
 const { Units, Items, Abilities } = require("war3-objectdata-th");
 
@@ -133,5 +132,5 @@ function generateBasesPkl(): string {
 }
 
 const outputPath = path.resolve("objects/bases.pkl");
-fs.writeFileSync(outputPath, generateBasesPkl());
+Deno.writeTextFileSync(outputPath, generateBasesPkl());
 console.log(`Generated ${outputPath}`);

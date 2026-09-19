@@ -1,6 +1,5 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-import * as fs from "node:fs";
 import * as path from "node:path";
 import { friendlyPropertyName } from "./object-data.ts";
 
@@ -98,7 +97,7 @@ function generatePropsClass(
 }
 
 const outDir = path.resolve("objects/schema/generated");
-fs.mkdirSync(outDir, { recursive: true });
+Deno.mkdirSync(outDir, { recursive: true });
 
 // 1. Units props (240 properties)
 const unitsContent = generatePropsClass(
@@ -108,7 +107,7 @@ const unitsContent = generatePropsClass(
   "Wc3Object",
   UnitProps as RawProp[]
 );
-fs.writeFileSync(path.join(outDir, "units_props.pkl"), unitsContent);
+Deno.writeTextFileSync(path.join(outDir, "units_props.pkl"), unitsContent);
 console.log(`Generated ${path.join(outDir, "units_props.pkl")} (${UnitProps.length} properties)`);
 
 // 2. Items props (42 properties)
@@ -119,7 +118,7 @@ const itemsContent = generatePropsClass(
   "Wc3Object",
   ItemProps as RawProp[]
 );
-fs.writeFileSync(path.join(outDir, "items_props.pkl"), itemsContent);
+Deno.writeTextFileSync(path.join(outDir, "items_props.pkl"), itemsContent);
 console.log(`Generated ${path.join(outDir, "items_props.pkl")} (${ItemProps.length} properties)`);
 
 // 3. Abilities props (69 properties)
@@ -130,7 +129,7 @@ const abilitiesContent = generatePropsClass(
   "Wc3Object",
   AbilityProps as RawProp[]
 );
-fs.writeFileSync(path.join(outDir, "abilities_props.pkl"), abilitiesContent);
+Deno.writeTextFileSync(path.join(outDir, "abilities_props.pkl"), abilitiesContent);
 console.log(`Generated ${path.join(outDir, "abilities_props.pkl")} (${AbilityProps.length} properties)`);
 
 // 4. Buffs props (27 properties)
@@ -141,7 +140,7 @@ const buffsContent = generatePropsClass(
   "Wc3Object",
   BuffProps as RawProp[]
 );
-fs.writeFileSync(path.join(outDir, "buffs_props.pkl"), buffsContent);
+Deno.writeTextFileSync(path.join(outDir, "buffs_props.pkl"), buffsContent);
 console.log(`Generated ${path.join(outDir, "buffs_props.pkl")} (${BuffProps.length} properties)`);
 
 // 5. Upgrades props (37 properties)
@@ -152,5 +151,5 @@ const upgradesContent = generatePropsClass(
   "Wc3Object",
   UpgradeProps as RawProp[]
 );
-fs.writeFileSync(path.join(outDir, "upgrades_props.pkl"), upgradesContent);
+Deno.writeTextFileSync(path.join(outDir, "upgrades_props.pkl"), upgradesContent);
 console.log(`Generated ${path.join(outDir, "upgrades_props.pkl")} (${UpgradeProps.length} properties)`);

@@ -58,9 +58,17 @@ These choices follow Deno's documented [Node/npm compatibility](https://docs.den
 - `import.meta.main` replaces CommonJS entry-point checks so importing a build module in tests does not run its CLI.
 - `createRequire(import.meta.url)` is used where legacy libraries or compiler paths need CommonJS resolution. It resolves through Deno's compatibility layer.
 - `scripts/warcraft-library.ts` unwraps the map library's `exports.default` constructors. Deno's ESM import exposes the CommonJS exports object; it does not apply the same automatic unwrapping previously provided by TypeScript's CommonJS output.
-- `fs-extra` uses a default import because its dynamically assembled exports are not all available through an ESM namespace import.
+- Project file I/O uses Deno APIs, with pinned `@std/fs` helpers for recursive copying and existence checks. Text and binary operations remain separate; MPQ and object-table parsers receive `Uint8Array` or an exact-sized `ArrayBuffer`.
+- The small logger writes timestamped messages to the console and appends to `project.log` synchronously, so CLI failures do not depend on flushing a Winston transport. `fs-extra`, its types, and Winston are no longer direct dependencies.
 - `scripts/compile.ts` starts the pinned compiler using the current Deno executable. No Node executable is required for that child process.
+- Pkl and compiler invocations use `Deno.Command` with inherited terminal streams and argument arrays. A shared helper checks unsuccessful exit statuses explicitly: unlike `execFileSync`, `outputSync()` does not throw just because a child exits nonzero. Compiler-config cleanup remains in `finally`.
 - `scripts/test.ts` explicitly sets `windowsHide: false` when launching Warcraft III. Deno's child-process compatibility layer otherwise hides Windows subprocess windows, which can leave the game audible but invisible. A follow-up launch with this setting was confirmed visible by the user.
+
+The game launcher deliberately retains `node:child_process`: the documented [Deno command options](https://docs.deno.com/api/deno/subprocess/) do not expose `windowsHide`. Removing the previously verified visibility fix needs separate interactive game validation. Build verification does not establish that a game window displays correctly.
+
+An interactive follow-up on Windows with Deno 2.9.7 tested `Deno.Command` against the configured Warcraft III executable and the same staged map and launch arguments. The user observed no window or sound. A second native launch, keeping the Deno parent alive and capturing output, returned exit code 0 with empty stdout/stderr and no remaining Warcraft III process. The existing `deno task test` launcher then produced a responding Warcraft III window, and the user confirmed normal operation. Retain the compatibility launcher on this setup. These observations establish a behavioral difference, but do not isolate the underlying Windows startup cause or prove that native launches fail on every system.
+
+`node:path` remains for established Windows path behavior, and `node:assert/strict` remains in tests. Neither needs an installed Node executable. They could be replaced with standard-library equivalents later, but doing so does not remove the compatibility layer still needed by the Warcraft dependencies. `node:module` and Node type declarations remain for CommonJS package resolution and upstream declarations. The npm compiler, transformer, object-data, map parser, Lua minifier, and declaration generator remain pinned; the game source and Lua target are unchanged. TSTL 1.31.0 declares an exact TypeScript 5.8.2 peer dependency, and its [transformer configuration](https://typescripttolua.github.io/docs/configuration/) is part of the compilation pipeline.
 
 Build tasks use `-A` to retain the template's filesystem, subprocess, environment, and compile-time execution capabilities. This is compatibility with the trusted local build workflow; the migration does not introduce a restricted execution boundary for compile-time callbacks.
 
@@ -88,7 +96,9 @@ Warcraft III itself was not launched during migration verification. The project 
 
 ## Editing and future changes
 
-Add or change commands in `deno.json`. Keep `package.json` forwarding aliases only where useful to users of the original template. Add dependencies to `package.json`, run `deno install` to refresh resolution, and commit `deno.lock` with the manifest change.
+The utility follow-up was verified with Deno 2.9.7: 13 regression tests, both type checks, lint and JSON validation, normal and minified map builds, and regeneration of bases, schemas, and Lua declarations passed. A separate temporary copy without `node_modules` also passed frozen installation, both type checks, and all 13 tests. New regressions exercise nested binary MPQ imports, sliced byte buffers, subprocess argument quoting and failure status, and persisted CLI error logs. Warcraft III was not launched in this follow-up.
+
+Add or change commands in `deno.json`. Keep `package.json` forwarding aliases only where useful to users of the original template. Add npm dependencies to `package.json` and JSR dependencies to `deno.json` imports. Run `deno install --frozen=false` to intentionally refresh resolution, and commit `deno.lock` with the manifest change.
 
 Keep build code under `scripts/` and game code under `src/`. If your editor uses the Deno language server, scope it to `scripts/`; game source still belongs to the Warcraft/TSTL TypeScript configuration.
 

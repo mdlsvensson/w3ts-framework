@@ -1,11 +1,11 @@
+import { removeIfExists, writeJsonFile } from "./files.ts";
+import { existsSync, copySync } from "@std/fs";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-import { execFileSync } from "node:child_process";
-import fs from "fs-extra";
 import * as path from "node:path";
 import { IProjectConfig, loadJsonFile } from "./config.ts";
 import { injectObjectData } from "./object-files.ts";
-import { logger } from "./utils.ts";
+import { logger, runCommand } from "./utils.ts";
 import { evaluateObjects } from "./evaluate-objects.ts";
 const luamin = require("luamin");
 
@@ -32,15 +32,15 @@ export function createBuildConfig(config: IProjectConfig): string {
   plugin.mapDir = path.resolve("maps", config.mapFolder);
   plugin.entryFile = path.resolve(tsconfig.tstl.luaBundleEntry);
   plugin.outputDir = path.resolve("dist", config.mapFolder);
-  const filename = path.resolve(`tsconfig.build.${process.pid}.json`);
-  fs.writeJsonSync(filename, tsconfig, { spaces: 2 });
+  const filename = path.resolve(`tsconfig.build.${Deno.pid}.json`);
+  writeJsonFile(filename, tsconfig, { spaces: 2 });
   return filename;
 }
 
 export function compileMap(config: IProjectConfig): string {
   const source = path.resolve("maps", config.mapFolder);
   const destination = path.resolve("dist", config.mapFolder);
-  if (!fs.existsSync(path.join(source, "war3map.lua"))) throw new Error(`Missing ${source}/war3map.lua. Save the base map with Lua enabled.`);
+  if (!existsSync(path.join(source, "war3map.lua"))) throw new Error(`Missing ${source}/war3map.lua. Save the base map with Lua enabled.`);
 
   logger.info("Evaluating Pkl object data...");
   evaluateObjects();
@@ -48,25 +48,25 @@ export function compileMap(config: IProjectConfig): string {
   // Only replace this map's staging directory, after verifying the resolved path.
   const dist = path.resolve("dist");
   if (path.dirname(destination) !== dist || destination === dist) throw new Error("Map staging path must be a direct child of dist.");
-  fs.removeSync(destination);
-  fs.copySync(source, destination);
+  removeIfExists(destination);
+  copySync(source, destination);
   const bundle = path.resolve(loadJsonFile<TsConfig>("tsconfig.json").tstl.luaBundle);
   if (!bundle.startsWith(dist + path.sep)) throw new Error("Lua bundle must be inside dist.");
-  fs.removeSync(bundle);
+  removeIfExists(bundle);
 
   const buildConfig = createBuildConfig(config);
   try {
     logger.info("Transpiling TypeScript to Lua...");
-    execFileSync(Deno.execPath(), ["run", "-A", require.resolve("typescript-to-lua/dist/tstl.js"), "-p", buildConfig], { stdio: "inherit" });
+    runCommand(Deno.execPath(), ["run", "-A", require.resolve("typescript-to-lua/dist/tstl.js"), "-p", buildConfig]);
   } finally {
-    fs.removeSync(buildConfig);
+    removeIfExists(buildConfig);
   }
 
   logger.info("Applying Pkl object data...");
   injectObjectData(destination, loadJsonFile("src/generated/objects.json"));
   const mapLua = path.join(destination, "war3map.lua");
-  let contents = fs.readFileSync(mapLua, "utf8") + "\n" + fs.readFileSync(bundle, "utf8");
+  let contents = Deno.readTextFileSync(mapLua) + "\n" + Deno.readTextFileSync(bundle);
   if (config.minifyScript) contents = luamin.minify(contents);
-  fs.writeFileSync(mapLua, contents);
+  Deno.writeTextFileSync(mapLua, contents);
   return destination;
 }

@@ -1,13 +1,16 @@
+import { removeIfExists, writeJsonFile } from "../files.ts";
 import assert from "node:assert/strict";
 const test = Deno.test;
-import fs from "fs-extra";
-import * as os from "node:os";
 import * as path from "node:path";
 import { ObjectData } from "war3-objectdata-th";
-import { SimpleFile, LevelFile } from "../warcraft-library.ts";
+import { SimpleFile, LevelFile, War3Map } from "../warcraft-library.ts";
+import { createMapFromDir } from "../build.ts";
+import { getFilesInDirectory, runCommand, toArrayBuffer } from "../utils.ts";
+import { copySync } from "@std/fs";
+import MapInfoModule from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/w3i/file.js";
 import { applyObjectData } from "../object-data.ts";
 import { injectObjectData } from "../object-files.ts";
-import { loadProjectConfig } from "../config.ts";
+import { loadJsonFile, loadProjectConfig } from "../config.ts";
 import { createBuildConfig } from "../compile.ts";
 import { plugin as wcraftLintPlugin } from "../lint/wcraft-rules.ts";
 import { validateJsonSyntax, validateProjectJsonFiles } from "../validate-json.ts";
@@ -93,47 +96,47 @@ test("existing game and map IDs cannot be silently overwritten", () => {
 });
 
 test("file injection writes buffs/upgrades and preserves existing modifications", () => {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "w3ts-object-tests-"));
+  const dir = Deno.makeTempDirSync({ prefix: "w3ts-object-tests-" });
   try {
     injectObjectData(dir, { buffs: { B001: { base: "BHbz", name: "Existing" } } });
     injectObjectData(dir, { upgrades: { R001: { base: "Rhme", name: "New upgrade", goldBase: 42 } } });
     const buff = new SimpleFile();
-    buff.load(fs.readFileSync(path.join(dir, "war3mapSkin.w3h")));
+    buff.load(Deno.readFileSync(path.join(dir, "war3mapSkin.w3h")));
     assert.equal(buff.customTable.objects[0].newId, "B001");
     const upgrade = new LevelFile();
-    upgrade.load(fs.readFileSync(path.join(dir, "war3map.w3q")));
+    upgrade.load(Deno.readFileSync(path.join(dir, "war3map.w3q")));
     assert.equal(upgrade.customTable.objects[0].newId, "R001");
     assert(upgrade.customTable.objects[0].modifications.some(mod => mod.id === "gglb" && mod.value === 42));
   } finally {
-    fs.removeSync(dir);
+    removeIfExists(dir);
   }
 });
 
 test("config overrides are validated and malformed JSON fails clearly", () => {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "w3ts-config-tests-"));
+  const dir = Deno.makeTempDirSync({ prefix: "w3ts-config-tests-" });
   const config = { mapFolder: "map.w3x", minifyScript: false, gameExecutable: "game.exe", outputFolder: "dist/bin", launchArgs: [] };
   try {
-    fs.writeJsonSync(path.join(dir, "config.json"), config);
-    fs.writeJsonSync(path.join(dir, "config.local.json"), { gameExecutable: "Local Game.exe", launchArgs: ["-windowed"] });
+    writeJsonFile(path.join(dir, "config.json"), config);
+    writeJsonFile(path.join(dir, "config.local.json"), { gameExecutable: "Local Game.exe", launchArgs: ["-windowed"] });
     assert.deepEqual(loadProjectConfig(dir), { ...config, gameExecutable: "Local Game.exe", launchArgs: ["-windowed"] });
-    fs.writeJsonSync(path.join(dir, "config.local.json"), { mapFolder: "../map.w3x" });
+    writeJsonFile(path.join(dir, "config.local.json"), { mapFolder: "../map.w3x" });
     assert.throws(() => loadProjectConfig(dir), /mapFolder/);
-    fs.writeFileSync(path.join(dir, "config.local.json"), "{");
+    Deno.writeTextFileSync(path.join(dir, "config.local.json"), "{");
     assert.throws(() => loadProjectConfig(dir), /Cannot read.*config.local.json/);
   } finally {
-    fs.removeSync(dir);
+    removeIfExists(dir);
   }
 });
 
 test("build config does not modify tracked tsconfig", () => {
-  const before = fs.readFileSync("tsconfig.json", "utf8");
+  const before = Deno.readTextFileSync("tsconfig.json");
   const filename = createBuildConfig(loadProjectConfig());
   try {
-    assert.equal(fs.readFileSync("tsconfig.json", "utf8"), before);
-    const generated = fs.readJsonSync(filename);
+    assert.equal(Deno.readTextFileSync("tsconfig.json"), before);
+    const generated = loadJsonFile<{ compilerOptions: { plugins: Array<{ mapDir: string }> } }>(filename);
     assert(path.isAbsolute(generated.compilerOptions.plugins[0].mapDir));
   } finally {
-    fs.removeSync(filename);
+    removeIfExists(filename);
   }
 });
 
@@ -170,12 +173,12 @@ test("custom lint plugin wcraft-rules catches invalid FourCC rawcodes", () => {
 });
 
 test("validateJsonSyntax detects valid and corrupted JSON files", () => {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "w3ts-json-tests-"));
+  const dir = Deno.makeTempDirSync({ prefix: "w3ts-json-tests-" });
   try {
     const validFile = path.join(dir, "valid.json");
     const invalidFile = path.join(dir, "invalid.json");
-    fs.writeJsonSync(validFile, { key: "value" });
-    fs.writeFileSync(invalidFile, "{ not valid json ");
+    writeJsonFile(validFile, { key: "value" });
+    Deno.writeTextFileSync(invalidFile, "{ not valid json ");
 
     assert.equal(validateJsonSyntax(validFile).valid, true);
     const invalidResult = validateJsonSyntax(invalidFile);
@@ -186,7 +189,75 @@ test("validateJsonSyntax detects valid and corrupted JSON files", () => {
     assert(projectResults.length >= 4);
     assert(projectResults.every(r => r.valid));
   } finally {
-    fs.removeSync(dir);
+    removeIfExists(dir);
   }
 });
 
+test("Deno file staging and MPQ packaging preserve nested binary data", () => {
+  const dir = Deno.makeTempDirSync({ prefix: "w3ts archive tests " });
+  try {
+    const source = path.join(dir, "source");
+    const staged = path.join(dir, "staged");
+    Deno.mkdirSync(path.join(source, "assets"), { recursive: true });
+    const bytes = new Uint8Array([0, 255, 128, 13, 10, 0]);
+    Deno.writeFileSync(path.join(source, "assets", "binary.dat"), bytes);
+    Deno.writeTextFileSync(path.join(source, "war3map.lua"), "-- map script\n");
+    const info = new MapInfoModule.default();
+    info.version = 31;
+    Deno.writeFileSync(path.join(source, "war3map.w3i"), new Uint8Array(info.save()));
+    copySync(source, staged);
+    assert.deepEqual(getFilesInDirectory(staged).map(file => path.relative(staged, file)), [
+      path.join("assets", "binary.dat"), "war3map.lua", "war3map.w3i",
+    ]);
+    const archive = path.join(dir, "test.w3x");
+    createMapFromDir(archive, staged);
+    const map = new War3Map();
+    map.load(Deno.readFileSync(archive));
+    assert.deepEqual(new Uint8Array(map.get("assets/binary.dat")!.arrayBuffer()!), bytes);
+    assert.deepEqual(new Uint8Array(toArrayBuffer(bytes.subarray(1, 3))), new Uint8Array([255, 128]));
+    removeIfExists(staged);
+    removeIfExists(staged);
+    assert.throws(() => Deno.statSync(staged), Deno.errors.NotFound);
+  } finally {
+    removeIfExists(dir);
+  }
+});
+
+test("CLI failures persist timestamped logs and return a failing exit code", () => {
+  const dir = Deno.makeTempDirSync({ prefix: "w3ts-log-tests-" });
+  try {
+    const moduleUrl = new URL("../utils.ts", import.meta.url).href;
+    const script = path.join(dir, "cli.ts");
+    Deno.writeTextFileSync(script, `import { logger, runCli } from ${JSON.stringify(moduleUrl)};
+logger.info("starting");
+runCli(() => { throw new Error("intentional failure"); });`);
+    const result = new Deno.Command(Deno.execPath(), {
+      args: ["run", "--no-config", "-A", script], cwd: dir,
+      stdout: "piped", stderr: "piped",
+    }).outputSync();
+    assert.equal(result.code, 1);
+    const log = Deno.readTextFileSync(path.join(dir, "project.log"));
+    assert.match(log, /\[\d{4}-.*Z\] info: starting\n/);
+    assert.match(log, /error: intentional failure\n$/);
+    assert.match(new TextDecoder().decode(result.stderr), /intentional failure/);
+  } finally {
+    removeIfExists(dir);
+  }
+});
+
+test("Deno build commands preserve arguments and reject unsuccessful exits", () => {
+  const dir = Deno.makeTempDirSync({ prefix: "w3ts command tests " });
+  try {
+    const script = path.join(dir, "child script.ts");
+    const output = path.join(dir, "arguments.json");
+    Deno.writeTextFileSync(script, 'Deno.writeTextFileSync(Deno.args[0], JSON.stringify(Deno.args.slice(1)));');
+    const args = ["space in argument", 'a"quote', "Z:\\map folder\\map.w3x", "&literal"];
+    runCommand(Deno.execPath(), ["run", "--no-config", "-A", script, output, ...args]);
+    assert.deepEqual(loadJsonFile(output), args);
+    Deno.writeTextFileSync(script, "Deno.exit(7);");
+    assert.throws(() => runCommand(Deno.execPath(), ["run", "--no-config", script]), /exit code 7/);
+    assert.throws(() => runCommand(path.join(dir, "missing-executable"), []), Deno.errors.NotFound);
+  } finally {
+    removeIfExists(dir);
+  }
+});

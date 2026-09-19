@@ -1,4 +1,3 @@
-import fs from "fs-extra";
 import * as path from "node:path";
 import { War3Map } from "./warcraft-library.ts";
 import { getFilesInDirectory, logger, toArrayBuffer, runCli } from "./utils.ts";
@@ -7,7 +6,7 @@ import { compileMap } from "./compile.ts";
 
 function main() {
   const config = loadProjectConfig();
-  const minify = process.argv.includes("-minify") || config.minifyScript;
+  const minify = Deno.args.includes("-minify") || config.minifyScript;
 
   if (minify !== config.minifyScript) {
     logger.info('Enabling minification from command line argument "-minify".');
@@ -16,7 +15,7 @@ function main() {
   const mapDir = compileMap(config);
 
   logger.info(`Creating w3x archive...`);
-  fs.ensureDirSync(config.outputFolder);
+  Deno.mkdirSync(config.outputFolder, { recursive: true });
   createMapFromDir(path.join(config.outputFolder, config.mapFolder), mapDir);
 }
 
@@ -32,7 +31,7 @@ export function createMapFromDir(output: string, dir: string) {
   map.archive.resizeHashtable(files.length);
 
   for (const fileName of files) {
-    const contents = toArrayBuffer(fs.readFileSync(fileName));
+    const contents = toArrayBuffer(Deno.readFileSync(fileName));
     const archivePath = path.relative(dir, fileName).replace(/\\/g, "/");
     const imported = map.import(archivePath, contents);
 
@@ -47,7 +46,7 @@ export function createMapFromDir(output: string, dir: string) {
     throw new Error("Failed to save archive.");
   }
 
-  fs.writeFileSync(output, new Uint8Array(result));
+  Deno.writeFileSync(output, new Uint8Array(result));
 
   logger.info("Finished!");
 }
