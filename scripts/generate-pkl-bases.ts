@@ -1,7 +1,5 @@
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
 import * as path from "@std/path";
-const { Units, Items, Abilities } = require("war3-objectdata-th");
+import { Units, Items, Abilities } from "war3-objectdata-th";
 
 function cleanIdentifier(name: string): string {
   // Ensure valid Pkl identifier (cannot start with a digit, remove invalid chars)

@@ -1,13 +1,10 @@
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
 import * as path from "@std/path";
 import { friendlyPropertyName } from "./object-data.ts";
-
-const { UnitProps } = require("war3-objectdata-th/dist/cjs/generated/units.js");
-const { ItemProps } = require("war3-objectdata-th/dist/cjs/generated/items.js");
-const { AbilityProps } = require("war3-objectdata-th/dist/cjs/generated/abilities.js");
-const { BuffProps } = require("war3-objectdata-th/dist/cjs/generated/buffs.js");
-const { UpgradeProps } = require("war3-objectdata-th/dist/cjs/generated/upgrades.js");
+import { UnitProps } from "war3-objectdata-th/dist/cjs/generated/units.js";
+import { ItemProps } from "war3-objectdata-th/dist/cjs/generated/items.js";
+import { AbilityProps } from "war3-objectdata-th/dist/cjs/generated/abilities.js";
+import { BuffProps } from "war3-objectdata-th/dist/cjs/generated/buffs.js";
+import { UpgradeProps } from "war3-objectdata-th/dist/cjs/generated/upgrades.js";
 
 interface RawProp {
   id: string;

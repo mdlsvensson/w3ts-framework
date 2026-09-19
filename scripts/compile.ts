@@ -1,13 +1,12 @@
 import { removeIfExists, writeJsonFile, loadJsonFile } from "./files.ts";
 import { existsSync, copySync } from "@std/fs";
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
 import * as path from "@std/path";
+import { fromFileUrl } from "@std/path";
+import luamin from "luamin";
 import { IProjectConfig } from "./config.ts";
 import { injectObjectData } from "./object-files.ts";
 import { logger, runCommand } from "./utils.ts";
 import { evaluateObjects } from "./evaluate-objects.ts";
-const luamin = require("luamin");
 
 interface TsConfig {
   compilerOptions: {
@@ -57,7 +56,8 @@ export function compileMap(config: IProjectConfig): string {
   const buildConfig = createBuildConfig(config);
   try {
     logger.info("Transpiling TypeScript to Lua...");
-    runCommand(Deno.execPath(), ["run", "-A", require.resolve("typescript-to-lua/dist/tstl.js"), "-p", buildConfig]);
+    const tstlPath = fromFileUrl(import.meta.resolve("typescript-to-lua/dist/tstl.js"));
+    runCommand(Deno.execPath(), ["run", "-A", tstlPath, "-p", buildConfig]);
   } finally {
     removeIfExists(buildConfig);
   }

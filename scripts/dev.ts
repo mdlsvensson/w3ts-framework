@@ -1,8 +1,6 @@
-import { createRequire } from "node:module";
-const require = createRequire(import.meta.url);
+import War3TSTLHelper from "war3tstlhelper";
 import { logger } from "./utils.ts";
 import { loadProjectConfig } from "./config.ts";
-const War3TSTLHelper = require("war3tstlhelper");
 
 const config = loadProjectConfig();
 
