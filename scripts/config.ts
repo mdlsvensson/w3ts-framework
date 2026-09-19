@@ -11,9 +11,9 @@ export interface IProjectConfig {
   winePrefix?: string;
 }
 
-export function loadJsonFile(filename: string): any {
+export function loadJsonFile<T = Record<string, unknown>>(filename: string): T {
   try {
-    return JSON.parse(fs.readFileSync(filename, "utf8"));
+    return JSON.parse(fs.readFileSync(filename, "utf8")) as T;
   } catch (error) {
     throw new Error(`Cannot read ${filename}: ${error}`);
   }
@@ -31,7 +31,7 @@ export function loadProjectConfig(root = process.cwd()): IProjectConfig {
   for (const key of ["mapFolder", "gameExecutable", "outputFolder"]) {
     if (typeof config[key] !== "string" || !config[key].trim()) throw new Error(`config.${key} must be a nonempty string.`);
   }
-  if (!/^[^\\/:]+\.w3x$/i.test(config.mapFolder)) throw new Error("config.mapFolder must be a .w3x folder name, without a path.");
+  if (typeof config.mapFolder !== "string" || !/^[^\\/:]+\.w3x$/i.test(config.mapFolder)) throw new Error("config.mapFolder must be a .w3x folder name, without a path.");
   if (typeof config.minifyScript !== "boolean") throw new Error("config.minifyScript must be a boolean.");
   if (!Array.isArray(config.launchArgs) || !config.launchArgs.every((arg: unknown) => typeof arg === "string")) {
     throw new Error("config.launchArgs must be an array of strings.");
@@ -39,5 +39,5 @@ export function loadProjectConfig(root = process.cwd()): IProjectConfig {
   for (const key of ["winePath", "winePrefix"]) {
     if (config[key] !== undefined && typeof config[key] !== "string") throw new Error(`config.${key} must be a string.`);
   }
-  return config as IProjectConfig;
+  return config as unknown as IProjectConfig;
 }

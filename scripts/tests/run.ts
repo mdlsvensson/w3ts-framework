@@ -9,6 +9,8 @@ import { applyObjectData } from "../object-data.ts";
 import { injectObjectData } from "../object-files.ts";
 import { loadProjectConfig } from "../config.ts";
 import { createBuildConfig } from "../compile.ts";
+import { plugin as wcraftLintPlugin } from "../lint/wcraft-rules.ts";
+import { validateJsonSyntax, validateProjectJsonFiles } from "../validate-json.ts";
 
 test("unit aliases, null inheritance, lists and explicit property overrides", () => {
   const data = new ObjectData();
@@ -134,3 +136,57 @@ test("build config does not modify tracked tsconfig", () => {
     fs.removeSync(filename);
   }
 });
+
+test("custom lint plugin wcraft-rules catches invalid FourCC rawcodes", () => {
+  const runLint = (code: string) => {
+    const denoLint = (Deno as unknown as {
+      lint?: {
+        runPlugin: (plugin: unknown, filename: string, source: string) => Array<{ message: string; id: string }>;
+      };
+    }).lint;
+    assert(denoLint, "Deno.lint is required for lint plugin tests");
+    return denoLint.runPlugin(wcraftLintPlugin, "src/test.ts", code);
+  };
+
+  // Valid rawcodes
+  assert.equal(runLint('FourCC("hfoo");').length, 0);
+  assert.equal(runLint('FourCC("A000");').length, 0);
+  assert.equal(runLint('FourCC(Units.Footman);').length, 0);
+
+  // Invalid length (> 4)
+  const tooLong = runLint('FourCC("hfoo1");');
+  assert.equal(tooLong.length, 1);
+  assert.match(tooLong[0].message, /must be exactly 4 characters/);
+
+  // Invalid length (< 4)
+  const tooShort = runLint('FourCC("hfo");');
+  assert.equal(tooShort.length, 1);
+  assert.match(tooShort[0].message, /must be exactly 4 characters/);
+
+  // Invalid non-printable ASCII
+  const nonAscii = runLint('FourCC("hf\\x00o");');
+  assert.equal(nonAscii.length, 1);
+  assert.match(nonAscii[0].message, /printable ASCII/);
+});
+
+test("validateJsonSyntax detects valid and corrupted JSON files", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "w3ts-json-tests-"));
+  try {
+    const validFile = path.join(dir, "valid.json");
+    const invalidFile = path.join(dir, "invalid.json");
+    fs.writeJsonSync(validFile, { key: "value" });
+    fs.writeFileSync(invalidFile, "{ not valid json ");
+
+    assert.equal(validateJsonSyntax(validFile).valid, true);
+    const invalidResult = validateJsonSyntax(invalidFile);
+    assert.equal(invalidResult.valid, false);
+    assert(invalidResult.error);
+
+    const projectResults = validateProjectJsonFiles();
+    assert(projectResults.length >= 4);
+    assert(projectResults.every(r => r.valid));
+  } finally {
+    fs.removeSync(dir);
+  }
+});
+

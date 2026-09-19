@@ -9,9 +9,24 @@ import { logger } from "./utils.ts";
 import { evaluateObjects } from "./evaluate-objects.ts";
 const luamin = require("luamin");
 
+interface TsConfig {
+  compilerOptions: {
+    plugins: Array<{
+      transform: string;
+      mapDir?: string;
+      entryFile?: string;
+      outputDir?: string;
+    }>;
+  };
+  tstl: {
+    luaBundle: string;
+    luaBundleEntry: string;
+  };
+}
+
 /** Emit an isolated config beside the source config to preserve relative paths. */
 export function createBuildConfig(config: IProjectConfig): string {
-  const tsconfig = loadJsonFile("tsconfig.json");
+  const tsconfig = loadJsonFile<TsConfig>("tsconfig.json");
   const plugin = tsconfig.compilerOptions.plugins.find((entry: { transform: string }) => entry.transform === "war3-transformer");
   if (!plugin) throw new Error("tsconfig.json is missing war3-transformer.");
   plugin.mapDir = path.resolve("maps", config.mapFolder);
@@ -35,7 +50,7 @@ export function compileMap(config: IProjectConfig): string {
   if (path.dirname(destination) !== dist || destination === dist) throw new Error("Map staging path must be a direct child of dist.");
   fs.removeSync(destination);
   fs.copySync(source, destination);
-  const bundle = path.resolve(loadJsonFile("tsconfig.json").tstl.luaBundle);
+  const bundle = path.resolve(loadJsonFile<TsConfig>("tsconfig.json").tstl.luaBundle);
   if (!bundle.startsWith(dist + path.sep)) throw new Error("Lua bundle must be inside dist.");
   fs.removeSync(bundle);
 

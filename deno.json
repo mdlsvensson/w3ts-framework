@@ -14,7 +14,39 @@
     "schema:gen": "deno run -A scripts/generate-pkl-schema.ts",
     "bases:gen": "deno run -A scripts/generate-pkl-bases.ts && deno task schema:gen",
     "build:defs": "deno run -A scripts/dev.ts",
-    "dev": "deno run -A scripts/watch.ts"
+    "dev": "deno run -A scripts/watch.ts",
+    "lint": "deno lint && deno task lint:json",
+    "lint:json": "deno run -A scripts/validate-json.ts"
   },
-  "fmt": { "exclude": ["node_modules", "dist", "maps", "objects/bases.pkl", "objects/schema/generated", "src/generated"] }
+  "lint": {
+    "plugins": ["./scripts/lint/wcraft-rules.ts"],
+    "exclude": [
+      "node_modules",
+      "dist",
+      "maps",
+      "objects/bases.pkl",
+      "objects/schema/generated",
+      "src/generated",
+      "src/war3map.d.ts"
+    ],
+    "rules": {
+      "tags": ["recommended"],
+      "include": [
+        "no-eval",
+        "no-throw-literal",
+        "no-sparse-arrays",
+        "no-sync-fn-in-async-fn"
+      ]
+    }
+  },
+  "fmt": {
+    "exclude": [
+      "node_modules",
+      "dist",
+      "maps",
+      "objects/bases.pkl",
+      "objects/schema/generated",
+      "src/generated"
+    ]
+  }
 }

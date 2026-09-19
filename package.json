@@ -14,7 +14,8 @@
     "dev": "deno task dev",
     "build:defs": "deno task build:defs",
     "test:unit": "deno task test:unit",
-    "typecheck": "deno task typecheck"
+    "typecheck": "deno task typecheck",
+    "lint": "deno task lint"
   },
   "dependencies": {
     "w3ts": "3.0.2"
