@@ -1,4 +1,4 @@
-import * as path from "node:path";
+import * as path from "@std/path";
 
 export function toArrayBuffer(buffer: Uint8Array): ArrayBuffer {
   return Uint8Array.from(buffer).buffer;

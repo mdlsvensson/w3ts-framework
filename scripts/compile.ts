@@ -2,7 +2,7 @@ import { removeIfExists, writeJsonFile, loadJsonFile } from "./files.ts";
 import { existsSync, copySync } from "@std/fs";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-import * as path from "node:path";
+import * as path from "@std/path";
 import { IProjectConfig } from "./config.ts";
 import { injectObjectData } from "./object-files.ts";
 import { logger, runCommand } from "./utils.ts";
@@ -51,7 +51,7 @@ export function compileMap(config: IProjectConfig): string {
   removeIfExists(destination);
   copySync(source, destination);
   const bundle = path.resolve(loadJsonFile<TsConfig>("tsconfig.json").tstl.luaBundle);
-  if (!bundle.startsWith(dist + path.sep)) throw new Error("Lua bundle must be inside dist.");
+  if (!bundle.startsWith(dist + path.SEPARATOR)) throw new Error("Lua bundle must be inside dist.");
   removeIfExists(bundle);
 
   const buildConfig = createBuildConfig(config);

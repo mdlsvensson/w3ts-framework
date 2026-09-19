@@ -1,6 +1,6 @@
 import { existsSync } from "@std/fs";
 import { loadJsonFile } from "./files.ts";
-import * as path from "node:path";
+import * as path from "@std/path";
 
 export interface IProjectConfig {
   mapFolder: string;

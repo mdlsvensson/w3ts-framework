@@ -1,6 +1,6 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-import * as path from "node:path";
+import * as path from "@std/path";
 import { friendlyPropertyName } from "./object-data.ts";
 
 const { UnitProps } = require("war3-objectdata-th/dist/cjs/generated/units.js");

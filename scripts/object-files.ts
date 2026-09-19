@@ -1,5 +1,5 @@
 import { existsSync } from "@std/fs";
-import * as path from "node:path";
+import * as path from "@std/path";
 import { ObjectData, ModificationFiles } from "war3-objectdata-th/dist/cjs/objectdata.js";
 import { SimpleFile, LevelFile } from "./warcraft-library.ts";
 import { applyObjectData } from "./object-data.ts";

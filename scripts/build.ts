@@ -1,4 +1,4 @@
-import * as path from "node:path";
+import * as path from "@std/path";
 import { War3Map } from "./warcraft-library.ts";
 import { getFilesInDirectory, logger, toArrayBuffer, runCli } from "./utils.ts";
 import { loadProjectConfig } from "./config.ts";

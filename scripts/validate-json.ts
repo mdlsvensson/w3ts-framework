@@ -1,5 +1,5 @@
 import { existsSync } from "@std/fs";
-import * as path from "node:path";
+import * as path from "@std/path";
 import { loadProjectConfig } from "./config.ts";
 
 export interface ValidationResult {

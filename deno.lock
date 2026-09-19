@@ -278,6 +278,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/fs@1.0.24",
+      "jsr:@std/path@^1.1.5",
       "npm:@types/node@22.15.17"
     ],
     "packageJson": {

@@ -1,6 +1,6 @@
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-import * as path from "node:path";
+import * as path from "@std/path";
 const { Units, Items, Abilities } = require("war3-objectdata-th");
 
 function cleanIdentifier(name: string): string {

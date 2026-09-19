@@ -1,7 +1,7 @@
 import { removeIfExists, writeJsonFile, loadJsonFile } from "../files.ts";
 import assert from "node:assert/strict";
 const test = Deno.test;
-import * as path from "node:path";
+import * as path from "@std/path";
 import { ObjectData } from "war3-objectdata-th";
 import { SimpleFile, LevelFile, War3Map } from "../warcraft-library.ts";
 import { createMapFromDir } from "../build.ts";
@@ -231,8 +231,9 @@ test("CLI failures persist timestamped logs and return a failing exit code", () 
     Deno.writeTextFileSync(script, `import { logger, runCli } from ${JSON.stringify(moduleUrl)};
 logger.info("starting");
 runCli(() => { throw new Error("intentional failure"); });`);
+    const configPath = path.resolve("deno.json");
     const result = new Deno.Command(Deno.execPath(), {
-      args: ["run", "--no-config", "-A", script], cwd: dir,
+      args: ["run", "--config", configPath, "-A", script], cwd: dir,
       stdout: "piped", stderr: "piped",
     }).outputSync();
     assert.equal(result.code, 1);
