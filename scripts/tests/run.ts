@@ -1,4 +1,4 @@
-import { removeIfExists, writeJsonFile } from "../files.ts";
+import { removeIfExists, writeJsonFile, loadJsonFile } from "../files.ts";
 import assert from "node:assert/strict";
 const test = Deno.test;
 import * as path from "node:path";
@@ -10,7 +10,7 @@ import { copySync } from "@std/fs";
 import MapInfoModule from "mdx-m3-viewer-th/dist/cjs/parsers/w3x/w3i/file.js";
 import { applyObjectData } from "../object-data.ts";
 import { injectObjectData } from "../object-files.ts";
-import { loadJsonFile, loadProjectConfig } from "../config.ts";
+import { loadProjectConfig } from "../config.ts";
 import { createBuildConfig } from "../compile.ts";
 import { plugin as wcraftLintPlugin } from "../lint/wcraft-rules.ts";
 import { validateJsonSyntax, validateProjectJsonFiles } from "../validate-json.ts";

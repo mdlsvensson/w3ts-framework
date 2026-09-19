@@ -1,4 +1,5 @@
 import { existsSync } from "@std/fs";
+import { loadJsonFile } from "./files.ts";
 import * as path from "node:path";
 
 export interface IProjectConfig {
@@ -11,23 +12,18 @@ export interface IProjectConfig {
   winePrefix?: string;
 }
 
-export function loadJsonFile<T = Record<string, unknown>>(filename: string): T {
-  try {
-    return JSON.parse(Deno.readTextFileSync(filename)) as T;
-  } catch (error) {
-    throw new Error(`Cannot read ${filename}: ${error}`);
-  }
+export function readConfig(file: string) {
+  const value = loadJsonFile(file);
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(`${file} must contain an object.`);
+  return value;
 }
 
 export function loadProjectConfig(root = Deno.cwd()): IProjectConfig {
-  const filename = path.join(root, "config.json");
-  const local = path.join(root, "config.local.json");
-  const readConfig = (file: string) => {
-    const value = loadJsonFile(file);
-    if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(`${file} must contain an object.`);
-    return value;
-  };
-  const config = { ...readConfig(filename), ...(existsSync(local) ? readConfig(local) : {}) };
+  const configPath = path.join(root, "config.json");
+  const configLocalPath = path.join(root, "config.local.json");
+  const config = { ...readConfig(configPath), ...(existsSync(configLocalPath) ? readConfig(configLocalPath) : {}) };
+
+  // Validation
   for (const key of ["mapFolder", "gameExecutable", "outputFolder"]) {
     if (typeof config[key] !== "string" || !config[key].trim()) throw new Error(`config.${key} must be a nonempty string.`);
   }
@@ -36,6 +32,8 @@ export function loadProjectConfig(root = Deno.cwd()): IProjectConfig {
   if (!Array.isArray(config.launchArgs) || !config.launchArgs.every((arg: unknown) => typeof arg === "string")) {
     throw new Error("config.launchArgs must be an array of strings.");
   }
+
+  // TODO: Check if -load with maps even works through wine. Further testing required
   for (const key of ["winePath", "winePrefix"]) {
     if (config[key] !== undefined && typeof config[key] !== "string") throw new Error(`config.${key} must be a string.`);
   }

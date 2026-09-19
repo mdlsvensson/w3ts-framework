@@ -1,9 +1,9 @@
-import { removeIfExists, writeJsonFile } from "./files.ts";
+import { removeIfExists, writeJsonFile, loadJsonFile } from "./files.ts";
 import { existsSync, copySync } from "@std/fs";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 import * as path from "node:path";
-import { IProjectConfig, loadJsonFile } from "./config.ts";
+import { IProjectConfig } from "./config.ts";
 import { injectObjectData } from "./object-files.ts";
 import { logger, runCommand } from "./utils.ts";
 import { evaluateObjects } from "./evaluate-objects.ts";

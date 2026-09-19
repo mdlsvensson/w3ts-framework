@@ -7,6 +7,14 @@ export function removeIfExists(filename: string): void {
   }
 }
 
+export function loadJsonFile<T = Record<string, unknown>>(filename: string): T {
+  try {
+    return JSON.parse(Deno.readTextFileSync(filename)) as T;
+  } catch (error) {
+    throw new Error(`Cannot read ${filename}: ${error}`);
+  }
+}
+
 export function writeJsonFile(filename: string, value: unknown, options: { spaces?: number } = {}): void {
   Deno.writeTextFileSync(filename, JSON.stringify(value, null, options.spaces) + "\n");
 }
