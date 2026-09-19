@@ -48,5 +48,8 @@
       "objects/schema/generated",
       "src/generated"
     ]
+  },
+  "lock": {
+    "frozen": true
   }
 }
