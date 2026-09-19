@@ -91,7 +91,7 @@ This document records the architectural changes, refactors, and conventions esta
 | [`scripts/compile.ts`](file:///c:/Users/mdlsvensson/Repo/w3ts-framework/scripts/compile.ts) | Pkl evaluation, dynamic `tsconfig.build.<pid>.json` generation, TSTL invocation, and object data injection. |
 | [`scripts/validate-json.ts`](file:///c:/Users/mdlsvensson/Repo/w3ts-framework/scripts/validate-json.ts) | JSON syntax and project configuration schema validation runner. |
 | [`scripts/dev.ts`](file:///c:/Users/mdlsvensson/Repo/w3ts-framework/scripts/dev.ts) | Generates TypeScript definitions (`src/war3map.d.ts`) from base map globals using `War3TSTLHelper`. |
-| [`scripts/tests/run.ts`](file:///c:/Users/mdlsvensson/Repo/w3ts-framework/scripts/tests/run.ts) | Regression test suite (13 unit tests covering binary I/O, config, lint rules, JSON validation, and CLI logging). |
+| [`scripts/tests/run.ts`](file:///c:/Users/mdlsvensson/Repo/w3ts-framework/scripts/tests/run.ts) | Regression test suite (14 tests covering binary I/O, actual base-map packaging, config, lint rules, JSON validation, and CLI logging). |
 
 ---
 
@@ -103,13 +103,20 @@ When making further changes to this repository, AI models must preserve the foll
    * Use `@std/fs` and `Deno.*` instead of `node:fs` or `fs-extra`.
    * Use `@std/path` instead of `node:path`. Note the uppercase `path.SEPARATOR`.
    * Use `fromFileUrl(import.meta.resolve(...))` instead of `node:module` / `require.resolve`.
-2. **Never commit without running the verification trifecta:**
+2. **Never commit without running the full verification sequence:**
    * `deno task lint` (runs Deno lint + JSON syntax/schema checks).
    * `deno task test:unit` (runs regression test suite).
    * `deno task typecheck` (type-checks both `scripts/` with Deno and `src/` with pinned `typescript@5.8.2`).
+   * `deno task build` and `deno task build -- -minify` (exercise Pkl, compilation, and packaging of the actual base map).
 3. **Lockfile updates must be explicit:**
    * Because `"lock": { "frozen": true }` is enabled in `deno.json`, any change to dependencies or import maps requires running `deno install --frozen=false`.
 4. **Child process execution in tests:**
    * When spawning subprocesses with `Deno.Command` in tests located outside the repository root (e.g. in temp folders), pass `--config <path-to-deno.json>` if the executed script imports bare `@std/*` specifiers.
 5. **Preserve game source isolation (`src/`):**
    * Code in `src/` compiles to Lua 5.3. Never use Node, Deno, or browser globals in `src/` unless explicitly wrapped in a compile-time macro (`compiletime(() => ...)`).
+
+## 5. Map Packaging Compatibility
+
+The checked-in base map uses `war3map.w3i` format 39. The pinned map library cannot fully parse this format. Its `War3Map.save()` parses metadata only to decide whether to add a legacy `HM3W` header, which caused both regular and minified builds to fail despite passing unit tests.
+
+`scripts/build.ts` reads the unchanged format/build-version prefix for format 39 maps targeting Warcraft III 1.31 or newer and uses the library's headerless MPQ save path, including its import table update. Metadata and assets are preserved byte-for-byte; this does not add full format 39 parsing support. Other versions retain the library's existing save behavior. A regression test packages the checked-in base map and compares every source file with the extracted archive contents, alongside the existing synthetic format 31 test.

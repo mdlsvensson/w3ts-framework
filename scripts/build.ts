@@ -40,7 +40,7 @@ export function createMapFromDir(output: string, dir: string) {
     }
   }
 
-  const result = map.save();
+  const result = saveMapArchive(map);
 
   if (!result) {
     throw new Error("Failed to save archive.");
@@ -49,6 +49,26 @@ export function createMapFromDir(output: string, dir: string) {
   Deno.writeFileSync(output, new Uint8Array(result));
 
   logger.info("Finished!");
+}
+
+
+// TODO: Understand this mess
+/** Preserve modern metadata that the pinned library cannot fully parse. */
+function saveMapArchive(map: InstanceType<typeof War3Map>): ArrayBuffer | Uint8Array | null {
+  const info = map.get("war3map.w3i")?.arrayBuffer();
+  if (info && info.byteLength >= 28) {
+    const header = new DataView(info);
+    const version = header.getInt32(0, true);
+    const buildVersion = header.getUint32(12, true) * 100 + header.getUint32(16, true);
+    // War3Map.save() parses the entire w3i just to choose the legacy HM3W
+    // header. Version 39 retains the build-version prefix but adds fields
+    // unsupported by that parser. Match its headerless path for 1.31+ maps.
+    if (version === 39 && buildVersion >= 131) {
+      map.setImportsFile();
+      return map.archive.save();
+    }
+  }
+  return map.save();
 }
 
 if (import.meta.main) runCli(main);

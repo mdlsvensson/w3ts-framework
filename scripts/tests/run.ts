@@ -223,6 +223,24 @@ test("Deno file staging and MPQ packaging preserve nested binary data", () => {
   }
 });
 
+test("checked-in base map packages without changing its metadata or assets", () => {
+  const dir = Deno.makeTempDirSync({ prefix: "w3ts-base-map-tests-" });
+  try {
+    const source = path.fromFileUrl(new URL("../../maps/map.w3x/", import.meta.url));
+    const archive = path.join(dir, "base.w3x");
+    createMapFromDir(archive, source);
+    const map = new War3Map();
+    map.load(Deno.readFileSync(archive));
+    for (const filename of getFilesInDirectory(source)) {
+      const relative = path.relative(source, filename).replace(/\\/g, "/");
+      assert.deepEqual(new Uint8Array(map.get(relative)!.arrayBuffer()!), Deno.readFileSync(filename), relative);
+    }
+    assert(map.getImportNames().includes("war3map.w3i"));
+  } finally {
+    removeIfExists(dir);
+  }
+});
+
 test("CLI failures persist timestamped logs and return a failing exit code", () => {
   const dir = Deno.makeTempDirSync({ prefix: "w3ts-log-tests-" });
   try {

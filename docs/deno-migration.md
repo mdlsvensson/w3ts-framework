@@ -54,9 +54,9 @@ These choices follow Deno's documented [Node/npm compatibility](https://docs.den
 
 ## Where compatibility is handled
 
-- Build-script imports use explicit `.ts` extensions and `node:` prefixes for Node built-ins. The game source keeps its TSTL-compatible imports.
+- Build-script imports use explicit `.ts` extensions, Deno APIs, and `@std/fs` / `@std/path`. The game source keeps its TSTL-compatible imports.
 - `import.meta.main` replaces CommonJS entry-point checks so importing a build module in tests does not run its CLI.
-- `createRequire(import.meta.url)` is used where legacy libraries or compiler paths need CommonJS resolution. It resolves through Deno's compatibility layer.
+- Legacy packages use direct ESM imports through Deno's CommonJS compatibility layer. Compiler paths use `fromFileUrl(import.meta.resolve(...))`; `createRequire` has been removed.
 - `scripts/warcraft-library.ts` unwraps the map library's `exports.default` constructors. Deno's ESM import exposes the CommonJS exports object; it does not apply the same automatic unwrapping previously provided by TypeScript's CommonJS output.
 - Project file I/O uses Deno APIs, with pinned `@std/fs` helpers for recursive copying and existence checks. Text and binary operations remain separate; MPQ and object-table parsers receive `Uint8Array` or an exact-sized `ArrayBuffer`.
 - The small logger writes timestamped messages to the console and appends to `project.log` synchronously, so CLI failures do not depend on flushing a Winston transport. `fs-extra`, its types, and Winston are no longer direct dependencies.
@@ -68,7 +68,7 @@ The game launcher deliberately retains `node:child_process`: the documented [Den
 
 An interactive follow-up on Windows with Deno 2.9.7 tested `Deno.Command` against the configured Warcraft III executable and the same staged map and launch arguments. The user observed no window or sound. A second native launch, keeping the Deno parent alive and capturing output, returned exit code 0 with empty stdout/stderr and no remaining Warcraft III process. The existing `deno task test` launcher then produced a responding Warcraft III window, and the user confirmed normal operation. Retain the compatibility launcher on this setup. These observations establish a behavioral difference, but do not isolate the underlying Windows startup cause or prove that native launches fail on every system.
 
-`node:path` remains for established Windows path behavior, and `node:assert/strict` remains in tests. Neither needs an installed Node executable. They could be replaced with standard-library equivalents later, but doing so does not remove the compatibility layer still needed by the Warcraft dependencies. `node:module` and Node type declarations remain for CommonJS package resolution and upstream declarations. The npm compiler, transformer, object-data, map parser, Lua minifier, and declaration generator remain pinned; the game source and Lua target are unchanged. TSTL 1.31.0 declares an exact TypeScript 5.8.2 peer dependency, and its [transformer configuration](https://typescripttolua.github.io/docs/configuration/) is part of the compilation pipeline.
+`@std/path` replaces `node:path`, and `node:module` has been removed. `node:assert/strict` remains in tests, and Node type declarations remain for upstream declarations. Neither requires an installed Node executable. The Warcraft dependencies still need Deno's compatibility layer. The npm compiler, transformer, object-data, map parser, Lua minifier, and declaration generator remain pinned; the game source and Lua target are unchanged. TSTL 1.31.0 declares an exact TypeScript 5.8.2 peer dependency, and its [transformer configuration](https://typescripttolua.github.io/docs/configuration/) is part of the compilation pipeline.
 
 Build tasks use `-A` to retain the template's filesystem, subprocess, environment, and compile-time execution capabilities. This is compatibility with the trusted local build workflow; the migration does not introduce a restricted execution boundary for compile-time callbacks.
 
